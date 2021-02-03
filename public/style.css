@@ -91,10 +91,14 @@ body:after{
 .portWrite{text-align: center;font-family:'Muli', sans-serif; padding:20px}
 .projectss{display: flex;flex-wrap: wrap;justify-content: center;}
 
-.portDiv{width:20em;margin: 7%;height: 17em;border-radius: 10px;}
+.portDiv{
+    width:20em;
+    margin: 7%;
+    height: 17em;
+    border-radius: 10px;
+}
 
 .theCard{
-    
   position: relative;
   width:100%;
   height: 100%;  
@@ -145,6 +149,46 @@ body:after{
         color: white;
         border-radius: 10px;
 }
+
+.card{
+    width:20em;
+    margin: 7%;
+    height: 17em;
+}
+
+.card_inner{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card_inner:hover{
+    transform: rotateY(180deg);
+}
+
+.card_face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16;
+}
+
+.card_face-back{
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
 .show{display: block;}
 .portClass{width: 100%;height: 100%;border-radius: 10px;}
 .portName{background-color: rgb(40, 29, 104) ;color:rgb(185, 114, 7) ;
