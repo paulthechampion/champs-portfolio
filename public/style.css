@@ -105,7 +105,10 @@ body:after{
 }
 .theCard:hover{
    transform:rotateY(180deg);
-    ; 
+   -webkit-transform:rotateY(180deg); 
+   -moz-transform:rotateY(180deg) ;
+   -o-transform: rotateY(180deg);
+    
 }
 .portImg{ 
    position: absolute;
@@ -166,16 +169,6 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;
 .iconLink{text-decoration: none;color: black;}
 .phoneLink{text-align: right;}
 
-
-@-webkit-keyframes spin{
-    100%{-webkit-transform: rotateY(180deg);}
-}
-@-moz-keyframes spin{
-    100%{-webkit-transform: rotateY(180deg);}
-}
-@keyframes spin{
-    100%{-webkit-transform: rotateY(180deg);}
-}
 
 @media(min-width :586px){
     .title{margin-left:20%;margin-top: 55%;}
