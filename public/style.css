@@ -104,6 +104,7 @@ body:after{
   border-radius: 10px;
 }
 .theCard:hover{
+    border: 1px solid transparent;
    transform:rotateY(180deg);
    -webkit-transform:rotateY(180deg); 
    -moz-transform:rotateY(180deg) ;
