@@ -154,6 +154,7 @@ body:after{
     width:20em;
     margin: 7%;
     height: 17em;
+    perspective: 500px;
 }
 
 .card_inner{
@@ -166,7 +167,7 @@ body:after{
 }
 
 .card_inner:hover{
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 .card_face{
@@ -178,7 +179,7 @@ body:after{
 }
 
 .card_face-back{
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 
