@@ -144,7 +144,7 @@ body:after{
 label{font-family:'Muli', sans-serif;}
 .status{font-family:'Muli', sans-serif;}
 .inputCont{width: 20em;height: 1.5em;font-family:'Muli', sans-serif;}
-.inputText{width:16.75em;height:15em;margin-bottom: 1em; resize: none;font-family:'Muli', sans-serif;}
+.inputText{width:20em;height:15em;margin-bottom: 1em; resize: none;font-family:'Muli', sans-serif;}
 .contForm{text-align: left;margin-left: 13%;}
 .Dlabel{font-style: inherit;}
 .phoneMenu{width:100%; height:1000%; background-image: url("webtest.jpg");position: fixed; top:0%;left:0%;z-index: 3;}
