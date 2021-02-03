@@ -104,12 +104,21 @@ body:after{
   border-radius: 10px;
 }
 .theCard:hover{
-    border: 1px solid transparent;
-   transform:rotateY(180deg);
-   -webkit-transform:rotateY(180deg); 
-   -moz-transform:rotateY(180deg) ;
-   -o-transform: rotateY(180deg);
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: flipper;
     
+}
+@keyframes flipper{
+    from{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(90deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
 }
 .portImg{ 
    position: absolute;
@@ -124,7 +133,9 @@ body:after{
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
-        transform: rotateY(180deg);
+        animation-duration: 1.5s;
+       animation-fill-mode: both;
+       animation-name: flipper;
         text-align: center;
         background-color: rgb(45, 45, 126,0.7);
         -webkit-background-color: rgb(45, 45, 126,0.7);
