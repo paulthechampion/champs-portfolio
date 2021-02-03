@@ -167,7 +167,7 @@ body:after{
 }
 
 .card_inner:hover{
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 .card_face{
@@ -179,7 +179,7 @@ body:after{
 }
 
 .card_face-back{
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 
