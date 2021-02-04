@@ -91,39 +91,6 @@ body:after{
 .portWrite{text-align: center;font-family:'Muli', sans-serif; padding:20px}
 .projectss{display: flex;flex-wrap: wrap;justify-content: center;}
 
-.portDiv{
-    width:20em;
-    margin: 7%;
-    height: 17em;
-    border-radius: 10px;
-}
-
-.theCard{
-  position: relative;
-  width:100%;
-  height: 100%;  
-  transform-style: preserve-3d;
-  transition: all 1s ease;
-  border: 3px solid rgb(41, 41, 134);
-  border-radius: 10px;
-}
-.theCard:hover{
-    animation-duration: 1.5s;
-    animation-fill-mode: both;
-    animation-name: flipper;
-    
-}
-@keyframes flipper{
-    from{
-        transform: rotateY(0deg);
-    }
-    50%{
-        transform: rotateY(90deg);
-    }
-    to{
-        transform: rotateY(180deg);
-    }
-}
 .portImg{ 
    position: absolute;
    width: 100%;
@@ -174,8 +141,16 @@ body:after{
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
+  
     border-radius: 16;
+    color: white;
+    perspective: none;
+    -webkit-perspective:none;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    visibility:visible;
+    backface-visibility: hidden;
 }
 
 .card_face-back{
@@ -185,18 +160,19 @@ body:after{
         -moz-background-color: rgb(45, 45, 126,0.7);
         -o-background-color: rgb(45, 45, 126,0.7);
         -ms-background-color: rgb(45, 45, 126,0.7);
+        
 }
 
 
 
 
 
-
+.portClass{width: 100%;height: 100%;border-radius: 10px;}
 
 
 
 .show{display: block;}
-.portClass{width: 100%;height: 100%;border-radius: 10px;}
+
 .portName{background-color: rgb(40, 29, 104) ;color:rgb(185, 114, 7) ;
     text-align: center;padding: 5px;position: relative;bottom:50%}
 .viewButton{position: absolute;top: 70%;left: 33%;}
