@@ -97,6 +97,7 @@ body:after{
     margin: 7%;
     height: 17em;
     perspective: 500px;
+    border-radius: 10px;
 }
 
 .card_inner{
@@ -106,6 +107,7 @@ body:after{
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    border-radius: 10px;
 }
 
 .card_inner:hover{
