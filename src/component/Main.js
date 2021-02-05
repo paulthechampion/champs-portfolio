@@ -20,8 +20,9 @@ import {FaLinkedin} from "react-icons/fa"
 
 import Ani from "./img/chat.png"
 import Cat2 from "./img/immigration.jpg"
-import Cat3 from "./img/handshake.jpg"
+import keer from "./img/handshake.jpg"
 import Dog from "./img/Dogs1.jpg"
+import ruixPic from "./img/rubix-pic.jpg"
 
 
 const myPic =picA
@@ -129,10 +130,10 @@ export default function Main() {
                     make any of them better please ensure to give me some pointers, Thank You! 
                      </p>
                     <div className="projectss">
-                      <Port port={{img: Cat3 , link:"https://www.kreer.ng/", words:"necijepwopckcinepq", name:"Keer NG"}}    />
+                      <Port port={{img: keer , link:"https://www.kreer.ng/", words:"necijepwopckcinepq", name:"Keer NG"}}    />
                       <Port port={{img:Cat2, link:"https://www.instagram.com", words:"ojqecojojepcqopm" , name:"Davito Immigration"}}/>
                       <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", words:"kleccmimpoecomeic", name:"Clown Chat"}}/>
-                      <Port port={{img:Dog, link:"https://www.twitter.com", words:"ecpocopmcemie"}}/>
+                      <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", words:"ecpocopmcemie", name:"Read Rubixx"}}/>
                     </div>     
                 </section>
 
