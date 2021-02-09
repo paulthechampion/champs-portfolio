@@ -1,8 +1,5 @@
 import React from 'react'
 import PhoneMenu from './PhoneMenu'
-import Wolf from "./img/wolf.png"
-
-const wolf =Wolf; 
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {

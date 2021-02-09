@@ -169,8 +169,17 @@ label{font-family:'Muli', sans-serif;}
 .inputText{width:20em;height:15em;margin-bottom: 1em; resize: none;font-family:'Muli', sans-serif;}
 .contForm{text-align: left;margin-left: 13%;}
 .Dlabel{font-style: inherit;}
-.phoneMenu{width:100%; height:1000%; background-image: url("webtest.jpg");position: fixed; top:0%;left:0%;z-index: 3;}
-.subPM{width:100%;height:100%;background-color: rgb(255, 255, 255,0.7); position: absolute; top:0px;text-align: center;}
+.phoneMenu{width:100%; height:1000%;
+     background-image: url("webtest.jpg");position: fixed; 
+     top:0%;z-index: 3;transform: translateX(-100%);
+    transition: all 1s ease-out;
+    }
+.phoneMenu.open{
+    transform: translateX(0%);
+    left: 0%;
+   
+}
+.subPM{width:100%;height:100%;background-color: rgb(255, 255, 255,0.7);text-align: center;position: absolute;top:0}
 .phoneL{color:rgb(185, 114, 7) ;text-decoration: none;padding-bottom: 50px;font-weight: 550;}
 .firstNav{padding-top: 4em;}
 .phoneLdiv{margin-top: 3em;}
@@ -188,6 +197,45 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;
 .iconLink{text-decoration: none;color: black;}
 .phoneLink{text-align: right;}
 
+
+
+@keyframes openMenu{
+    0%{
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top:30%;
+        left:30%;
+    }
+
+    20%{
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top:30%;
+        left:30%;
+    }
+
+    50%{
+        border-radius: 100%;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top:30%;
+        left:30%;
+    }
+
+    100%{
+        border-radius: 0;
+        width: 100%;
+        height: 1000%;
+        position: fixed;
+         top:0%;
+         left:0%
+    }
+}
 
 @media(min-width :586px){
     .title{margin-left:20%;margin-top: 55%;}

@@ -18,11 +18,11 @@ import {FaGithub} from "react-icons/fa"
 import {FaTwitter} from "react-icons/fa"
 import {FaLinkedin} from "react-icons/fa"
 
-import Ani from "./img/chat.png"
+import Ani from "./img/chat-icon.jpg"
 import Cat2 from "./img/immigration.jpg"
 import keer from "./img/handshake.jpg"
-import Dog from "./img/Dogs1.jpg"
-import ruixPic from "./img/rubix-pic.jpg"
+import todoPic from "./img/todo.png"
+import ruixPic from "./img/books.jpg"
 
 
 const myPic =picA
@@ -131,9 +131,11 @@ export default function Main() {
                      </p>
                     <div className="projectss">
                       <Port port={{img: keer , link:"https://www.kreer.ng/", words:"necijepwopckcinepq", name:"Keer NG"}}    />
-                      <Port port={{img:Cat2, link:"https://www.instagram.com", words:"ojqecojojepcqopm" , name:"Davito Immigration"}}/>
-                      <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", words:"kleccmimpoecomeic", name:"Clown Chat"}}/>
-                      <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", words:"ecpocopmcemie", name:"Read Rubixx"}}/>
+                      <Port port={{img:Cat2, link:"https://nada-create.herokuapp.com/", words:"ojqecojojepcqopm" , name:"NADA Create"}}/>
+                     <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", words:"ecpocopmcemie", name:"Read Rubixx"}}/> 
+                     <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", words:"kleccmimpoecomeic", name:"Clown Chat"}}/>
+                     <Port port={{img:Cat2, link:"https://www.davitoservices.com", words:"ojqecojojepcqopm" , name:"Davito Immigration"}}/> 
+                      <Port port={{img:todoPic, link:"https://dashboard.heroku.com/apps/champs-todo", words:"ecpocopmcemie", name:"Todo App"}}/>
                     </div>     
                 </section>
 
