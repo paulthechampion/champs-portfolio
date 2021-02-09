@@ -135,7 +135,7 @@ export default function Main() {
                      <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", words:"ecpocopmcemie", name:"Read Rubixx"}}/> 
                      <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", words:"kleccmimpoecomeic", name:"Clown Chat"}}/>
                      <Port port={{img:Cat2, link:"https://www.davitoservices.com", words:"ojqecojojepcqopm" , name:"Davito Immigration"}}/> 
-                      <Port port={{img:todoPic, link:"https://dashboard.heroku.com/apps/champs-todo", words:"ecpocopmcemie", name:"Todo App"}}/>
+                      <Port port={{img:todoPic, link:"https://champs-todo.herokuapp.com", words:"ecpocopmcemie", name:"Todo App"}}/>
                     </div>     
                 </section>
 
