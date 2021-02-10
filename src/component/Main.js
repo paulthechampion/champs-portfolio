@@ -23,7 +23,7 @@ import Cat2 from "./img/immigration.jpg"
 import keer from "./img/handshake.jpg"
 import todoPic from "./img/todo.png"
 import ruixPic from "./img/books.jpg"
-
+import nadaPic from "./img/nada-title.png"
 
 const myPic =picA
 const myPic1=Ani
@@ -131,7 +131,7 @@ export default function Main() {
                      </p>
                     <div className="projectss">
                       <Port port={{img: keer , link:"https://www.kreer.ng/", words:"necijepwopckcinepq", name:"Keer NG"}}    />
-                      <Port port={{img:Cat2, link:"https://nada-create.herokuapp.com/", words:"ojqecojojepcqopm" , name:"NADA Create"}}/>
+                      <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", words:"ojqecojojepcqopm" , name:"NADA Create"}}/>
                      <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", words:"ecpocopmcemie", name:"Read Rubixx"}}/> 
                      <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", words:"kleccmimpoecomeic", name:"Clown Chat"}}/>
                      <Port port={{img:Cat2, link:"https://www.davitoservices.com", words:"ojqecojojepcqopm" , name:"Davito Immigration"}}/> 
