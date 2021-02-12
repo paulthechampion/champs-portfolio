@@ -1,5 +1,6 @@
 import React from 'react'
 import PhoneMenu from './PhoneMenu'
+import medal from "./img/pdc-medal-no.png"
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -18,7 +19,7 @@ export default function Header() {
 
         <div className="headerDiv" id="home">
             <div className="logo">
-           
+           <img src={medal} alt="Medal thing" height="75px"/>
           </div>
                     <a href="#aboutId" className="ahead">ABOUT </a>
                     <a href="#skillsId" className="ahead">SKILLS</a>
@@ -32,6 +33,7 @@ export default function Header() {
 
         <div className="SheaderDiv" id="SheaderDivID">
         <div className="logoS">
+        <img src={medal} alt="Medal thing" height="75px"/>
           </div>
             <a href="#aboutId" className="aheadS">ABOUT </a>
             <a href="#skillsId" className="aheadS">SKILLS</a>

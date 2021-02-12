@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import MenuIcon from "./img/menuIcon.png"
+import medal from "./img/pdc-medal-background.png"
 export default function PhoneMenu() {
     const [showMenu, setShowMenu]= useState(false)
     let navClasses = "phoneMenu"
@@ -19,7 +20,10 @@ export default function PhoneMenu() {
             
             <nav className={navClasses} id="phoneMenuId">
                 <div className="subPM">
-                    <div className="phoneLdiv firstNav"> <a href="" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>HOME</a></div>
+                    <div className="phoneLdiv firstNav">
+                      <img src={medal} alt="Medal thing" height="75px"/>
+                     </div>
+                    <div className="phoneLdiv"> <a href="" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>HOME</a></div>
                     <div className="phoneLdiv"> <a href="#aboutId" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>ABOUT </a></div>
                     <div className="phoneLdiv"> <a href="#skillsId" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>SKILLS</a></div>
                     <div className="phoneLdiv"> <a href="#portfID" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>PORTFOLIO</a></div>
