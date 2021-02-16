@@ -49,7 +49,7 @@ export default function Main() {
    
     return (
         <main className="mainSturv">
-                <div className="title">
+                <div className="title" >
                 <h1 className="myName">PAUL ENWEREM</h1>
                 <p className="full">FULL-STACK DEVELOPER</p>
                 <a className="buttonClass" href="#contactID">CONTACT</a>
@@ -130,12 +130,19 @@ export default function Main() {
                     make any of them better please ensure to give me some pointers, Thank You! 
                      </p>
                     <div className="projectss">
-                      <Port port={{img: keer , link:"https://www.kreer.ng/", words:"necijepwopckcinepq", name:"Keer NG"}}    />
-                      <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", words:"ojqecojojepcqopm" , name:"NADA Create"}}/>
-                     <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", words:"ecpocopmcemie", name:"Read Rubixx"}}/> 
-                     <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", words:"kleccmimpoecomeic", name:"Clown Chat"}}/>
-                     <Port port={{img:Cat2, link:"https://www.davitoservices.com", words:"ojqecojojepcqopm" , name:"Davito Immigration"}}/> 
-                      <Port port={{img:todoPic, link:"https://champs-todo.herokuapp.com", words:"ecpocopmcemie", name:"Todo App"}}/>
+                      <Port port={{img: keer , link:"https://www.kreer.ng/", 
+                      words:"Keer Ng is a Company based in Nigeria that offers Business Development services", 
+                      name:"Keer NG"}}    />
+                      <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", 
+                      words:"Nada Create is an E-commerce company that sells sport wears, especially that of soccer" , name:"NADA Create"}}/>
+                     <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", 
+                     words:"Rubixx is an online book library", name:"Read Rubixx"}}/> 
+                     <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", 
+                     words:"A comical messaging app", name:"Clown Chat"}}/>
+                     <Port port={{img:Cat2, link:"https://www.davitoservices.com", 
+                     words:"A Canadian Immigration company" , name:"Davito Immigration"}}/> 
+                      <Port port={{img:todoPic, link:"https://champs-todo.herokuapp.com",
+                       words:"A Todo app, saves Todo tasks and arranges them in a tabular format", name:"Todo App"}}/>
                     </div>     
                 </section>
 
