@@ -196,7 +196,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;
 .chatIcons{width: 1.5em;height: 1.5em; margin: 1em;}
 .iconLink{text-decoration: none;color: black;}
 .phoneLink{text-align: right;}
-.portwords{padding: 1em;word-break:break-all;}
+.portwords{padding: 1em;word-break:keep-all;}
 .logo-link{outline: none; text-decoration: none;color: none;}
 
 @keyframes openMenu{
