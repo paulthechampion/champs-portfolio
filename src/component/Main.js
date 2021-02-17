@@ -124,14 +124,14 @@ export default function Main() {
                 <section className="projectSec" id="portfID">
                     <h3 className="sHead">PORTFOLIO</h3>
                     <p className="portWrite">I have been blessed with
-                    the opportunity to work with a few Businesses and with their
-                    permission I have listed them below. Also Listed below are a couple 
-                    of my personal Projects, Please if you have any feedback on how I can
+                    the opportunity to work with a few businesses and with their
+                    permission I have listed them below. Also listed below are a couple 
+                    of my personal projects, if you have any feedback on how I can
                     make any of them better please ensure to give me some pointers, Thank You! 
                      </p>
                     <div className="projectss">
                       <Port port={{img: keer , link:"https://www.kreer.ng/", 
-                      words:"Keer Ng is a Company based in Nigeria that offers Business Development services", 
+                      words:"Keer Ng is a company based in Nigeria that offers business development services", 
                       name:"Keer NG"}}    />
                       <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", 
                       words:"Nada Create is an E-commerce company that sells sport wears, especially that of soccer" , name:"NADA Create"}}/>
