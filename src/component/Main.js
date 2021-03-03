@@ -134,15 +134,15 @@ export default function Main() {
                       words:"Keer Ng is a company based in Nigeria that offers business development services", 
                       name:"Keer NG"}}    />
                       <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", 
-                      words:"Nada Create is an E-commerce company that sells sport wears, especially that of soccer" , name:"NADA Create"}}/>
+                      words:"Nada Create is a Full-stack E-commerce company that sells sport wears, especially that of soccer" , name:"NADA Create"}}/>
                      <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", 
-                     words:"Rubixx is an online book library", name:"Read Rubixx"}}/> 
+                     words:"Rubixx is a Full-stack online book library, it saves authors and their books. Also enables users to read books.", name:"Read Rubixx"}}/> 
                      <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", 
                      words:"A comical messaging app", name:"Clown Chat"}}/>
                      <Port port={{img:Cat2, link:"https://www.davitoservices.com", 
                      words:"A Canadian Immigration company" , name:"Davito Immigration"}}/> 
                       <Port port={{img:todoPic, link:"https://champs-todo.herokuapp.com",
-                       words:"A Todo app, saves Todo tasks and arranges them in a tabular format", name:"Todo App"}}/>
+                       words:"A Full-stack Todo app, saves Todo tasks and arranges them in a tabular format", name:"Todo App"}}/>
                     </div>     
                 </section>
 
