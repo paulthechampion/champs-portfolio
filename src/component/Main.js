@@ -130,11 +130,12 @@ export default function Main() {
                     make any of them better please ensure to give me some pointers, Thank You! 
                      </p>
                     <div className="projectss">
-                      <Port port={{img: keer , link:"https://www.kreer.ng/", 
-                      words:"Keer Ng is a company based in Nigeria that offers business development services", 
-                      name:"Keer NG"}}    />
+                     
                       <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", 
                       words:"Nada Create is a Full-stack E-commerce app that sells sport wears, especially that of soccer" , name:"NADA Create"}}/>
+                       <Port port={{img: keer , link:"https://www.kreer.ng/", 
+                      words:"Keer Ng is a company based in Nigeria that offers business development services", 
+                      name:"Keer NG"}}    />
                      <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", 
                      words:"Rubixx is a Full-stack online book library, it saves authors and their books. Also enables users to read books.", name:"Read Rubixx"}}/> 
                      <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", 
