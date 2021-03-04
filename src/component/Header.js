@@ -24,7 +24,6 @@ export default function Header() {
                     <a href="#aboutId" className="ahead">ABOUT </a>
                     <a href="#skillsId" className="ahead">SKILLS</a>
                     <a href="#portfID" className="ahead">PORTFOLIO</a>
-                    <a href="[[" className="ahead">BLOG</a>
                     <a href="#contactID" className="ahead">CONTACT</a>
             
 
@@ -38,7 +37,6 @@ export default function Header() {
             <a href="#aboutId" className="aheadS">ABOUT </a>
             <a href="#skillsId" className="aheadS">SKILLS</a>
             <a href="#portfID" className="aheadS">PORTFOLIO</a>
-            <a href="[[" className="aheadS">BLOG</a>
             <a href="#contactID" className="aheadS">CONTACT</a>
         </div>
 

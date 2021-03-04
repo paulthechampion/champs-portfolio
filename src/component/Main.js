@@ -66,7 +66,7 @@ export default function Main() {
                         <h3 className="sHead">ABOUT</h3>
                         <p className="begEnd">Greetings<br/></p>
                         My name is Paul Enwerem. I am a full-stack developer primarily experienced in Javascript, 
-                        as well as some experience with PHP. 
+                        as well as some experience with PHP, based in Toronto, Canada. 
                         I am passionate about my work and innovative in my thinking with regards to 
                         creating user friendly websites and web applicatons, using clean and understandable code.
                          I am always seeking challenges and driven to expand my work portfolio.

@@ -27,7 +27,6 @@ export default function PhoneMenu() {
                     <div className="phoneLdiv"> <a href="#aboutId" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>ABOUT </a></div>
                     <div className="phoneLdiv"> <a href="#skillsId" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>SKILLS</a></div>
                     <div className="phoneLdiv"> <a href="#portfID" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>PORTFOLIO</a></div>
-                    <div className="phoneLdiv" > <a href="[[" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>BLOG</a></div>
                     <div className="phoneLdiv"> <a href="#contactID" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>CONTACT</a></div>
                 </div>
             </nav>
