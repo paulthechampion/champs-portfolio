@@ -24,6 +24,7 @@ import keer from "./img/handshake.jpg"
 import todoPic from "./img/todo.png"
 import ruixPic from "./img/books.jpg"
 import nadaPic from "./img/nada-title.png"
+import surveyPic from "./img/survey.jpg"
 
 const myPic =picA
 const myPic1=Ani
@@ -131,19 +132,23 @@ export default function Main() {
                      </p>
                     <div className="projectss">
                      
-                      <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", 
-                      words:"Nada Create is a Full-stack E-commerce app that sells sport wears, especially that of soccer" , name:"NADA Create"}}/>
-                       <Port port={{img: keer , link:"https://www.kreer.ng/", 
-                      words:"Keer Ng is a company based in Nigeria that offers business development services", 
-                      name:"Keer NG"}}    />
-                     <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", 
-                     words:"Rubixx is a Full-stack online book library, it saves authors and their books. Also enables users to read books.", name:"Read Rubixx"}}/> 
-                     <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", 
-                     words:"A comical messaging app", name:"Clown Chat"}}/>
-                     <Port port={{img:Cat2, link:"https://www.davitoservices.com", 
-                     words:"A Canadian Immigration company" , name:"Davito Immigration"}}/> 
-                      <Port port={{img:todoPic, link:"https://champs-todo.herokuapp.com",
-                       words:"A Full-stack Todo app, saves Todo tasks and arranges them in a tabular format", name:"Todo App"}}/>
+                        <Port port={{img:nadaPic, link:"https://nada-create.herokuapp.com/", github:"https://github.com/paulthechampion/nada-create",
+                        words:"Nada Create is an ongiong Ecommerce company which sells sportwears, especially that of soccer. This Application is being created using Node js, Express, Ejs for the view engine, Mongodb, Paystack for the Payment integration system and many more" ,
+                        name:"NADA Create"}}/>
+                        <Port port={{img: surveyPic , link:"https://email-dev-list.herokuapp.com", github:"https://github.com/paulthechampion/email-list",
+                        words:"Emaily is a survey dispatch service, it enables the users to send surveys to a series of emails and receive feedback. This app is still in the test phase, it was created using Mongodb, Express Js, React Js, Redux, Redux Forms, Stripe for payment integration, Node js and many more", 
+                        name:"Emaily"}}/>
+                        <Port port={{img: keer , link:"https://www.kreer.ng/", github:"",
+                        words:"Keer Ng is a company based in Nigeria that offers business development services", 
+                        name:"Keer NG"}}    />
+                        <Port port={{img:ruixPic, link:"https://rubixx.herokuapp.com/", github:"https://github.com/paulthechampion/rubix",
+                        words:"Rubixx is a Full-stack online book library, it saves authors and their books. Also enables users to read books. This as created using the MERN stack as well as PDF.js library to read the books", name:"Read Rubixx"}}/> 
+                        <Port port={{img:myPic1 , link:"https://clownchat.herokuapp.com/", github:"https://github.com/paulthechampion/ClownChat",
+                        words:"A comical messaging app, created using Express, Node js, Ejs view engine and Socket.io", name:"Clown Chat"}}/>
+                        <Port port={{img:Cat2, link:"https://www.davitoservices.com", github:"https://github.com/paulthechampion/Davito-services",
+                        words:"A Canadian Immigration company" , name:"Davito Immigration"}}/> 
+                        <Port port={{img:todoPic, link:"https://champs-todo.herokuapp.com",github:"https://github.com/paulthechampion/todoApp",
+                        words:"A Full-stack Todo app, saves Todo tasks and arranges them in a tabular format", name:"Todo App"}}/>
                     </div>     
                 </section>
 

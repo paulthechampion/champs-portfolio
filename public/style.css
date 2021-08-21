@@ -156,7 +156,23 @@ body:after{
 
 .portName{background-color: rgb(40, 29, 104) ;color:rgb(185, 114, 7) ;
     text-align: center;padding: 5px;position: relative;bottom:50%; width: 98%;}
-.viewButton{position: absolute;top: 70%;left: 34%;}
+/* .viewButton{position: absolute;top: 70%;left: 34%;} */
+.portLink-div{
+    display: flex;flex-wrap: wrap;position: absolute;top: 70%;left: 20%;
+}
+.gitLink-div{
+    margin-right: 1em;
+}
+
+.gitButton{
+    background-color: rgb(94, 93, 93);
+}
+
+.gitButton:hover{
+    color: rgb(94, 93, 93);
+    background-color: white;
+}
+
 .phoneLogo{height: 6em;width:6em;}
 .MenuBotton{position:fixed;width:1.7em; height:1.7em;right:5%;top:5%;z-index: 4;}
 .MenuBotton{cursor: pointer;}
