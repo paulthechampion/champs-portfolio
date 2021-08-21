@@ -136,7 +136,7 @@ export default function Main() {
                         words:"Nada Create is an ongiong Ecommerce company which sells sportwears, especially that of soccer. This Application is being created using Node js, Express, Ejs for the view engine, Mongodb, Paystack for the Payment integration system and many more" ,
                         name:"NADA Create"}}/>
                         <Port port={{img: surveyPic , link:"https://email-dev-list.herokuapp.com", github:"https://github.com/paulthechampion/email-list",
-                        words:"Emaily is a survey dispatch service, it enables the users to send surveys to a series of emails and receive feedback. This app is still in the test phase, it was created using Mongodb, Express Js, React Js, Redux, Redux Forms, Stripe for payment integration, Node js and many more", 
+                        words:"Emaily is a survey dispatch service, it enables the users to send surveys to a series of emails and receive feedback. This app is still in the test phase, it was created using Mongodb, Express Js, React Js, Redux, Redux Forms, Stripe for payment integration, SendGrid,Node js and many more", 
                         name:"Emaily"}}/>
                         <Port port={{img: keer , link:"https://www.kreer.ng/", github:"",
                         words:"Keer Ng is a company based in Nigeria that offers business development services", 
