@@ -92,6 +92,8 @@ export default function Main() {
             setProjects({name:projects.name, img: projects.img, link: projects.link, github: projects.github, words:projects.words })
             setActiveProject(projects.name)
         }
+
+        window.location.href = "#inner"
         
     }
 
@@ -106,6 +108,8 @@ export default function Main() {
             card.classList.toggle("card_inner-flip")
             setCardFlipped(true)
         }
+
+        window.location.href = "#inner"
     }
     function activeClass(event) {
         if(activeH2) {
@@ -122,6 +126,7 @@ export default function Main() {
         }
         return
     }
+
 
     function toggleDarkLight() {
         const toggleDiv = document.getElementById("toggle-dark-light")
