@@ -21,12 +21,12 @@ export default function PhoneMenu() {
             <nav className={navClasses} id="phoneMenuId">
                 <div className="subPM">
                     <div className="phoneLdiv firstNav">
-                    <a href="/#home" class="logo-link"> <img src={medal} alt="Medal thing" height="75px"/></a>
+                    <a href="/#home" className="logo-link"> <img src={medal} alt="Medal thing" height="75px"/></a>
                      </div>
                     <div className="phoneLdiv"> <a href="" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>HOME</a></div>
                     <div className="phoneLdiv"> <a href="#aboutId" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>ABOUT </a></div>
                     <div className="phoneLdiv"> <a href="#skillsId" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>SKILLS</a></div>
-                    <div className="phoneLdiv"> <a href="#portfID" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>PORTFOLIO</a></div>
+                    <div className="phoneLdiv"> <a href="#portfID" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>PROJECTS</a></div>
                     <div className="phoneLdiv"> <a href="#contactID" className="phoneL"  onClick={()=>setShowMenu(!showMenu)}>CONTACT</a></div>
                 </div>
             </nav>
