@@ -305,7 +305,7 @@ export default function Main() {
                 </div>
                 <article className="articleSec" id="skillsId">
                     <div className="skills">
-                        <h3 className="sHead lightWhite fade-in">SKILLS</h3>
+                        <h3 className="sHead lightWhite fade-in from-left">SKILLS</h3>
                         <div className='flex skills-mini-div'>
                             {isDesktopOrLaptop ?
                             <>
@@ -376,7 +376,7 @@ export default function Main() {
                     </div>
 
                     <section className="projectSec" id="portfID">
-                        <h3 className="sHead projectsH3 lightWhite fade-in">PROJECTs</h3>
+                        <h3 className="sHead projectsH3 lightWhite fade-in from-right">PROJECTs</h3>
                         <div className='flex project-mini-div'>
                         {isDesktopOrLaptop ? 
                             <>
