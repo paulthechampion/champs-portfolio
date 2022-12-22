@@ -619,8 +619,8 @@ body:after{
 }
 
 .fixScroll{width:100%; height:10000%;position: fixed; background-size: cover;background-repeat: no-repeat;
-    top:0%;z-index:5;background-color: transparent;
-   transition: all 1s ease-out;
+    top:-30%;background-color: transparent;
+   transition: all 1s ease-out;pointer-events: none;
    }
 
 
@@ -637,9 +637,10 @@ body:after{
     position: relative;top:.2em; right:1em}
     .aheadS:hover{color:rgb(185, 114, 7);
     }    
-.headerDiv{text-align: right;margin-top: 1.4em;margin-right: 1em; display: none; z-index: 5;}
+.headerDiv{text-align: right;margin-top: 1.4em;margin-right: 1em; display: none; z-index: 2;}
 header{
-    z-index: 5;
+    z-index: 3;
+    position: relative;
 }
 .SheaderDiv{text-align: right;margin-right: 1em;
     position: fixed;top:-100px; width:100%; transition:top 0.3s;padding:15px; z-index: 2;height: 2em;display: none; background-color: rgb(65, 65, 65); opacity: .5;}
@@ -764,7 +765,7 @@ header{
 }
 
 .phoneLogo{height: 6em;width:6em;}
-.MenuBotton{position:fixed;width:1.7em; height:1.7em;right:5%;top:5%;z-index: 4;}
+.MenuBotton{position:fixed;width:1.7em; height:1.7em;right:5%;top:5%;z-index: 7;}
 .MenuBotton{cursor: pointer;}
 .contactSec{position: relative;bottom:4.3em;}
 .contactFlex{display: flex;}
