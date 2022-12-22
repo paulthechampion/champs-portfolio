@@ -770,7 +770,7 @@ label{font-family:'Muli', sans-serif;}
 .contForm{text-align: left;margin-left: 13%;}
 .Dlabel{font-style: inherit;}
 .phoneMenu{width:100%; height:1000%;
-     background-image: url("phone-background.png");position: fixed; background-size: cover;
+     background-image: url("phone-background.png");position: fixed; background-size: cover;background-repeat: no-repeat;
      top:0%;z-index:2;transform: translateX(-100%);
     transition: all 1s ease-out;
     }
