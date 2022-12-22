@@ -18,9 +18,9 @@ window.addEventListener("load", function(){
   var bodyS = document.body.style
   bodyS.overflowX ="hidden"
   const appearOptions = {
-      root: document.body,
+      root:null,
       threshold:0,
-      rootMargin:"0px 0px -200px 0px"
+      rootMargin:"0px 0px -150px 0px"
   }       
 
   const faders = document.querySelectorAll(".fade-in")

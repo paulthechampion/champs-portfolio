@@ -427,7 +427,7 @@ export default function Main() {
                                 <div className='slide-in from-left fade-in'>
                                     <Port port={{img:projects.img, link:projects.link, github:projects.github,
                                     words:projects.words,
-                                    name:projects.name}} refs={ref}/>
+                                    name:projects.name}} refs={ref} toggleCard = {toggleCardFlip}/>
                                 </div>
 
                             </>
