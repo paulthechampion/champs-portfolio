@@ -603,6 +603,18 @@ body:after{
     .astro {
         top:18em;
     }
+
+    .short-about > div:first-child { 
+        list-style: 230px;
+    }
+
+    .sHead {
+        bottom:.5em;
+    }
+
+    .contact-mini-div {
+        margin-top: 30px;
+    }
     
 }
 
