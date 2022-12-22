@@ -115,6 +115,17 @@ body:after{
     bottom:97px;
 }
 
+@supports (not (-moz-appearance: none)) {
+    
+    .forWork {
+        bottom:125px;
+    }
+    .short-about > div:first-child { 
+        line-height: 200px;
+    }
+    
+}
+
 .available > br {
     display: block;
     margin: -.2em 0;
@@ -832,6 +843,25 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;
 .endP{text-align: right;}
 
 @media(max-width:1155px) {
+    #root {
+        position: relative;
+        overflow-x: hidden;
+    }
+    .half-dark-moon {
+        margin: auto;
+        text-align: center;
+        width: 300px;
+        height: 150px;
+        display: block;
+        position: relative;
+        left: 0em;
+    }
+    .main-with-background {
+        width: 100%;
+        background-image:url("phone-background.png"); 
+        background-size: cover;
+    
+    }
     .short-about > div:last-child {
         font-size: 30px;
         line-height: 30px;
@@ -902,6 +932,19 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;
     .downMoon {
         width: 90%;
     }
+
+    @supports (not (-moz-appearance: none)) {
+        .available {
+            bottom: 110px;
+        }
+        .forWork {
+            bottom:125px;
+        }
+        .short-about > div:first-child { 
+            line-height: 160px;
+        }
+        
+    }
 }
 
 @media only screen and (max-width:1155px ) and (min-width: 850px) {
@@ -939,7 +982,9 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;
         left: 0em;
     }
     .main-with-background {
+        width: 100%;
         background-image:url("phone-background.png"); 
+        background-size: cover;
     
     }
 
@@ -1180,6 +1225,19 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;
     }
     footer {
         margin-top: 2em;
+    }
+
+    @supports (not (-moz-appearance: none)) {
+        .available {
+            bottom: 60px;
+        }
+        .forWork {
+            bottom:74px;
+        }
+        .short-about > div:first-child { 
+            line-height: 100px;
+        }
+        
     }
     
 
