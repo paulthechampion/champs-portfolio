@@ -9,7 +9,7 @@ export default class Portfolio extends React.Component {
     render() {
     
       return (
-        <div className="card" >
+        <div className="card" onClick={()=>{this.props.toggleCard()}}>
             <div className="card_inner" id="inner" ref={this.props.refs}>
                 <div className="card_face card_face-front">   
                     <img src={this.props.port.img} alt="project" className="portClass"/>

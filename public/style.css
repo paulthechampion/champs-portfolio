@@ -76,7 +76,7 @@ body:after{
 
 .main-with-background {
     margin-top: -3em;
-    max-height: 100%;
+    height: 128em;
     background-image:url("moon-background.png"); 
     background-repeat: no-repeat;
     background-size:cover;
