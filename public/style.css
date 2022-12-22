@@ -70,7 +70,8 @@ body:after{
     background-image:url("moon-background.png"); 
     background-repeat: no-repeat;
     background-size:cover;
-    transition:  1s,
+    transition:  1s;
+    overflow: hidden;
 }
 
 .date-div{
@@ -105,14 +106,14 @@ body:after{
     position: relative;
     left: 1.42em;
     margin-left: 3px;
-    bottom:100px;
+    bottom:60px;
 }
 
 .forWork {
     position: relative;
     left: 1.42em;
     margin-left: 3px;
-    bottom:97px;
+    bottom:55px;
 }
 
 @supports (not (-moz-appearance: none)) {
