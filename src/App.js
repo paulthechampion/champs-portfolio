@@ -25,6 +25,7 @@ window.addEventListener("load", function(){
 
   const faders = document.querySelectorAll(".fade-in")
   const sliders = document.querySelectorAll(".slide-in")
+  const astroFloat = document.querySelectorAll(".forAstro")
   const appearOnScroll = new IntersectionObserver
   (function(
       entries,
@@ -49,6 +50,10 @@ window.addEventListener("load", function(){
   sliders.forEach(slider=>{
       appearOnScroll.observe(slider)
   })
+
+  astroFloat.forEach(slider=>{
+    appearOnScroll.observe(slider)
+})
 
 });
 

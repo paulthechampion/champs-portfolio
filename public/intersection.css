@@ -20,6 +20,24 @@
     transition: transform 600ms ease-in;
 }
 
+.forAstro{
+    transform: translateX(50px);
+    transition: transform 600ms ease-in;
+}
+
+.forAstro2{
+    transition: transform 600ms ease-in;
+    transform: translateY(-20%);
+}
+
+.forAstro.appear{
+    transform: translateX(0);
+}
+
+.forAstro2.appear {
+    transform: translateY(0);
+}
+
 .from-left.appear, .from-right.appear {
     transform: translateX(0%);
 }
