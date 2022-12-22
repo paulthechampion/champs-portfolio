@@ -69,7 +69,6 @@ body:after{
   }
   .main-with-background ::-webkit-scrollbar {
     display: none;
-    -webkit-appearance: none;
     width: 0;
     height: 0;
 }
@@ -82,7 +81,6 @@ body:after{
     background-repeat: no-repeat;
     background-size:cover;
     transition:  1s;
-    overflow: hidden;
 }
 
 .date-div{
@@ -116,15 +114,15 @@ body:after{
 .available {
     position: relative;
     left: 1.42em;
-    margin-left: 3px;
-    bottom:60px;
+    margin-left: 20px;
+    bottom:100px;
 }
 
 .forWork {
     position: relative;
     left: 1.42em;
-    margin-left: 3px;
-    bottom:55px;
+    margin-left: 20px;
+    bottom:96px;
 }
 
 @supports (not (-moz-appearance: none)) {
