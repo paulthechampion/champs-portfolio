@@ -1,6 +1,6 @@
 .fade-in {
     opacity: 0;
-    transition: opacity 500ms ease-in;
+    transition: opacity 1s ease-in;
 }
 
 .fade-in.appear {
@@ -17,16 +17,16 @@
 
 .from-left,
 .from-right{
-    transition: transform 600ms ease-in;
+    transition: transform 1s ease-in;
 }
 
 .forAstro{
     transform: translateX(50px);
-    transition: transform 600ms ease-in;
+    transition: transform 1s ease-in;
 }
 
 .forAstro2{
-    transition: transform 600ms ease-in;
+    transition: transform 1s ease-in;
     transform: translateY(-20%);
 }
 
