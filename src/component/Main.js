@@ -266,7 +266,7 @@ export default function Main() {
 
                     <div className='flex short-about lightWhite'>
                         <div className='lightWhite slide-in from-left fade-in'>
-                            FULL STACK <br/>
+                            SOFTWARE <br/>
                             DEVELOPER
                         </div>
                         <div>

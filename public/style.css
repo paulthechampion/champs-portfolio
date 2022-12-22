@@ -76,7 +76,7 @@ body:after{
 
 .main-with-background {
     margin-top: -3em;
-    height: 128em;
+    max-height: 100%;
     background-image:url("moon-background.png"); 
     background-repeat: no-repeat;
     background-size:cover;
@@ -1071,7 +1071,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     }
 
     .typewriter-div {
-        height: 5em;
+        height: 6em;
     }
     
 
@@ -1165,6 +1165,10 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         width: 100%;
     }
 
+    .skills > h3 {
+        padding-top:100px ;
+    }
+
     .using-laptop {
         margin: auto;
         left: 0;
@@ -1251,7 +1255,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         height: 13em;
     }
     .astro {
-        top:100%;
+        top:170px;
         height: 100px;
     }
     @-webkit-keyframes slideLeft {
@@ -1267,10 +1271,6 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         50% {margin-left:10px;}
         100% { margin-left: -3px; }
     }
-    footer {
-        margin-top: 2em;
-    }
-
     @supports (not (-moz-appearance: none)) {
         .available {
             bottom: 60px;
