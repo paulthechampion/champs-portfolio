@@ -7,6 +7,7 @@ import Footer from './component/Footer'
 function App() {
   return (
     <div>
+      <div className='fixScroll'></div>
       <Header/>
       <Main />
       <Footer/>
