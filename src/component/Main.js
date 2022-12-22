@@ -257,8 +257,9 @@ export default function Main() {
                         
                         <span className='available lightWhite slide-in from-right fade-in'>
                             available <br/>
-                            <span className='forWork lightWhite slide-in from-right fade-in'>for work</span>
                         </span>
+                        <span className='forWork lightWhite slide-in from-right fade-in'>for work</span>
+                       
                         </span>
                         
                     </div>

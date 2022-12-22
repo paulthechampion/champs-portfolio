@@ -104,12 +104,15 @@ body:after{
 .available {
     position: relative;
     left: 1.42em;
-    bottom:1.4em;
     margin-left: 3px;
+    bottom:100px;
 }
 
 .forWork {
+    position: relative;
+    left: 1.42em;
     margin-left: 3px;
+    bottom:97px;
 }
 
 .available > br {
