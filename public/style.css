@@ -125,11 +125,6 @@ body:after{
     bottom:96px;
 }
 
-@media not all and (min-resolution: 0.001dpcm) {
-    .rest-of-day > hr {
-        bottom:1.7em;
-    }
-    }
 
 @supports (not (-moz-appearance: none)) {
     
@@ -589,6 +584,26 @@ body:after{
     display: block;
     text-align: left;
     width: 80%;
+}
+
+
+@media not all and (min-resolution: 0.001dpcm) {
+    .rest-of-day > hr {
+        bottom:1.7em;
+    }
+
+    .available {
+        bottom:150px;
+    }
+
+    .forWork {
+        bottom:167px;
+    }
+
+    .astro {
+        top:18em;
+    }
+    
 }
 
 
