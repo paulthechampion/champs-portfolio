@@ -605,7 +605,7 @@ body:after{
     }
 
     .short-about > div:first-child { 
-        list-style: 230px;
+        line-height: 230px;
     }
 
     .sHead {
@@ -613,7 +613,7 @@ body:after{
     }
 
     .contact-mini-div {
-        margin-top: 30px;
+        margin-top: 10px;
     }
     
 }
@@ -786,8 +786,8 @@ label{font-family:'Muli', sans-serif;}
 main {min-height: 100%;margin-bottom: -100px; width: 100%;}
 main:after {content: "";display: block;height: 20px;}
 .subsub{margin-bottom: 1em;}
-footer{height:10em; position: relative;bottom: 0%;left:0%;
-    width:100%;background-position: center;font-family:'Muli';text-align: center;color:white; margin: 0; padding: 0;}
+footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
+    width:100%;background-position: center;font-family:'Muli';text-align: center;color:white; margin: 0;margin-top: 5em; padding: 0;}
 .footerWrite{position: relative;top:50%}
 .chatWrite{text-align: left; width:70%; border-left: 2px solid rgb(185, 114, 7); padding-left: 2em;}
 .chatDiv{text-align: center;font-family:'Muli', sans-serif;margin-left:10%; margin-top: 10%; display: none; }
