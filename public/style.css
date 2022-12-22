@@ -63,6 +63,15 @@ body:after{
    -o-background-size: cover;
    background-size: cover;
 }
+.main-with-background {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+  .main-with-background ::-webkit-scrollbar {
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }
+
 
 .main-with-background {
     margin-top: -3em;
