@@ -1071,7 +1071,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     }
 
     .typewriter-div {
-        height: 7em;
+        height: 4em;
     }
     
 
@@ -1301,7 +1301,13 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         margin-bottom: 10px;
     }
     .typewriter-div {
-        height: 5em;
+        height: 6em;
+    }
+}
+
+@media(max-width :300px){ 
+    .typewriter-div {
+        height: 9em;
     }
 }
 
