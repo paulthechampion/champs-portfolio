@@ -125,6 +125,12 @@ body:after{
     bottom:96px;
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+    .rest-of-day > hr {
+        bottom:1.7em;
+    }
+    }
+
 @supports (not (-moz-appearance: none)) {
     
     .forWork {
