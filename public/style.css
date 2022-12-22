@@ -618,6 +618,12 @@ body:after{
     
 }
 
+.fixScroll{width:100%; height:1000%;position: fixed; background-size: cover;background-repeat: no-repeat;
+    top:0%;z-index:2;background-color: transparent;
+   transition: all 1s ease-out;
+   }
+
+
 
 .logoPic{width: 7em; height: 5em;}
 .SlogoPic{width: 7em; height: 5em;}

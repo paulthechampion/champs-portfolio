@@ -37,7 +37,7 @@ export default function Header() {
     
     return (
         <header>
-          
+        <div className='fixScroll'></div>
 
         <div className="headerDiv" id="home">
             <div className="logo">
