@@ -92,8 +92,10 @@ export default function Main() {
             setProjects({name:projects.name, img: projects.img, link: projects.link, github: projects.github, words:projects.words })
             setActiveProject(projects.name)
         }
-
-        window.location.href = "#inner"
+        if(isDesktopOrLaptop) {
+            window.location.href = "#portfID"
+        }
+        window.location.href = "#project6"
         
     }
 
@@ -109,7 +111,10 @@ export default function Main() {
             setCardFlipped(true)
         }
 
-        window.location.href = "#inner"
+        if(isDesktopOrLaptop) {
+            window.location.href = "#portfID"
+        }
+        window.location.href = "#project6"
     }
     function activeClass(event) {
         if(activeH2) {
@@ -409,9 +414,9 @@ export default function Main() {
                                 <div className='project-list-div slide-in from-right fade-in'>
                                     <hr className='lightBrown'/>
                                     <ul id='lightBrownList'>
-                                        {projectsData.map(projects =>{
+                                        {projectsData.map((projects,index) =>{
                                         return (
-                                            <li key={projects.name} className="lightBrownBoder">
+                                            <li key={`project${index+1}`} className="lightBrownBoder" id={`project${index+1}`}>
                                                 {projects.name === activeProject ? <span id="fakeBulletPoint" className={`fakeBulletPoint ${darkMode ? "lightWhite": "lightBrown"}`}>*</span>:null}
                                                 <h2 className={`${projects.name === activeProject ? "active lightBrown projectH2" : darkMode ? "lightWhite projectH2 hoverWhite": "lightWhite projectH2 hoverBrown"}`} onClick={(event)=>{toggleProjects(event,projects)}}>{projects.name}</h2>
                                                 {
