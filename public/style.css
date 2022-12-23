@@ -23,6 +23,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-y: initial !important;
   }
 
 
@@ -586,6 +587,10 @@ body:after{
     width: 80%;
 }
 
+.appDiv {
+    overflow: hidden;
+    padding-bottom: 350px;
+}
 
 @media not all and (min-resolution: 0.001dpcm) {
     .rest-of-day > hr {
@@ -617,12 +622,12 @@ body:after{
     }
     
 }
-
+/* 
 .fixScroll{width:100%; height:10000%;position: fixed; background-size: cover;background-repeat: no-repeat;
     top:-30%;background-color: transparent;
    transition: all 1s ease-out;pointer-events: none;
    z-index: 6;
-   }
+   } */
 
 
 
@@ -898,6 +903,12 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         position: relative;
         overflow-x: hidden;
     }
+
+    .appDiv {
+        padding-bottom: 175px;
+    }
+
+    
     .half-dark-moon {
         margin: auto;
         text-align: center;
@@ -977,7 +988,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     }
 
     footer {
-        margin-top: 7em;
+        margin-top: 15em;
     }
 
     .downMoon {
@@ -1019,6 +1030,9 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
 
 
 @media(max-width :602px){ 
+    .appDiv {
+        padding-bottom: 150px;
+    }
     #root {
         position: relative;
         overflow-x: hidden;
@@ -1037,7 +1051,6 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         width: 100%;
         background-image:url("phone-background.png"); 
         background-size: cover;
-    
     }
 
     
