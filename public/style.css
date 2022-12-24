@@ -115,14 +115,14 @@ body:after{
 .available {
     position: relative;
     left: 1.42em;
-    margin-left: 20px;
+    margin-left: 50px;
     bottom:100px;
 }
 
 .forWork {
     position: relative;
     left: 1.42em;
-    margin-left: 20px;
+    margin-left: 80px;
     bottom:96px;
 }
 
@@ -1062,7 +1062,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         font-size: 40px;
     }
     .available {
-        margin-left:3px;
+        margin-left:8px;
     }
 
     .day {

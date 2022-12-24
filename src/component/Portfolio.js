@@ -21,7 +21,7 @@ export default class Portfolio extends React.Component {
                     <div className="portLink-div">
                     <div className="gitLink-div">
                     <a href={this.props.port.github} target="_blank"className="buttonClass gitButton">
-                        GitHub <i className="fab fa-github"></i>
+                        GitHub <i className="fab -github"></i>
                     </a>
                     </div>
                     <div>
