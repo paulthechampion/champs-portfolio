@@ -1062,9 +1062,11 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         font-size: 40px;
     }
     .available {
-        margin-left:8px;
+        margin-left:25px;
     }
-
+    .forWork {
+        margin-left: 40px;
+    }
     .day {
         font-size: 150px;
     }
