@@ -73,7 +73,6 @@ export default function Main() {
     const day = new Intl.DateTimeFormat("en-GB", {
                     day:"numeric"
                 }).format(date)
-    
     const dateNth = nth(day)
 
     function toggleProjects (event,projects) {
@@ -252,7 +251,7 @@ export default function Main() {
                 <div className='main-with-background' id="main-with-background"> 
                     <img src={darkMoon} className="half-dark-moon" /> 
                     <div className='date-div lightWhite slide-in from-right fade-in'> 
-                        <span className='day lightWhite slide-in from-left fade-in'>{day}</span>
+                        <span className='day lightWhite slide-in from-left fade-in'>{day < 10 ? `0${day}`: day}</span>
                         <span className='rest-of-day lightWhite slide-in from-right fade-in'>{dateNth} {new Intl.DateTimeFormat("en-GB", {
                             year: "numeric",
                             month: "short",
