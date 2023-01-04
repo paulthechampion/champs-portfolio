@@ -34,7 +34,7 @@ html {
    -ms-background-image:url("webtest.jpg");
    -o-background-image:url("webtest.jpg"); */
 
-   background-color: #19181E;
+  
    
    background-image: url("./starsBack.gif");
    background-repeat: no-repeat;
@@ -906,6 +906,11 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         overflow-x: hidden;
     }
 
+    body {
+        background-image: url("./starsBack.gif");
+        background-repeat: repeat;
+        background-size: contain;
+    }
     .appDiv {
         padding-bottom: 175px;
     }
