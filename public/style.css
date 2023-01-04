@@ -36,6 +36,7 @@ html {
 
    background-color: #19181E;
    
+   background-image: url("./starsBack.gif");
    background-repeat: no-repeat;
   
    
@@ -351,7 +352,8 @@ body:after{
 
 .articleSec {
     margin-top: -29em;
-    background-color: #19181E;
+    background-image: url("./starsBack.gif");
+    background-attachment: fixed;
 }
 
 .sHead { 
@@ -635,7 +637,7 @@ body:after{
 .SlogoPic{width: 7em; height: 5em;}
 .logoS{float: left;position: relative;bottom:20px;margin-left: 20px;}
 .logo{float: left;position: relative;bottom:20px;margin-left: 20px;}
-.contactSec{background-color: #19181E;
+.contactSec{
     margin-top: 10em; margin-bottom: -17em;}
 .ahead{text-decoration: none; margin: 30px; color: rgb(255, 255, 255);font-size: 1.2em;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;z-index: 5;}
 .ahead:hover{color: rgb(185, 114, 7);}
@@ -675,7 +677,7 @@ header{
     position: relative;bottom:1.17em; height:30em;}
 
 
-.projectSec{background-color: #19181E; position: relative;bottom:3em;}
+.projectSec{position: relative;bottom:3em;}
 .skillDiv{margin-bottom: 5%;margin-left: 15%;}
 .forWrap{display:flex; flex-wrap: wrap;}
 
