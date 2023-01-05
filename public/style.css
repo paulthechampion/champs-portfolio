@@ -354,6 +354,7 @@ body:after{
     margin-top: -29em;
     background-image: url("./starsBack.gif");
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .sHead { 
@@ -427,6 +428,16 @@ body:after{
     bottom: 13em;
     height: 500px;
     margin: auto;
+}
+
+.gif-test {
+    height: 450px;
+    padding-top: 2.5em;
+    padding-bottom: 35px;
+    border-radius: 80%;
+    width: 550px;
+    overflow: hidden;
+    margin-bottom: 15em;
 }
 
 .relax-fish {
@@ -815,6 +826,10 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
 .portwords{padding: 1em;word-break:keep-all;}
 .logo-link{outline: none; text-decoration: none;color: none;}
 
+.projectP {
+    padding: 10px;
+}
+
 @keyframes openMenu{
     0%{
         border-radius: 100%;
@@ -1061,7 +1076,9 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         background-size: cover;
     }
 
-    
+    .articleSec {
+        background-size: contain;
+    }
     .date-div{
         margin-top: -7em
     }
@@ -1208,6 +1225,15 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         height: 300px;
     }
 
+    .gif-test {
+        margin: auto;
+        height: 190px;
+        width: 390px;
+        padding-top: 70px;
+        border-radius: 80%;
+        margin-bottom: 250px;
+    }
+
     .sun-moon {
         position: relative;
         right: 10%;
@@ -1231,7 +1257,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     
 
     .projectsH3 {
-        margin-top: 9em;
+        margin-top: 11.5em;
     }
     .relax-fish {
         width: 100%;
@@ -1248,7 +1274,6 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         text-align: center;
         margin: auto;
         
-        margin-left: 10%;
         height: 20em;
         width: 100%;
     }

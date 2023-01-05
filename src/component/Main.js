@@ -336,15 +336,19 @@ export default function Main() {
                                 </div>
 
                                 <div className='slide-in from-right fade-in'>
-                                    <img src={sun} alt="Sun or Moon" className='sun-moon' id="sunMoon"></img>
-                                    <img src={usingLaptop} alt="using laptop" className='using-laptop'></img>
+                                    <div className='gif-test'>
+                                        <img src={sun} alt="Sun or Moon" className='sun-moon' id="sunMoon"></img>
+                                        <img src={usingLaptop} alt="using laptop" className='using-laptop'></img>
+                                    </div>
                                 </div>
                             </>
                             :
                                 <>
                                     <div className='slide-in from-left fade-in'>
-                                        <img src={sun} alt="Sun or Moon" className='sun-moon' id="sunMoon"></img>
-                                        <img src={usingLaptop} alt="using laptop" className='using-laptop'></img>
+                                        <div className='gif-test'>
+                                            <img src={sun} alt="Sun or Moon" className='sun-moon' id="sunMoon"></img>
+                                            <img src={usingLaptop} alt="using laptop" className='using-laptop'></img>
+                                        </div>
                                     </div>
                                     <div className="table-container lightWhite slide-in from-right fade-in">
                                         <table>
@@ -372,7 +376,7 @@ export default function Main() {
                             }
                             
                         </div>
-                        <p className='lightWhite fade-in'>
+                        <p className='lightWhite fade-in projectP'>
                             I can deliver quality finished projects with html and css in a reasonable timeframe.I can deliver quality finished projects with html and css in a reasonable timeframe.I can deliver quality finished projects with html and css in a reasonable timeframe.fp3irihf0winfwnrifnw-9gnw-9ngI can deliver quality finished projects with html and css in a reasonable timeframe.j467jr67j67j6r7j67j76j7jI can deliver quality finished projects with html and css in a reasonable timeframe.wrfrrgethetwh56j57kj67j67I can deliver quality finished projects with html and css in a reasonable timeframe.j67j76j5e7je56jtyrhtgrhthjfhmgj,,,,,,,,,,,,,,g,jgj,,yukuI can deliver quality finished projects with html and css in a reasonable timeframe.,iy,f,yi,iy,yu,r6u,tu
                         </p>
 
