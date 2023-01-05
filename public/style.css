@@ -690,6 +690,7 @@ header{
     height: 100%;
     perspective: 500px;
     border-radius: 10px;
+    margin: auto;
 }
 
 .card_inner{
@@ -1348,4 +1349,11 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         padding-bottom: 3em;
     }
 
+    .skills {
+        margin-top: 250px;
+    }
+
+    .card{
+        width:80%;
+    }
  }
