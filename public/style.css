@@ -1112,7 +1112,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     }
     
     .short-about > div:last-child{
-        text-align: right;
+        text-align: center;
         padding-left: 35%;
         line-height: 30px;
         width: 60%;
