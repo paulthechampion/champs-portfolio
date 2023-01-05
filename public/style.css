@@ -1206,6 +1206,10 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         margin-top: -9em;
     }
 
+    .card {
+        margin-top: 30px;
+    }
+
     .skills-mini-div > div:first-child {
         margin: auto;
         text-align: center;
