@@ -1343,6 +1343,14 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     }
 }
 
+@media(min-width :1084px){ 
+    
+.short-about > div:first-child {
+    padding-left: 30px;
+}
+
+}
+
 @media(min-width :1384px){
     .project-list-div {
         padding-top: 3em;
