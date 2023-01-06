@@ -150,7 +150,11 @@ export default function Main() {
         const phoneMenuMainDiv = document.getElementById("phoneMenuId")
 
         if(darkMode) {
-            background.style.backgroundImage = "url(./moon-background.png)";
+            if(isDesktopOrLaptop) {
+                background.style.backgroundImage = "url(./moon-background.png)";
+            }else {
+                background.style.backgroundImage = "url(./phone-background.png)";
+            }
             roundDiv.classList.remove("toggle-slide-left");
             toggleDiv.style.backgroundColor = "white";
             logoLink.innerHTML = `<img src=${logoWhite} alt="Medal thing" height="50px"/>`;
