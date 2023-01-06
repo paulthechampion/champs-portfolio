@@ -1117,6 +1117,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         line-height: 30px;
         width: 65%;
         font-size: 30px;
+        padding-right: 10px;
     }
 
     .typewriter-div {
