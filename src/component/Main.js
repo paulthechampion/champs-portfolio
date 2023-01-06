@@ -57,7 +57,7 @@ export default function Main() {
     const ref = React.useRef(null)
 
     const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 603px)'
+        query: '(min-width: 700px)'
       })
 
     const nth = function(d) {

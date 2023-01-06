@@ -968,13 +968,13 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         text-align: center;
     }
     .projectsH3 {
-        margin-top: 8em;
+        margin-top: 9em;
     } 
 
     .skills-mini-div {
         margin: auto;
         text-align: center;
-        margin-bottom: -9em;
+        margin-bottom: -17em;
     }
     .skillDiv > div:last-child {
         margin: auto;
@@ -1034,13 +1034,20 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
 
 @media only screen and (max-width:1155px ) and (min-width: 850px) {
     .projectsH3 {
-        margin-top: 5.5em;
+        margin-top: 9em;
     } 
 }
 
+@media only screen and (max-width:1155px ) and (min-width: 913px) {
+    .projectsH3 {
+        margin-top: 7em;
+    } 
+}
+
+
 @media only screen and (max-width:1155px ) and (min-width: 1085px) {
     .projectsH3 {
-        margin-top: -1em;
+        margin-top: 0em;
     } 
 }
 
@@ -1052,7 +1059,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
 
 
 
-@media(max-width :602px){ 
+@media(max-width :700px){ 
     .appDiv {
         padding-bottom: 150px;
     }
@@ -1205,6 +1212,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     }
     .skills-mini-div {
         margin-top: -9em;
+        margin-bottom: -9em;
     }
 
     .card {
@@ -1262,7 +1270,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     
 
     .projectsH3 {
-        margin-top: 1150px;
+        margin-top: 11em;
     }
     .relax-fish {
         width: 100%;
