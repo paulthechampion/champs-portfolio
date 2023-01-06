@@ -150,54 +150,54 @@ export default function Main() {
         const phoneMenuMainDiv = document.getElementById("phoneMenuId")
 
         if(darkMode) {
-            background.style.backgroundImage = "url(./moon-background.png)"
-            roundDiv.classList.remove("toggle-slide-left")
+            background.style.backgroundImage = "url(./moon-background.png)";
+            roundDiv.classList.remove("toggle-slide-left");
             toggleDiv.style.backgroundColor = "white";
-            logoLink.innerHTML = `<img src=${logoWhite} alt="Medal thing" height="50px"/>`
-            slogoLink.innerHTML = `<img src=${logoWhite} alt="Medal thing" height="50px"/>` 
-            sunMoon.src = sun
+            logoLink.innerHTML = `<img src=${logoWhite} alt="Medal thing" height="50px"/>`;
+            slogoLink.innerHTML = `<img src=${logoWhite} alt="Medal thing" height="50px"/>` ;
+            sunMoon.src = sun;
 
             if (isDesktopOrLaptop) {
                 mainDiv.style.border = "5px solid #46879D";
                 roundDiv.style.border = "5px solid #44739C";
-                roundDiv.innerHTML = `<img src=${halfSun} alt="dark mood moon" className='dark-mood-img' id="dark-mood-img" style= "margin: auto;text-align: center;margin-top: 8.5px;display: block;height: 25px;"/>` 
+                roundDiv.innerHTML = `<img src=${halfSun} alt="dark mood moon" className='dark-mood-img' id="dark-mood-img" style= "margin: auto;text-align: center;margin-top: 8.5px;display: block;height: 25px;"/>`;
             } else {
                 mainDiv.style.border = "2px solid #46879D";
                 roundDiv.style.border = "2px solid #44739C";
-                roundDiv.innerHTML = `<img src=${halfSun} alt="dark mood moon" className='dark-mood-img' id="dark-mood-img" style= "margin: auto;text-align: center;margin-top: 4px;display: block;height: 18px;"/>` 
-                phoneMenuMainDiv.style.backgroundImage = "url(phone-background.png)"
+                roundDiv.innerHTML = `<img src=${halfSun} alt="dark mood moon" className='dark-mood-img' id="dark-mood-img" style= "margin: auto;text-align: center;margin-top: 4px;display: block;height: 18px;"/>`;
+                phoneMenuMainDiv.style.backgroundImage = "url(phone-background.png)";
             }
             for(var i = 0; i < lightWhite.length; i++) {
-                lightWhite[i].style.color = "white"
+                lightWhite[i].style.color = "white";
                 if(lightWhite[i].localName === "h2" || lightWhite[i].classList.contains("ahead") || lightWhite[i].classList.contains("aheadS") || lightWhite[i].classList.contains("contactH3")){
                    
-                    lightWhite[i].classList.remove("hoverWhite")
-                    lightWhite[i].classList.add("hoverBrown")
+                    lightWhite[i].classList.remove("hoverWhite");
+                    lightWhite[i].classList.add("hoverBrown");
                 }
             }
             for(var i = 0; i < lightBrown.length; i++) {
-                lightBrown[i].style.color = "#D07D01"
+                lightBrown[i].style.color = "#D07D01";
                 if(lightBrown[i].localName === "a") {
-                    lightBrown[i].classList.remove("hoverBrown")
-                    lightBrown[i].classList.add("hoverWhite")
+                    lightBrown[i].classList.remove("hoverBrown");
+                    lightBrown[i].classList.add("hoverWhite");
                 }
             }
             for(var i = 0; i < lightBrownBoder.length; i++) {
-                lightBrownBoder[i].style.borderTop = "1px solid #D07D01"
+                lightBrownBoder[i].style.borderTop = "1px solid #D07D01";
             }
-            list.lastChild.style.borderBottom = "1px solid #D07D01"
-            contactBtn.style.border = "2px solid white"
-            contactBtn.style.color = "white"
-            fakeBulletPoint.classList.add("white")
+            list.lastChild.style.borderBottom = "1px solid #D07D01";
+            contactBtn.style.border = "2px solid white";
+            contactBtn.style.color = "white";
+            fakeBulletPoint.classList.add("white");
         }
         else{
             
             toggleDiv.style.backgroundColor = "black";
-            background.style.backgroundImage = "none"
-            roundDiv.classList.add("toggle-slide-left")
-            logoLink.innerHTML = `<img src=${logoBrown} alt="Medal thing" height="50px"/>`
-            slogoLink.innerHTML = `<img src=${logoBrown} alt="Medal thing" height="50px"/>` 
-            sunMoon.src = miniMoon
+            background.style.backgroundImage = "none";
+            roundDiv.classList.add("toggle-slide-left");
+            logoLink.innerHTML = `<img src=${logoBrown} alt="Medal thing" height="50px"/>`;
+            slogoLink.innerHTML = `<img src=${logoBrown} alt="Medal thing" height="50px"/>`;
+            sunMoon.src = miniMoon;
             if (isDesktopOrLaptop) {
                 mainDiv.style.border = "5px solid #5A7A42";
                 roundDiv.style.border = "5px solid #5A7A42";
@@ -206,7 +206,7 @@ export default function Main() {
                 mainDiv.style.border = "2px solid #5A7A42";
                 roundDiv.style.border = "2px solid #5A7A42";
                 roundDiv.innerHTML = `<img src=${halfMoon} alt="dark mood moon" className='dark-mood-img' id="dark-mood-img" style= "margin: auto;text-align: center;margin-top: 7px;display: block;height: 11px;"/>`  
-                phoneMenuMainDiv.style.backgroundImage = "none"
+                phoneMenuMainDiv.style.backgroundImage = "none";
             }
             for(var i = 0; i < lightWhite.length; i++) {
                 lightWhite[i].style.color = "#D07D01"
@@ -335,7 +335,7 @@ export default function Main() {
                                     </table>
                                 </div>
 
-                                <div className='slide-in from-right fade-in'>
+                                <div className='slide-in fade-in'>
                                     <div className='gif-test'>
                                         <img src={sun} alt="Sun or Moon" className='sun-moon' id="sunMoon"></img>
                                         <img src={usingLaptop} alt="using laptop" className='using-laptop'></img>
@@ -344,7 +344,7 @@ export default function Main() {
                             </>
                             :
                                 <>
-                                    <div className='slide-in from-left fade-in'>
+                                    <div className='slide-in fade-in'>
                                         <div className='gif-test'>
                                             <img src={sun} alt="Sun or Moon" className='sun-moon' id="sunMoon"></img>
                                             <img src={usingLaptop} alt="using laptop" className='using-laptop'></img>
