@@ -378,14 +378,14 @@ export default function Main() {
                                         <table>
                                             <tbody className='lightWhite'>
                                                 <tr>
-                                                    <td className='lightWhite'>Html 5 and CSS 3 </td>
+                                                    <td className='lightWhite'>Html 5 & CSS 3 </td>
                                                     <td className='lightWhite'>JavaScript </td>
                                                     <td className='lightWhite'>JQuery</td>
                                                 </tr>
                                                 <tr>
                                                     <td className='lightWhite'>Node JS </td>
                                                     <td className='lightWhite'>MongoDB</td>
-                                                    <td className='lightWhite'>React JS and Vue JS</td>
+                                                    <td className='lightWhite'>React & Vue JS</td>
                                                 </tr>
                                                 <tr>
                                                     <td className='lightWhite'>Express JS</td>
