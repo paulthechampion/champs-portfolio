@@ -320,21 +320,41 @@ export default function Main() {
                                 <div className="table-container lightWhite slide-in from-left fade-in">
                                     <table>
                                         <tbody className='lightWhite'>
-                                            <tr>
-                                            <td className='lightWhite'>1</td>
-                                            <td className='lightWhite'>Test</td>
-                                            <td className='lightWhite'>Demo</td>
-                                            </tr>
-                                            <tr>
-                                            <td className='lightWhite'>2</td>
-                                            <td className='lightWhite'>Test</td>
-                                            <td className='lightWhite'>Demo</td>
-                                            </tr>
-                                            <tr>
-                                            <td className='lightWhite'>3</td>
-                                            <td className='lightWhite'>Test</td>
-                                            <td className='lightWhite'>Demo</td>
-                                            </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>Html 5 & CSS 3 </td>
+                                                    <td className='lightWhite'>JavaScript </td>
+                                                    <td className='lightWhite'>JQuery</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>Node JS </td>
+                                                    <td className='lightWhite'>MongoDB</td>
+                                                    <td className='lightWhite'>React JS & Vue JS</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>Express JS</td>
+                                                    <td className='lightWhite'> Redux</td>
+                                                    <td className='lightWhite'> Jenkins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>REST API </td>
+                                                    <td className='lightWhite'>GIT </td>
+                                                    <td className='lightWhite'>C#</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>Agile Framework</td>
+                                                    <td className='lightWhite'>Heroku </td>
+                                                    <td className='lightWhite'>Json Web Tokens (JWT)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>Unit Testing (JEST)</td>
+                                                    <td className='lightWhite'>GitHub  </td>
+                                                    <td className='lightWhite'>Amazon web service (AWS) </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>WCAG 2.0 Accessibility</td>
+                                                    <td className='lightWhite'>Bitbucket  </td>
+                                                    <td className='lightWhite'>Agile framework (JIRA)</td>
+                                                </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -358,19 +378,39 @@ export default function Main() {
                                         <table>
                                             <tbody className='lightWhite'>
                                                 <tr>
-                                                <td className='lightWhite'>1</td>
-                                                <td className='lightWhite'>Test</td>
-                                                <td className='lightWhite'>Demo</td>
+                                                    <td className='lightWhite'>Html 5 and CSS 3 </td>
+                                                    <td className='lightWhite'>JavaScript </td>
+                                                    <td className='lightWhite'>JQuery</td>
                                                 </tr>
                                                 <tr>
-                                                <td className='lightWhite'>2</td>
-                                                <td className='lightWhite'>Test</td>
-                                                <td className='lightWhite'>Demo</td>
+                                                    <td className='lightWhite'>Node JS </td>
+                                                    <td className='lightWhite'>MongoDB</td>
+                                                    <td className='lightWhite'>React JS and Vue JS</td>
                                                 </tr>
                                                 <tr>
-                                                <td className='lightWhite'>3</td>
-                                                <td className='lightWhite'>Test</td>
-                                                <td className='lightWhite'>Demo</td>
+                                                    <td className='lightWhite'>Express JS</td>
+                                                    <td className='lightWhite'> Redux</td>
+                                                    <td className='lightWhite'> Jenkins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>REST API </td>
+                                                    <td className='lightWhite'>GIT </td>
+                                                    <td className='lightWhite'>C#</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>Agile Framework</td>
+                                                    <td className='lightWhite'>Heroku </td>
+                                                    <td className='lightWhite'>Json Web Tokens (JWT)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>Unit Testing (JEST)</td>
+                                                    <td className='lightWhite'>GitHub  </td>
+                                                    <td className='lightWhite'>Amazon web service (AWS) </td>
+                                                </tr>
+                                                <tr>
+                                                    <td className='lightWhite'>WCAG 2.0 Accessibility</td>
+                                                    <td className='lightWhite'>Bitbucket  </td>
+                                                    <td className='lightWhite'>Agile framework (JIRA)</td>
                                                 </tr>
                                             </tbody>
                                         </table>
