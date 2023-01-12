@@ -1248,18 +1248,25 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
 
     .using-laptop {
         margin: auto;
-        left: 0;
         margin-top: 5em;
-        height: 300px;
+        height: 390px;
+    max-width: 100%;  
+  object-fit: contain;
+  object-position: center;
+  text-align: center;
     }
 
     .gif-test {
         margin: auto;
-        height: 190px;
-        width: 390px;
+        height: 290px;
+        width: 490px;
         padding-top: 70px;
         border-radius: 80%;
         margin-bottom: 250px;
+    max-width: 100%;  
+  object-fit: contain;
+  object-position: center;
+  text-align: center;
     }
 
     .sun-moon {
@@ -1297,7 +1304,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     
 
     .projectsH3 {
-        margin-top: 11.5em;
+        margin-top: 13.3em;
     }
     .relax-fish {
         width: 100%;
@@ -1389,7 +1396,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         margin-top: 12em;
     }
     .using-laptop {
-        width: 340px;
+        width: 390px;
     }
     .project-list-div > ul > li {
         font-size: 10px;
@@ -1430,3 +1437,17 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         width:85%;
     }
  }
+
+
+
+ @media(max-width: 368px) {
+    .projectsH3 {
+        margin-top: 14em;
+    }
+ }
+
+ @media only screen and (max-width: 699px) and (min-width: 490px) {
+    .projectsH3 {
+        margin-top: 12em;
+    }
+}
