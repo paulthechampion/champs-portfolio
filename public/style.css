@@ -772,15 +772,25 @@ header{
 .portName{background-color: rgb(40, 29, 104) ;color:rgb(185, 114, 7) ;
     text-align: center;padding: 5px;position: relative;bottom:50%; width: 98%;}
 /* .viewButton{position: absolute;top: 70%;left: 34%;} */
-.portLink-div{
-    display: flex;flex-wrap: wrap;position: absolute;top: 70%;left: 0;
+
+.main-portLink-div {
+    position: relative;
+}
+
+.portLink-main-div {
+    position: absolute;top: 70%;left: 0;
     right: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
-.gitLink-div{
-    margin-right: 1em;
+
+.portLink-div{
+    display: flex;flex-wrap: wrap;
+}
+
+.portLink-div > div {
+    margin: auto;
 }
 
 .gitButton{
