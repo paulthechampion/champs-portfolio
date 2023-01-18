@@ -773,7 +773,11 @@ header{
     text-align: center;padding: 5px;position: relative;bottom:50%; width: 98%;}
 /* .viewButton{position: absolute;top: 70%;left: 34%;} */
 .portLink-div{
-    display: flex;flex-wrap: wrap;position: absolute;top: 70%;left: 20%;
+    display: flex;flex-wrap: wrap;position: absolute;top: 70%;left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
 }
 .gitLink-div{
     margin-right: 1em;

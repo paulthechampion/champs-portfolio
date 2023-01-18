@@ -19,14 +19,17 @@ export default class Portfolio extends React.Component {
                 <div className="card_face card_face-back" id="wordAndLink">
                     <p className="portwords">{this.props.port.words}</p>
                     <div className="portLink-div">
-                    <div className="gitLink-div">
-                    <a href={this.props.port.github} target="_blank"className="buttonClass gitButton">
-                        GitHub <i className="fab -github"></i>
-                    </a>
-                    </div>
-                    <div>
-                    <a href={this.props.port.link} target="_blank"className="buttonClass viewButton">View Live</a>
-                    </div>
+                      {this.props.port.github ? 
+                        <div className="gitLink-div">
+                        <a href={this.props.port.github} target="_blank"className="buttonClass gitButton">
+                            GitHub <i className="fab -github"></i>
+                        </a>
+                      </div>
+                      : null}
+                      
+                      <div>
+                        <a href={this.props.port.link} target="_blank"className="buttonClass viewButton">View Live</a>
+                      </div>
                     </div>
                 </div>
             </div>
