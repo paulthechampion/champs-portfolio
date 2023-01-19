@@ -342,7 +342,7 @@ export default function Main() {
                                                     <td className='lightWhite'>C#</td>
                                                 </tr>
                                                 <tr>
-                                                    <td className='lightWhite'>Agile Framework</td>
+                                                    <td className='lightWhite'>Visual Studio</td>
                                                     <td className='lightWhite'>Heroku </td>
                                                     <td className='lightWhite'>Json Web Tokens (JWT)</td>
                                                 </tr>
@@ -391,7 +391,7 @@ export default function Main() {
                                                 <tr>
                                                     <td className='lightWhite'>Express JS</td>
                                                     <td className='lightWhite'> Redux</td>
-                                                    <td className='lightWhite'> Jenkins</td>
+                                                    <td className='lightWhite'> Visual Studio</td>
                                                 </tr>
                                                 <tr>
                                                     <td className='lightWhite'>REST API </td>
