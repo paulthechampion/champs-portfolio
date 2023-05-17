@@ -297,12 +297,12 @@ export default function Main() {
 
                     <div className="flex main-about lightWhite" id="aboutId">
                         <div className='lightWhite slide-in from-left fade-in'>
-                            I am a full-stack developer working in Toronto, Canada, with a background largely 
-                            in Javascript and some knowledge of C#. I have a strong sense of commitment to my job 
-                            and a creative way of thinking when it comes to developing user-friendly web applications and 
-                            websites that have clear and intelligible code. I am determined to diversify my line of work and 
-                            am constantly looking for challenges. I look forward to working with you and your organization in the 
-                            future. Please feel free to contact me, I will respond to you as soon as I can. I appreciate you visiting my page.
+                            Passionate and dedicated software developer with a focus on crafting exceptional 
+                            websites and web applications for discerning clients. With a strong commitment to 
+                            delivering cutting-edge solutions, I blend technical expertise with a creative 
+                            mindset to build captivating online experiences. Armed with a drive for excellence 
+                            and a meticulous approach, I thrive on transforming client visions into reality. 
+                            Let's collaborate to bring your digital aspirations to life.
                         </div>
                         <div className='slide-in from-right fade-in'>
                             <div className='js-tag'>
@@ -422,7 +422,10 @@ export default function Main() {
                             
                         </div>
                         <p className='lightWhite fade-in projectP'>
-                            As a full stack developer, I am a true jack-of-all-trades when it comes to coding. I have a deep understanding of both front-end and back-end technologies, and I am always eager to tackle new challenges. My experience in HTML, CSS, JavaScript, and various programming languages, allows me to bring a website or an application to life from start to finish. I am a problem solver at heart, and I enjoy finding creative solutions to complex issues. I am always learning and growing, and I am dedicated to staying up-to-date with the latest technologies and trends in the industry. With my skills and passion, I am confident in my ability to create beautiful and functional websites and applications for any project. 
+                        With my extensive skill set and unwavering dedication to excellence, I am well-equipped to build the best websites and web applications tailored specifically to your needs. I possess a deep understanding of the latest web technologies and industry best practices, allowing me to create modern, intuitive, and user-friendly interfaces.
+                            I approach every project with a meticulous attention to detail, ensuring that each element is meticulously designed and flawlessly executed. By leveraging my expertise in frontend and backend development, I guarantee seamless functionality and optimal performance.
+                            Furthermore, I prioritize effective communication and collaboration throughout the development process. I will work closely with you to understand your goals, requirements, and preferences, ensuring that the final product aligns perfectly with your vision.
+                            Whether you need a dynamic e-commerce platform, a responsive portfolio website, or a robust web application, I have the expertise to bring your ideas to life. By combining creativity, technical prowess, and a client-centric approach, I am committed to delivering the best websites and web applications that exceed your expectations.
                         </p>
 
                         <img src={earth} alt="Earth Spin" className='relax-fish fade-in'/>
