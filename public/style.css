@@ -1108,7 +1108,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
         left: 0em;
     }
     .main-with-background {
-        height: 130em;
+        height: 120em;
         width: 100%;
         background-image:url("phone-background.png"); 
         background-size: cover;
