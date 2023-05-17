@@ -454,7 +454,7 @@ body:after{
 .projectsH3 {
     text-align: right;
     margin-right: .2em;
-    margin-top: -.05em;
+    margin-top: .5em;
     margin-bottom: .32em;
 }
 
@@ -611,7 +611,7 @@ body:after{
 
 @media not all and (min-resolution: 0.001dpcm) {
     .rest-of-day > hr {
-        bottom:1.7em;
+        bottom:2.7em;
     }
 
     .available {
@@ -1321,7 +1321,7 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     
 
     .projectsH3 {
-        margin-top: 12.8em;
+        margin-top: 14.8em;
     }
     .relax-fish {
         width: 100%;
