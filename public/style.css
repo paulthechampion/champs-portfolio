@@ -1124,6 +1124,10 @@ footer{height:10em; position: relative;bottom: 0%;left:0%;z-index: -1;
     .rest-of-day {
         font-size: 40px;
     }
+
+    .rest-of-day > hr {
+        bottom: 1.9em;
+    }
     .available {
         margin-left:25px;
     }
