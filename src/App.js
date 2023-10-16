@@ -312,10 +312,10 @@ function App() {
         const deltaY = endY - startY;
 
         if (deltaY > 0) {
-            document.getElementsByTagName('body').style.backgroundColor('red')
+            document.getElementById('swipeArea').style.backgroundColor('red')
             //swipedown
         } else if (deltaY < 0) {
-            document.getElementsByTagName('body').style.backgroundColor('green')
+            document.getElementById('swipeArea').style.backgroundColor('green')
             //swipe up
         }
     });
