@@ -285,12 +285,15 @@ function App() {
                 console.log("Action", activeCard)
             }
         }
+        console.log('scrolling')
     }
   
     document.addEventListener('DOMContentLoaded', function() {
         if(!isDesktopOrLaptop) {
-            window.addEventListener('scroll', handleScroll);
-            window.addEventListener('touchmove', handleScroll);
+            document.addEventListener('wheel', handleScroll);
+            document.addEventListener("scroll", handleScroll);
+            window.addEventListener("scroll", handleScroll);
+            window.onscroll = handleScroll
         } else {
             console.log("DESKTOP VIEW")
         }
