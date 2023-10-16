@@ -288,14 +288,35 @@ function App() {
         console.log('scrolling')
     }
   
-    document.addEventListener('DOMContentLoaded', function() {
-        if(!isDesktopOrLaptop) {
-            document.addEventListener('wheel', handleScroll);
-            document.addEventListener("scroll", handleScroll);
-            window.addEventListener("scroll", handleScroll);
-            window.onscroll = handleScroll
-        } else {
-            console.log("DESKTOP VIEW")
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     if(!isDesktopOrLaptop) {
+    //         document.addEventListener('wheel', handleScroll);
+    //         document.addEventListener("scroll", handleScroll);
+    //         window.addEventListener("scroll", handleScroll);
+    //         window.onscroll = handleScroll
+    //     } else {
+    //         console.log("DESKTOP VIEW")
+    //     }
+    // });
+    let startY = 0;
+    let endY = 0;
+    const swipeArea = document.getElementById('swipeArea');
+
+    swipeArea.addEventListener('touchstart', function (e) {
+        startY = e.touches[0].clientY;
+    });
+
+    swipeArea.addEventListener('touchend', function (e) {
+        endY = e.changedTouches[0].clientY;
+
+        const deltaY = endY - startY;
+
+        if (deltaY > 0) {
+            document.getElementsByTagName('body').style.backgroundColor('red')
+            //swipedown
+        } else if (deltaY < 0) {
+            document.getElementsByTagName('body').style.backgroundColor('green')
+            //swipe up
         }
     });
 
@@ -303,6 +324,9 @@ function App() {
     return (
         <div className="App">
             <div className='phone-logo-div'></div>
+            <div id="swipeArea" style="width: 100%; height: 300px; background-color: transparent;">
+
+            </div>
             <Circle/>
             <Main/>
         </div>
