@@ -289,7 +289,7 @@ function App() {
   
     document.addEventListener('DOMContentLoaded', function() {
         if(!isDesktopOrLaptop) {
-            document.addEventListener('wheel', handleScroll);
+            window.addEventListener('scroll', handleScroll);
         } else {
             console.log("DESKTOP VIEW")
         }
