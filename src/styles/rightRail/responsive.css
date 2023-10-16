@@ -14,8 +14,7 @@
 
 @media only screen and (max-width:809px )  { 
     body {
-        overflow: scroll !important;
-        overflow-x: hidden !important;
+        overflow: hidden;
         padding: 0;
         margin: 0;
     }
@@ -27,6 +26,10 @@
         width: 100%;
     }
 
+    .blank {
+        display: block !important;
+    }
+
     .phoneNone {
         display: none;
     }
@@ -35,14 +38,29 @@
         padding-left: 0px;
         padding-right: 0px;
         display: block;
+        overflow-x: hidden;
+    }
+
+    .socials-link {
+        margin-top: 30px;
+        width: 120%;
+        align-items: center;
+        text-align: center;
+        margin-left: -25px;
+    }
+
+    .iconLink {
+        padding-right: unset;
     }
 
     .mainDiv > div:first-child {
         width: 100%;
         position: unset;
         padding-right: unset;
-        margin-top: 25%;
+        padding: 50% 0 50%; 
         padding-left: 25px;
+        margin-top: 0;
+        position: relative;
     }
     .chatIcons {
         margin-right: 14%;
@@ -50,10 +68,6 @@
 
     .main-intro > h2 {
         font-size: 38px;
-    }
-
-    .menu-main-div {
-        display: none;
     }
 
     .mainDiv > div:last-child { 
@@ -85,9 +99,18 @@
     }
 
     .about {
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
+    .about > p:first-child {
+        margin-top: 20px;
+    }
+
+    .experience {
+        margin-top: unset;
+    }
+    
     .leftPad {
         padding-left: 40px;
     }

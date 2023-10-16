@@ -64,6 +64,7 @@ export default function SkillsService() {
             <p>This a List of the Skills I posses to help fulfil your Project :</p>
 
             <DataPointList dataPoints={dataPoints} />
+            <div id='skills-blank' className='blank'>fffffffffffffffffff<br/>ssssssssssssssssss</div>
         </div>
     )
 }

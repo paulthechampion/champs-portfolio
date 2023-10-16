@@ -32,7 +32,7 @@ export default function Projects() {
     
             <div>
                 {projectsData.map((project, index) => (
-                    <div className='project-card' key={index}>
+                    <div className='project-card' key={index} id={`project${index}`}>
                         <div>
                             <img src={project.img} alt={project.name} />
                         </div>
