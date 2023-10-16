@@ -14,7 +14,8 @@
 
 @media only screen and (max-width:809px )  { 
     body {
-        overflow: hidden !important;
+        overflow: scroll !important;
+        overflow-x: hidden !important;
         padding: 0;
         margin: 0;
     }
