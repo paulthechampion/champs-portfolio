@@ -290,6 +290,7 @@ function App() {
     document.addEventListener('DOMContentLoaded', function() {
         if(!isDesktopOrLaptop) {
             window.addEventListener('scroll', handleScroll);
+            window.addEventListener('touchmove', handleScroll);
         } else {
             console.log("DESKTOP VIEW")
         }
