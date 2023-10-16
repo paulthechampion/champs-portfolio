@@ -1,0 +1,133 @@
+.mainDiv {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-left: 80px;
+    padding-right: 80px;
+    box-sizing: border-box;
+    height: 100%;
+    align-items: center;
+}
+
+.mainDiv > div:first-child {
+    width: 40%;
+    margin: auto;
+    padding-right: 80px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    position: fixed;
+}
+
+.mainDiv > div:first-child::after {
+    content: '';
+    background: url("../images/blueloadinggif.gif"); /* Replace with your background image */
+    background-size: cover;
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    right:-70px;
+    opacity: 0.2; /* Adjust opacity for image */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.mainDiv > div:last-child {
+    width: 60%;
+    position: relative;
+    left: 20%;
+    margin: auto;
+    margin-top: 35px;
+}
+
+.main-intro > h2 {
+    font-size: 48px;
+    padding-bottom: 0;
+    margin-top: -60px;
+    margin-bottom: -10px;
+}
+
+.main-intro > p {
+    font-size: 20px;
+    word-spacing: 2px;
+}
+
+.iBuild {
+    padding-right: 20px;
+    word-spacing: 3px !important;
+}
+
+.menu-main-div {
+    margin-top: 30px;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+
+.menu-flex {
+    display: flex;
+    margin-bottom: -7px;
+}
+
+.menu-line {
+    border-bottom:1.5px solid white ;
+    width: 45px;
+    position: relative;
+    bottom: 23px;
+    margin-right: 10px;
+    transition: ease-in-out .5s;
+}
+
+.menu-link[tabindex]:focus .menu-line,
+.firstMenuLink.clicked .menu-line {
+    width: 80px !important;
+}
+
+.menu-link.clicked .menu-line {
+    width: 35px !important;
+}
+
+.menu-link:hover .menu-line {
+    width: 80px;
+}
+
+.call-div {
+    font-size: 23px;
+    margin-top: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.socials-link {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.iconLink {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.chatIcons {
+    font-size: 30px;
+    margin-right:15%;
+}
+
+.call-link {
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.call-link:hover {
+    text-decoration: underline;
+}
+
+.call-link > svg {
+    position: relative;
+    top:3px;
+    left:5px;
+}

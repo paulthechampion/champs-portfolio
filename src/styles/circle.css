@@ -1,0 +1,21 @@
+.circle {
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+    filter: blur(80px); /* Apply blur effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    opacity: .4;
+    transition: background-color 2s ease-in-out; /* Apply transition to background-color */
+  }
+
+  .zoom {
+    color: #ad973e;;
+  }
+
+  

@@ -1,0 +1,266 @@
+.phone-logo-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../images/blueloadinggif.gif"); /* Replace with your background image */
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.2; /* Adjust opacity for image */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+@media only screen and (max-width:809px )  { 
+    body {
+        overflow: hidden !important;
+        padding: 0;
+        margin: 0;
+    }
+    .phone-logo-div {
+        display: block !important;
+    }
+    .mainDiv > div:first-child::after { 
+        display: none !important;
+        width: 100%;
+    }
+
+    .phoneNone {
+        display: none;
+    }
+
+    .mainDiv {
+        padding-left: 0px;
+        padding-right: 0px;
+        display: block;
+    }
+
+    .mainDiv > div:first-child {
+        width: 100%;
+        position: unset;
+        padding-right: unset;
+        margin-top: 25%;
+        padding-left: 25px;
+    }
+    .chatIcons {
+        margin-right: 14%;
+    }
+
+    .main-intro > h2 {
+        font-size: 38px;
+    }
+
+    .menu-main-div {
+        display: none;
+    }
+
+    .mainDiv > div:last-child { 
+        left: unset;
+        width: 100%;
+        max-height: none;
+    }
+
+    .right-rail {
+        padding-left: unset;
+        padding-right: unset;
+        overflow-x: hidden;
+    }
+
+    .phone-mini-div{
+        display: block !important;
+        position: relative;
+        padding: 20px; /* You can adjust the padding as needed */
+        width: 100%;
+        background: linear-gradient(92.43deg, rgba(255, 255, 255, 0.3) -24.03%, rgba(255, 255, 255, 0.205) 31.08%);
+        z-index: -1; /* Behind the content of the parent */
+        margin-left: -20px;
+    }
+
+    .phone-mini-div > h1 {
+        font-size: 18px;
+        margin: -10px;
+        padding-left: 10px;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .leftPad {
+        padding-left: 40px;
+    }
+
+    .experienceFlex {
+        display: block;
+    }
+
+    .experienceFlex > div:first-child { 
+        width: 100%;
+        padding-left: 20px;
+        padding-top: 13%;
+        font-size: 14px;
+    }
+
+    .experienceFlex > div:last-child { 
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .experienceFlex > div:last-child > p {
+        font-size: 14px;
+    }
+
+    .resume-div {
+        margin-left: 20px;
+    }
+
+    .resume-div > a {
+        padding-right: -10px;
+        padding-bottom: 3px;
+    }
+
+    .resume-div > a::after {
+        content: "";
+        display: block;
+        width: 122px;
+        border-bottom: 1px solid white; /* Customize the underline style */
+        margin-top: 3px; /* Adjust the space between text and underline */
+    }
+
+    .skillservice > p { 
+        padding-left: 20px;
+    }
+    
+    .service-p { 
+        padding-left: 20px;
+    }
+
+    .skillservice > p { 
+        padding-left: 20px;
+    }
+
+    .loading-flex {
+        display: block;
+    }
+
+    .loading-flex > div {
+        padding-left: 25px;
+        margin-top: 7px;
+        width: 100%;
+    }
+
+    .project-card { 
+        flex-direction: column-reverse;
+        padding-bottom: 25px;
+    }
+
+    .project-phone {
+        margin-bottom: 30px;
+    }
+
+    .project-card {
+        max-height: 480px;
+    }
+
+    .project-card > div:last-child { 
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .project-card > div:first-child {
+        width: 45%;
+        height: 160px;
+    }
+
+    .project-link-div {
+        position: absolute;
+        left: 45.5%;
+        top: 76%;
+    }
+
+    .project-link-div > a {
+        margin-right: 5px;
+        font-size: 15px;
+    }
+
+    .project-card > div:first-child > img {
+        height: 90%;
+    }
+
+    .contactFlex {
+        flex-direction: column-reverse;
+    }
+
+    .contact > p {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .contactFlex > div:first-child { 
+        width: 90%;
+        height: 400px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .contactFlex > div:last-child {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+@media only screen and (min-width:810px) and (max-width:1024px )  { 
+    .mainDiv {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .mainDiv > div:first-child { 
+        padding-right: 0;
+    }
+
+    .main-intro > h2 {
+        font-size: 40px;
+    }
+
+    .mainDiv > div:first-child::after {
+        display: none;
+    }
+
+    .phone-logo-div {
+        display: block !important;
+        background-size: 150%;
+    }
+}
+
+@media only screen and (min-width:1400px)  { 
+    .mainDiv > div:first-child {
+        padding-bottom: 200px;
+    }
+
+    .main-intro > h2 {
+        margin-top: 170px;
+    }
+
+    .mainDiv > div:first-child::after {
+        top: 20px;
+        right:100px;
+    }
+}
+
+@media only screen and (min-width:1600px)  { 
+    .mainDiv > div:first-child::after {
+        right:0px;
+    }
+
+    .messageCont {
+        height: 12em;
+    }
+
+    .contactFlex > div:first-child {
+        width: 37%;
+        height: 400px;
+      }
+}

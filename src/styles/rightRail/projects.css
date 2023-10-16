@@ -1,0 +1,86 @@
+.projects {
+    margin-top: 50px;
+}
+
+.projects > h1 {
+    font-size: 25px;
+}
+
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding-bottom: 37px;
+    border-radius: 10px;
+    padding-right: 10px;
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in the width */
+    max-height: 380px;
+    overflow-y: auto;
+}
+
+.project-card > div:first-child {
+    width: 37%;
+    height: 200px;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.project-card > div:first-child > img {
+    width: 90%;
+    height: 100%;
+    max-height: 200px;
+    border-radius: 12px;
+    border: 2px solid white;
+    object-fit: fill; /* Stretch the image to completely fill the container */
+    position: absolute;
+    top: 20px;
+    left: 13px;
+}
+
+.project-card > div:last-child { 
+    width: 63%;
+    box-sizing: border-box;
+    padding-left: 7px;
+}
+
+.project-card > div:last-child > h2 { 
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+
+.project-card > div:last-child > p {
+    font-size: 15px;
+} 
+
+.project-card::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(103.86deg, rgba(255, 255, 255, 0.3) -17.6%, rgba(255, 255, 255, 0.1) 62.46%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3); /* Wider and softer box shadow on hover */
+  }
+
+.project-card:hover::before {
+    opacity:1;
+}
+
+
+.project-link {
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}

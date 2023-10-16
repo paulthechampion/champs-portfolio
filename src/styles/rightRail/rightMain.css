@@ -1,0 +1,231 @@
+.right-rail {
+    font-size: 16px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    overflow: scroll;
+    max-height: 100vh;
+    scroll-behavior: smooth;
+    padding-right: 10px;
+    padding-bottom: 80px;
+}
+
+.upFullstop {
+    color: #eed15e;
+    font-size: 3em;
+    padding: 2px;
+    padding-right: 5px;
+    position: relative;
+    bottom: 2px;
+}
+
+.about > h1{
+    display: none;
+}
+
+.experience {
+    margin-top: 50px;
+}
+
+.experience > h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.experienceFlex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    align-items: center;
+}
+
+.experienceFlex > div > h2 {
+    font-size: 16px;
+}
+
+.experienceFlex > div:first-child{
+    width: 25%;
+    font-size: 13px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+
+
+.experienceFlex > div:last-child{
+    width: 75%;
+    margin-top: -30px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.experienceFlex > div:last-child > p{ 
+    font-size: 13px;
+}
+.experience-btn {
+    border: none;
+    outline: none;
+    color: #009FD6;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color: #0F5666;
+    box-shadow: 0 4px 6px rgba(15, 86, 102, 0.2);
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px #000;  
+}
+
+.experienceFlex::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(103.86deg, rgba(255, 255, 255, 0.3) -17.6%, rgba(255, 255, 255, 0.1) 62.46%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3); /* Wider and softer box shadow on hover */
+  }
+
+.experienceFlex:hover::before {
+    opacity:1;
+}
+
+.resume-div {
+    margin-top: 20px;
+}
+
+.resume-div > a {
+    padding-bottom: 3px;
+}
+
+.resume-div > a:hover {
+    width: 100px;
+    border-bottom: 1px solid white; /* Customize the underline style */
+    margin-top: 5px; /* Adjust the space between text and underline */
+}
+
+.resume-link {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.contact > h1 {
+    font-size: 25px;
+}
+
+.contact > p {
+    margin-bottom: 40px;
+}
+
+
+.contactFlex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactFlex > div:first-child {
+    width: 37%;
+    height: 330px;
+}
+
+.contactFlex > div:first-child >img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+.contactFlex >div:last-child {
+    width: 63%;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+
+.inputCont {
+    border: none;
+    border: 2px solid white;
+    background-color: transparent;
+    width: 100%;
+    height: 2.5em;
+    font-size: 18px;
+    border-radius:7px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.messageCont {
+    height: 8em;
+    padding-top: 10px;
+    resize: none;
+}
+
+.send-div {
+    text-align: right;
+}
+
+.inputCont:focus {
+    border: none;
+    outline: none;
+    border: 2px solid #009FD6;
+}
+
+.subsub {
+    background-color: transparent;
+    border: 2px solid #009FD6;
+    font-size: 18px;
+    padding: 5px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+    margin-bottom: 2em;
+}
+
+.status {
+    font-size: 18px;
+    margin-right: 15px;
+    position: relative;
+    bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.fa-arrow-right {
+    padding-left: 3px;
+    font-weight: 100;
+    color: #eed15e;
+    animation: slide 1s ease-in-out infinite;
+}
+
+.fa-arrow-up {
+    padding-left: 4px;
+    font-weight: 100;
+    transform: rotate(45deg);
+    color: #eed15e;
+}
+
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
