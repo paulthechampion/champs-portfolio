@@ -21,8 +21,6 @@ function SwipeDetector() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    position:'fixed',
-    top:0,
     zIndex:1
 
   };
