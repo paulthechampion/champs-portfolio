@@ -21,19 +21,7 @@
       opacity: 1;
     }
     50% {
-      bottom: 60%;
+      bottom: 55%;
       opacity: 0;
-    }
-    51% {
-      bottom: 60%;
-      opacity: 0;
-    }
-    52% {
-      bottom: 30%;
-      opacity: 0;
-    }
-
-    90% {
-        opacity: .8;
     }
   }
