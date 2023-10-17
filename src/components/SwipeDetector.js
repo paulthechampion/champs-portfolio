@@ -200,21 +200,16 @@ function SwipeDetector() {
 
                     if (incontact) {
                         const isDivAtTop = isDivAtTopOfScreen('contact');
-                        const contact = document.getElementById('contact');
-                        const lastProject = document.getElementById(`project8`);
-
-                        // if (lastProject !== null) {
-                        //     if(isElementOnScreen(lastProject)) {
-                        //         lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        //         setActiveCard(9)
-                        //     }
-                        // }
+                        
                         if (isDivAtTop) {
+                            const lastProject = document.getElementById(`project8`);
+                            setActiveCard(8)
                             if(lastProject) {
                                 lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
                             }
                           
                         } else {
+                            const contact = document.getElementById('contact');
                             contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }
                     }
