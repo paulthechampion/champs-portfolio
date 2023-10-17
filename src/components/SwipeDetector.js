@@ -125,29 +125,6 @@ function SwipeDetector() {
             else if (eventData.dir === 'Down') {
                     setNumber(number-1)
                    
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                    
-                    const inaboutDiv = eventData.event.target.closest("#about");
-            
-                    if (inaboutDiv) {
-                        const isaboutTop = isDivAtTopOfScreen('about');
-                    
-                        if (isaboutTop) {
-                            window.scrollTo({
-                                top: 0,
-                                behavior: 'smooth'
-                            });
-                        } else {
-                            // const aboutDiv = document.getElementById('about');
-                            // if (aboutDiv) {
-                            //     const aboutDivTop = aboutDiv.getBoundingClientRect().top + window.scrollY;
-                            //     window.scrollTo({ top: aboutDivTop, behavior: 'smooth' });
-                            // }
-                        } 
-                    }
 
                 }
         },
@@ -161,6 +138,7 @@ function SwipeDetector() {
 
   return (
         <div {...handlers} style={swipeAreaStyle}>
+            Swipe No {number}
             <Main/>
         </div>
   );
