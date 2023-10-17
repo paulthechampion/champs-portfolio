@@ -261,7 +261,8 @@ function SwipeDetector() {
                         if (isaboutTop) {
                             const leftRailDiv = document.getElementById('left-rail');
                             if (leftRailDiv) {
-                                window.scrollTo({ top: leftRailDiv, behavior: 'smooth' });
+                                const leftRailDivTop = aboutDiv.getBoundingClientRect().top + window.scrollY;
+                                window.scrollTo({ top: leftRailDivTop, behavior: 'smooth' });
                             } else {
                                 console.error("Element not found. Make sure the ID is correct.");
                             }
