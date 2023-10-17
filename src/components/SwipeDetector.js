@@ -133,12 +133,12 @@ function SwipeDetector() {
 
                     const inexperience = eventData.event.target.closest("#experience");
                     if(inexperience) {
-                        const resumeDiv = isElementOnScreen('resume-div')
-                        if(resumeDiv) {
-                            const experienceDiv = document.getElementById('experience')
-                            experienceDiv.scrollIntoView({ behavior: 'smooth', block:'start' })
-                            return
-                        }
+                        // const resumeDiv = isElementOnScreen('resume-div')
+                        // if(resumeDiv) {
+                        //     const experienceDiv = document.getElementById('experience')
+                        //     experienceDiv.scrollIntoView({ behavior: 'smooth', block:'start' })
+                        //     return
+                        // }
                         const aboutDiv = document.getElementById('about');
                         aboutDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
