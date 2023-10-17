@@ -147,7 +147,7 @@ function SwipeDetector() {
 
                     const inSkillServiceDiv = eventData.event.target.closest('#skill-service')
                     if(inSkillServiceDiv) {
-                        const blank = document.getElementById('')
+                        const blank = document.getElementById('skills-blank')
                         const isBlankDiv = isElementOnScreen(blank)
 
                         if(isBlankDiv) {
