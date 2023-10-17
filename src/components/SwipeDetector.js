@@ -159,6 +159,40 @@ function SwipeDetector() {
                         const experienceDiv = document.getElementById('experience')
                         experienceDiv.scrollIntoView({ behavior:'smooth', block:'start' })
                     }
+
+                    const inProjectsDiv = eventData.event.target.closest("#projects");
+
+                    if (inProjectsDiv) {
+                        // Check if the 'projects' div is at the top of the screen
+                        const isProjectsAtTop = isDivAtTopOfScreen('projects');
+
+                        if (isProjectsAtTop) {
+                            const skillServiceDiv = document.getElementById('skill-service');
+                            if (skillServiceDiv) {
+                                // Scroll to the top of the 'skill-service' div
+                                skillServiceDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        } else {
+                            if (activeCard <= 1) {
+                                // If 'activeCard' is less than or equal to 1, scroll to 'projects' and set 'activeCard' to 1
+                                const projectsDiv = document.getElementById('projects');
+                                if (projectsDiv) {
+                                    const projectsDivTop = projectsDiv.getBoundingClientRect().top + window.scrollY;
+                                    window.scrollTo({ top: projectsDivTop, behavior: 'smooth' });
+                                }
+                                setActiveCard(1);
+                            } else {
+                                // Scroll to the previous project card
+                                const projectCard = document.getElementById(`project${activeCard - 1}`);
+                                if (projectCard) {
+                                    projectCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                } else {
+                                    console.log(`Project card with ID project${activeCard - 1} not found.`);
+                                }
+                                setActiveCard(activeCard - 1);
+                            }
+                        }
+                    }
                     
 
                 }
