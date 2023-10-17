@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import {FaGithub, FaTwitter, FaLinkedin, FaMailBulk, FaPhone} from "react-icons/fa"
+import FingerScroll from './FingerScroll';
 
 export default function LeftRail() {
     useEffect(() => {
@@ -31,6 +32,7 @@ export default function LeftRail() {
     
     return (
     <div id='left-rail'>
+        <FingerScroll/>
         <div className='main-intro'>
             <h2>Champ<span className='i'>i</span>on Paul</h2>
             <p>Software Developer at S&P Global</p>

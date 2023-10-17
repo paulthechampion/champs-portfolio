@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import Main from './Main';
-import FingerScroll from './FingerScroll';
 
 function SwipeDetector() {
     const [backgroundColor, setBackgroundColor] = useState('transparent');
@@ -240,7 +239,6 @@ function SwipeDetector() {
 
   return (
         <div {...handlers} style={swipeAreaStyle}>
-            <FingerScroll/>
             <Main/>
         </div>
   );
