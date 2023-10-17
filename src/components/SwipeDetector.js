@@ -16,7 +16,8 @@ function SwipeDetector() {
   });
 
   const swipeAreaStyle = {
-    width: '100%'
+    width: '100%',
+    overflow:'hidden'
   };
 
   return (
