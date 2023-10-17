@@ -47,7 +47,8 @@
         display: block;
         overflow-x: hidden;
         z-index: 2;
-        position: relative;
+        position: absolute;
+        top: 0;
     }
 
     .socials-link {
