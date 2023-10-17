@@ -101,6 +101,7 @@ function SwipeDetector() {
                             setActiveCard(9);
                             contact.scrollIntoView({behavior:'smooth', block:'start'})
                         } else {
+                            setActiveCard(activeCard + 1);
                             let projectCard = document.getElementById(`project${activeCard}`);
                             if (projectCard !== null) {
                                 // Scroll to the project card
@@ -109,7 +110,6 @@ function SwipeDetector() {
                                 console.log(`Project card with ID project${activeCard} not found.`);
                             }
                             
-                            setActiveCard(activeCard + 1);
                         }
                         
                     }
@@ -180,13 +180,13 @@ function SwipeDetector() {
                                 setActiveCard(1);
                             } else {
                                 // Scroll to the previous project card
+                                setActiveCard(activeCard - 1);
                                 const projectCard = document.getElementById(`project${activeCard - 1}`);
                                 if (projectCard) {
                                     projectCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                 } else {
                                     console.log(`Project card with ID project${activeCard - 1} not found.`);
                                 }
-                                setActiveCard(activeCard - 1);
                             }
                         }
                     }
