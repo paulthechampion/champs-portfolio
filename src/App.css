@@ -6,6 +6,7 @@
 @import "./styles/rightRail/projects.css";
 @import "./styles/rightRail/skillservice.css";
 @import "./styles/rightRail/responsive.css";
+@import "./styles/rightRail/finger.css";
 
 *{
   padding: none;

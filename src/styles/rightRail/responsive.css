@@ -83,6 +83,10 @@
         max-height: none;
     }
 
+    .menu-flex {
+        width: 63%;
+    }
+
     .right-rail {
         padding-left: unset;
         padding-right: unset;
