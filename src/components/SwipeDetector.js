@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import Main from './Main';
 
 function SwipeDetector() {
   const [backgroundColor, setBackgroundColor] = useState('transparent');
@@ -15,17 +16,13 @@ function SwipeDetector() {
   });
 
   const swipeAreaStyle = {
-    width: '100%',
-    height: '100vh', // Full viewport height
-    backgroundColor,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+    width: '100%'
   };
 
   return (
         <div {...handlers} style={swipeAreaStyle}>
             Swipe me up or down {number}
+            <Main/>
         </div>
   );
 }
