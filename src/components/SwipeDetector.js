@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 function SwipeDetector() {
-  const [backgroundColor, setBackgroundColor] = useState('lightgray');
-
+  const [backgroundColor, setBackgroundColor] = useState('transparent');
+  const [number, setNumber] =useState(0)
   const handlers = useSwipeable({
     onSwiped: (eventData) => {
       if (eventData.dir === 'Up') {
-        setBackgroundColor('red');
+        setNumber(number+1)
       } else if (eventData.dir === 'Down') {
-        setBackgroundColor('green');
+        setNumber(number-1)
       }
     },
   });
@@ -21,11 +21,15 @@ function SwipeDetector() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    position:'fixed',
+    top:0,
+    zIndex:1
+
   };
 
   return (
     <div {...handlers} style={swipeAreaStyle}>
-      Swipe me up or down
+      Swipe me up or down {number}
     </div>
   );
 }
