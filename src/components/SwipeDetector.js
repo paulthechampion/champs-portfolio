@@ -41,7 +41,7 @@ function SwipeDetector() {
                         // If the user is inside the #left-rail div, scroll to the top of #about plus 20px
                         const aboutDiv = document.getElementById('about');
                         const aboutDivTop = aboutDiv.getBoundingClientRect().top + window.scrollY;
-                        aboutDiv.scrollIntoView({behavior:'smooth', block:'end'})
+                        aboutDiv.scrollIntoView({behavior:'smooth', block:'start'})
                     }
                 
                     // if (notLeftRail) {
@@ -64,7 +64,6 @@ function SwipeDetector() {
 
   return (
         <div {...handlers} style={swipeAreaStyle}>
-            Swipe me up or down {number}
             <Main/>
         </div>
   );
