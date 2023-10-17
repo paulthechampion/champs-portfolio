@@ -124,7 +124,12 @@ function SwipeDetector() {
             
             else if (eventData.dir === 'Down') {
                     setNumber(number-1)
-                   
+                    const inAbout = eventData.event.target.closest("#about");
+            
+                    if (inAbout) {
+                        window.scrollTo({ top:0, behavior:'smooth' })
+                    }
+                    
 
                 }
         },
