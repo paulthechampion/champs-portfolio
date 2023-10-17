@@ -215,8 +215,7 @@ function SwipeDetector() {
                             }
                           
                         } else {
-                            const conactBlank = document.getElementById('contact-blank')
-                            conactBlank.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }
                     }
                     
