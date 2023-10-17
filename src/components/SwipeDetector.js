@@ -126,7 +126,6 @@ function SwipeDetector() {
                     setNumber(number-1)
                     const inAbout = eventData.event.target.closest("#about");
             
-                    window.scrollTo({ top:0, behavior:'smooth' })
                     const leftRail = document.getElementById('left-rail');
                         const blankDivTop = leftRail.getBoundingClientRect().top + window.scrollY;
                         leftRail.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -144,7 +143,6 @@ function SwipeDetector() {
 
   return (
         <div {...handlers} style={swipeAreaStyle}>
-            Swipe No {number}
             <Main/>
         </div>
   );
