@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Swipeable } from 'react-swipeable';
+import ReactSwipe from 'react-swipe';
 
 class SwipeDetector extends Component {
   constructor() {
@@ -17,6 +17,10 @@ class SwipeDetector extends Component {
     this.setState({ backgroundColor: 'green' });
   }
 
+  componentDidMount() {
+    this.swipe = ReactSwipe(this.container);
+  }
+
   render() {
     const { backgroundColor } = this.state;
 
@@ -30,14 +34,11 @@ class SwipeDetector extends Component {
     };
 
     return (
-      <Swipeable
-        onSwipedUp={this.onSwipeUpListener}
-        onSwipedDown={this.onSwipeDownListener}
-      >
+      <div ref={el => (this.container = el)}>
         <div style={swipeAreaStyle}>
           Swipe me up or down
         </div>
-      </Swipeable>
+      </div>
     );
   }
 }
