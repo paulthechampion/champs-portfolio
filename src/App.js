@@ -3,7 +3,7 @@ import './App.css';
 import Circle from './components/Circle';
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
-import SwipeDetector from './SwipeDetector';
+import SwipeDetector from './components/SwipeDetector';
 
 function App() {
     const isDesktopOrLaptop = useMediaQuery({

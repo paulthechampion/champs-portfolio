@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Swipe from 'react-swipe-component';
+import {Swipe} from 'react-swipe-component';
 
 class SwipeDetector extends Component{
     constructor(){
@@ -33,10 +33,10 @@ class SwipeDetector extends Component{
         console.log("Swiped right");
     }
     _onSwipeUpListener(){
-        document.getElementById('swipe').style.backgroundColor('red')
+        document.getElementsByClassName('swipe')[0].style.backgroundColor('red')
     }
     _onSwipeDownListener() {
-        document.getElementById('swipe').style.backgroundColor('green')
+        document.getElementsByClassName('swipe')[0].style.backgroundColor('green')
     }
     _onSwipeListener(e){
         if (e[1]===0) console.log("Swipe x: "+e[0]);
