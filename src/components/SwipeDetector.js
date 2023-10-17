@@ -176,10 +176,7 @@ function SwipeDetector() {
                             if (activeCard <= 1) {
                                 // If 'activeCard' is less than or equal to 1, scroll to 'projects' and set 'activeCard' to 1
                                 const projectsDiv = document.getElementById('projects');
-                                if (projectsDiv) {
-                                    const projectsDivTop = projectsDiv.getBoundingClientRect().top + window.scrollY;
-                                    window.scrollTo({ top: projectsDivTop, behavior: 'smooth' });
-                                }
+                                projectsDiv.scrollIntoView({ behavior:'smooth' , block: 'start'})
                                 setActiveCard(1);
                             } else {
                                 // Scroll to the previous project card
