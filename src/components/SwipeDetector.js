@@ -198,28 +198,25 @@ function SwipeDetector() {
                         const contact = document.getElementById('contact');
                         const lastProject = document.getElementById(`project8`);
 
-                        if (lastProject !== null) {
-                            if(isElementOnScreen(lastProject)) {
-                                lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                setActiveCard(9)
-                            }
-                        }
+                        // if (lastProject !== null) {
+                        //     if(isElementOnScreen(lastProject)) {
+                        //         lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        //         setActiveCard(9)
+                        //     }
+                        // }
                         if (isDivAtTop) {
                             if (lastProject !== null) {
                                 // Scroll to the top of the project
                                 lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-                                // Wait for the scroll to finish before checking if it's at the top
-                                setTimeout(() => {
-                                    const isProjectAtTop = isDivAtTopOfScreen(`project${activeCard}`);
-                                    if (isProjectAtTop) {
-                                        // Scroll to lastProject if it's at the top
-                                        const nextProject = document.getElementById(`project${activeCard + 1}`);
-                                        if (nextProject !== null) {
-                                            nextProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                        }
-                                    }
-                                }, 500); // Adjust the timeout duration as needed
+                                    // const isProjectAtTop = isDivAtTopOfScreen(`project${activeCard}`);
+                                    // if (isProjectAtTop) {
+                                    //     // Scroll to lastProject if it's at the top
+                                    //     const nextProject = document.getElementById(`project8`);
+                                    //     if (nextProject !== null) {
+                                    //         nextProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    //     }
+                                    // }
                             }
                         } else {
                             contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
