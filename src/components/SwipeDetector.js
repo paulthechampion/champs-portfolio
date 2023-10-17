@@ -35,15 +35,13 @@ function SwipeDetector() {
         onSwiped: (eventData) => {
             if (eventData.dir === 'Up') {
                 setNumber(number+1)
-            } else if (eventData.dir === 'Down') {
-                    setNumber(number-1)
                     const notLeftRail = document.querySelector('.content-div:not(#left-rail):hover');
                 
                     if (eventData.event.target.closest("#left-rail")) {
                         // If the user is inside the #left-rail div, scroll to the top of #about plus 20px
                         const aboutDiv = document.getElementById('about');
                         const aboutDivTop = aboutDiv.getBoundingClientRect().top + window.scrollY;
-                        window.scrollTo({ top: aboutDivTop, behavior: 'smooth' });
+                        aboutDiv.scrollIntoView({behavior:'smooth', block:'end'})
                     }
                 
                     // if (notLeftRail) {
@@ -51,6 +49,9 @@ function SwipeDetector() {
                     //     const notLeftRailBottom = notLeftRail.getBoundingClientRect().bottom;
                     //     window.scrollBy(0, notLeftRailBottom);
                     // }
+            } else if (eventData.dir === 'Down') {
+                    setNumber(number-1)
+                    
                 }
         },
     });
