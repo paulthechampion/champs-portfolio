@@ -259,19 +259,16 @@ function SwipeDetector() {
                         const isaboutTop = isDivAtTopOfScreen('about');
                     
                         if (isaboutTop) {
-                            const leftRailDiv = document.getElementById('left-rail');
-                            if (leftRailDiv) {
-                                const leftRailDivTop = leftRailDiv.getBoundingClientRect().top + window.scrollY;
-                                window.scrollTo({ top: leftRailDivTop, behavior: 'smooth' });
-                            } else {
-                                console.error("Element not found. Make sure the ID is correct.");
-                            }
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            });
                         } else {
-                            const aboutDiv = document.getElementById('about');
-                            if (aboutDiv) {
-                                const aboutDivTop = aboutDiv.getBoundingClientRect().top + window.scrollY;
-                                window.scrollTo({ top: aboutDivTop, behavior: 'smooth' });
-                            }
+                            // const aboutDiv = document.getElementById('about');
+                            // if (aboutDiv) {
+                            //     const aboutDivTop = aboutDiv.getBoundingClientRect().top + window.scrollY;
+                            //     window.scrollTo({ top: aboutDivTop, behavior: 'smooth' });
+                            // }
                         } 
                     }
 
