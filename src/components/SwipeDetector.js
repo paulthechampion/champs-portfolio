@@ -17,7 +17,9 @@ function SwipeDetector() {
 
   const swipeAreaStyle = {
     width: '100%',
-    overflow:'hidden'
+    overflow:'hidden',
+    maxHeight:'100vh',
+    height:'100vh'
   };
 
   return (
