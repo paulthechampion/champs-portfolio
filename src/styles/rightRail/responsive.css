@@ -45,7 +45,7 @@
         padding-left: 0px;
         padding-right: 0px;
         display: block;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     .socials-link {
