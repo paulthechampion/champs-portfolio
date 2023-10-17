@@ -125,10 +125,11 @@ function SwipeDetector() {
             else if (eventData.dir === 'Down') {
                     setNumber(number-1)
                     const inAbout = eventData.event.target.closest("#about");
-            
-                    const leftRail = document.getElementById('left-rail');
+                    if(inAbout) {
+                        const leftRail = document.getElementById('left-rail');
                         const blankDivTop = leftRail.getBoundingClientRect().top + window.scrollY;
                         leftRail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                     
 
                 }
