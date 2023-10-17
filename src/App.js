@@ -298,28 +298,18 @@ function App() {
     //         console.log("DESKTOP VIEW")
     //     }
     // });
-    let startY = 0;
-    let endY = 0;
     const swipeArea = document.getElementById('swipeArea');
+    const mc = new Hammer(swipeArea);
 
-    swipeArea.addEventListener('touchstart', function (e) {
-        startY = e.touches[0].clientY;
+    mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+    mc.on('swipeup', function() {
+        swipeArea.style.backgroundColor = 'red'
     });
 
-    swipeArea.addEventListener('touchend', function (e) {
-        endY = e.changedTouches[0].clientY;
-
-        const deltaY = endY - startY;
-
-        if (deltaY > 0) {
-            document.getElementById('swipeArea').style.backgroundColor('red')
-            //swipedown
-        } else if (deltaY < 0) {
-            document.getElementById('swipeArea').style.backgroundColor('green')
-            //swipe up
-        }
+    mc.on('swipedown', function() {
+        swipeArea.style.backgroundColor = 'green'
     });
-
     
     return (
         <div className="App">
