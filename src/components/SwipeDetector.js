@@ -201,7 +201,7 @@ function SwipeDetector() {
                         if (lastProject !== null) {
                             if(isElementOnScreen(lastProject)) {
                                 lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                setActiveCard(8)
+                                setActiveCard(9)
                             }
                         }
                         if (isDivAtTop) {
