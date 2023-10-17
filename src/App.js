@@ -3,6 +3,7 @@ import './App.css';
 import Circle from './components/Circle';
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
+import SwipeDetector from './SwipeDetector';
 
 function App() {
     const isDesktopOrLaptop = useMediaQuery({
@@ -298,25 +299,11 @@ function App() {
     //         console.log("DESKTOP VIEW")
     //     }
     // });
-    const swipeArea = document.getElementById('swipeArea');
-    const mc = new Hammer(swipeArea);
-
-    mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-
-    mc.on('swipeup', function() {
-        swipeArea.style.backgroundColor = 'red'
-    });
-
-    mc.on('swipedown', function() {
-        swipeArea.style.backgroundColor = 'green'
-    });
     
     return (
         <div className="App">
             <div className='phone-logo-div'></div>
-            <div id="swipeArea" style="width: 100%; height: 300px; background-color: transparent;">
-
-            </div>
+            <SwipeDetector/>
             <Circle/>
             <Main/>
         </div>
