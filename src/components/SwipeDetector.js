@@ -126,9 +126,11 @@ function SwipeDetector() {
                     setNumber(number-1)
                     const inAbout = eventData.event.target.closest("#about");
             
-                    if (inAbout) {
-                        window.scrollTo({ top:0, behavior:'smooth' })
-                    }
+                    window.scrollTo({ top:0, behavior:'smooth' })
+                    const leftRail = document.getElementById('left-rail');
+                    leftRail.style.background = 'red'
+                        const blankDivTop = leftRail.getBoundingClientRect().top + window.scrollY;
+                        leftRail.scrollIntoView({ behavior: 'smooth', block: 'end' });
                     
 
                 }
