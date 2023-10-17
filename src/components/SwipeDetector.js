@@ -9,6 +9,15 @@ function SwipeDetector() {
     const [backgroundColor, setBackgroundColor] = useState('lightgray');
     const [activeCard, setActiveCard] = useState(1);
 
+    const swipeAreaStyle = {
+        width: '100%',
+        height: '100vh', // Full viewport height
+        backgroundColor: 'transparent',
+        zIndex: 1,
+        position:'fixed',
+        top:0
+    };
+
     function isElementOnScreen(element) {
         const rect = element.getBoundingClientRect();
         return (
@@ -284,13 +293,6 @@ function SwipeDetector() {
             console.log('scrolling')
         },
     });
-
-    const swipeAreaStyle = {
-        width: '100%',
-        height: '100vh', // Full viewport height
-        backgroundColor: 'transparent',
-        zIndex: 1,
-    };
 
     return (
         <div {...handlers} id='swipe-div' style={swipeAreaStyle}>
