@@ -196,12 +196,12 @@ function SwipeDetector() {
                     if (incontact) {
                         const isDivAtTop = isDivAtTopOfScreen('contact');
                         const contact = document.getElementById('contact');
-                        const lastProject = document.getElementById(`project${activeCard}`);
+                        const lastProject = document.getElementById(`project8`);
 
                         if (lastProject !== null) {
                             if(isElementOnScreen(lastProject)) {
                                 lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                setActiveCard(activeCard-1)
+                                setActiveCard(8)
                             }
                         }
                         if (isDivAtTop) {
