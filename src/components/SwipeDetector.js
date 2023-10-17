@@ -1,46 +1,33 @@
-import React, { Component } from 'react';
-import ReactSwipe from 'react-swipe';
+import React, { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
-class SwipeDetector extends Component {
-  constructor() {
-    super();
-    this.state = {
-      backgroundColor: 'lightgray',
-    };
-  }
+function SwipeDetector() {
+  const [backgroundColor, setBackgroundColor] = useState('lightgray');
 
-  onSwipeUpListener = () => {
-    this.setState({ backgroundColor: 'red' });
-  }
+  const handlers = useSwipeable({
+    onSwiped: (eventData) => {
+      if (eventData.dir === 'Up') {
+        setBackgroundColor('red');
+      } else if (eventData.dir === 'Down') {
+        setBackgroundColor('green');
+      }
+    },
+  });
 
-  onSwipeDownListener = () => {
-    this.setState({ backgroundColor: 'green' });
-  }
+  const swipeAreaStyle = {
+    width: '100%',
+    height: '100vh', // Full viewport height
+    backgroundColor,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
 
-  componentDidMount() {
-    this.swipe = ReactSwipe(this.container);
-  }
-
-  render() {
-    const { backgroundColor } = this.state;
-
-    const swipeAreaStyle = {
-      width: '100%',
-      height: '100vh', // Full viewport height
-      backgroundColor,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    };
-
-    return (
-      <div ref={el => (this.container = el)}>
-        <div style={swipeAreaStyle}>
-          Swipe me up or down
-        </div>
-      </div>
-    );
-  }
+  return (
+    <div {...handlers} style={swipeAreaStyle}>
+      Swipe me up or down
+    </div>
+  );
 }
 
 export default SwipeDetector;
