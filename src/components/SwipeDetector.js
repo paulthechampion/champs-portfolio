@@ -144,6 +144,20 @@ function SwipeDetector() {
                         aboutDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         
                     }
+
+                    const inSkillServiceDiv = eventData.event.target.closest('#skill-service')
+                    if(inSkillServiceDiv) {
+                        const blank = document.getElementById('')
+                        const isBlankDiv = isElementOnScreen(blank)
+
+                        if(isBlankDiv) {
+                            const skillServiceDiv = document.getElementById('skill-service')
+                            skillServiceDiv.scrollIntoView({behavior:'smooth', block:'start'})
+                            return
+                        }
+                        const experienceDiv = document.getElementById('experience')
+                        experienceDiv.scrollIntoView({ behavior:'smooth', block:'start' })
+                    }
                     
 
                 }
