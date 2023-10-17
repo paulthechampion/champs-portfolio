@@ -164,8 +164,7 @@ function SwipeDetector() {
 
                     if (inProjectsDiv) {
                         // Check if the 'projects' div is at the top of the screen
-                        const projectDiv = document.getElementById('projects')
-                        const isProjectsAtTop = isDivAtTopOfScreen(projectDiv);
+                        const isProjectsAtTop = isDivAtTopOfScreen('projects');
 
                         if (isProjectsAtTop) {
                             const skillServiceDiv = document.getElementById('skill-service');
