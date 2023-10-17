@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Swipe } from 'react-swipe-component';
+import Swipeable from 'react-swipeable';
 
 class SwipeDetector extends Component {
   constructor() {
@@ -30,18 +30,14 @@ class SwipeDetector extends Component {
     };
 
     return (
-      <Swipe
-        nodeName="div"
-        id="swipe"
-        className="swipe"
-        mouseSwipe={false}
+      <Swipeable
         onSwipedUp={this.onSwipeUpListener}
         onSwipedDown={this.onSwipeDownListener}
       >
         <div style={swipeAreaStyle}>
           Swipe me up or down
         </div>
-      </Swipe>
+      </Swipeable>
     );
   }
 }
