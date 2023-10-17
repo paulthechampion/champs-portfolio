@@ -253,6 +253,11 @@ function SwipeDetector() {
                         }
                     }
 
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    
                     const inaboutDiv = eventData.event.target.closest("#about");
             
                     if (inaboutDiv) {
