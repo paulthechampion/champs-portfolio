@@ -1,5 +1,5 @@
 .finger-scroll-container {
-    position: fixed;
+    position: absolute;
     bottom: 30%;
     right: 50px;
     z-index: 999;
