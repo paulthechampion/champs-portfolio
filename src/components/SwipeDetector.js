@@ -117,9 +117,14 @@ function SwipeDetector() {
                     const incontact = eventData.event.target.closest("#contact");
             
                     if (incontact) {
-                        const blankDiv = document.getElementById('contact-blank');
-                        const blankDivTop = blankDiv.getBoundingClientRect().top + window.scrollY;
-                        blankDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if(isDivAtTopOfScreen('contact')) {
+                            const blankDiv = document.getElementById('contact-blank');
+                            const blankDivTop = blankDiv.getBoundingClientRect().top + window.scrollY;
+                            blankDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            return;
+                        }
+                        const contactDiv = document.getElementById('contact') 
+                        contactDiv.scrollIntoView({behavior:'smooth', block:'start'})
                     }    
             }
             
