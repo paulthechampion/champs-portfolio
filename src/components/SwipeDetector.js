@@ -210,21 +210,13 @@ function SwipeDetector() {
                         //     }
                         // }
                         if (isDivAtTop) {
-                            if (lastProject !== null) {
-                                // Scroll to the top of the project
+                            if(lastProject) {
                                 lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                                    // const isProjectAtTop = isDivAtTopOfScreen(`project${activeCard}`);
-                                    // if (isProjectAtTop) {
-                                    //     // Scroll to lastProject if it's at the top
-                                    //     const nextProject = document.getElementById(`project8`);
-                                    //     if (nextProject !== null) {
-                                    //         nextProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    //     }
-                                    // }
                             }
+                          
                         } else {
-                            contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            const conactBlank = document.getElementById('contact-blank')
+                            conactBlank.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }
                     }
                     
