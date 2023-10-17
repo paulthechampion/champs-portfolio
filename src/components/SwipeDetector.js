@@ -82,14 +82,15 @@ function SwipeDetector() {
                         // If the user is inside the #experience div, scroll to the bottom of the #skills-blank
                         const blank = document.getElementById('skills-blank');
                         const blankDivBottom = blank.getBoundingClientRect().bottom;
-
-                        if(isElementOnScreen(blank)) {
+                        const isBlank = isElementOnScreen(blank)
+                        if(isBlank) {
                             const projectsDiv = document.getElementById('projects');
                             const projectsDivTop = projectsDiv.getBoundingClientRect().top + window.scrollY;
-                            projectsDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
-                        } else {
-                            blank.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                            projectsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            return;
                         }
+                        blank.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                        
                     }
 
                     const inProjectsDiv = eventData.event.target.closest("#projects");
