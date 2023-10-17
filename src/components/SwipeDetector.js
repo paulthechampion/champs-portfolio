@@ -20,8 +20,7 @@ function SwipeDetector() {
     backgroundColor,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    position:'absolute',
+    justifyContent: 'center'
   };
 
   return (
