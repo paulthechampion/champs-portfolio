@@ -22,13 +22,17 @@ class SwipeDetector extends Component {
 
     const swipeAreaStyle = {
       width: '100%',
-      height: '300px',
+      height: '100vh', // Full viewport height
       backgroundColor,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     };
 
     return (
       <Swipe
         nodeName="div"
+        id="swipe"
         className="swipe"
         mouseSwipe={false}
         onSwipedUp={this.onSwipeUpListener}
