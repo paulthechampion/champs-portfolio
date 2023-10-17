@@ -134,7 +134,6 @@ function SwipeDetector() {
                     const inexperience = eventData.event.target.closest("#experience");
                     if(inexperience) {
                         const aboutDiv = document.getElementById('about');
-                        const blankDivTop = leftRail.getBoundingClientRect().top + window.scrollY;
                         aboutDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
                     
