@@ -31,6 +31,7 @@
 body {
   background-color: #10172A;
   overflow: hidden; 
+  scroll-behavior: smooth;
   
   /* if you change background color change blank color */
 }
