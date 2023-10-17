@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Swipeable from 'react-swipeable';
+import { Swipeable } from 'react-swipeable';
 
 class SwipeDetector extends Component {
   constructor() {
