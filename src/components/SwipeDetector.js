@@ -21,16 +21,14 @@ function SwipeDetector() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    position:'absolute'
-
+    position:'absolute',
+    zIndex:'1'
   };
 
   return (
-    <div style={{position:'fixed', zIndex:1}}>
         <div {...handlers} style={swipeAreaStyle}>
-        Swipe me up or down {number}
+            Swipe me up or down {number}
         </div>
-    </div>
   );
 }
 
