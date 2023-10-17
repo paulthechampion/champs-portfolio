@@ -26,7 +26,7 @@ function SwipeDetector() {
   };
 
   return (
-    <div style={{position:'fixed', top:0, zIndex:1}}>
+    <div style={{position:'fixed', zIndex:1}}>
         <div {...handlers} style={swipeAreaStyle}>
         Swipe me up or down {number}
         </div>
