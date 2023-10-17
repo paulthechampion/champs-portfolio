@@ -99,7 +99,7 @@ function SwipeDetector() {
                         if (activeCard > 9) {
                             const contact = document.getElementById('contact');
                             setActiveCard(9);
-                            contact.scrollIntoView({behavior:'smooth', block:'end'})
+                            contact.scrollIntoView({behavior:'smooth', block:'start'})
                         } else {
                             let projectCard = document.getElementById(`project${activeCard}`);
                             if (projectCard !== null) {
