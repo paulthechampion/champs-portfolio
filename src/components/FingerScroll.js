@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPointer } from '@fortawesome/free-solid-svg-icons';
+import swipePic from '../images/swipe.png'
 
 
 export default function  FingerScroll() {
@@ -14,11 +15,7 @@ export default function  FingerScroll() {
   
     return (
       <div className="finger-scroll-container">
-        <FontAwesomeIcon
-          icon={faHandPointer}
-          className="finger"
-          onClick={handleScroll}
-        />
+        <img src={swipePic}/>
       </div>
     );
 
