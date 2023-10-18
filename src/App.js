@@ -15,7 +15,7 @@ function App() {
       
         const observer = new IntersectionObserver(handleIntersection, {
           root: null, // Use the viewport as the root
-          rootMargin:"0px 0px -150px 0px",
+          rootMargin:"0px 0px -200px 0px",
           threshold: 0, // Trigger when 10% of the element is visible
         });
       

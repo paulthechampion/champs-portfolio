@@ -1,27 +1,59 @@
-import React from 'react'
+import React , { useEffect, useRef }from 'react'
 
 export default function SkillsService() {
-    function LoadingDiv({ loadingPercentage }) {
+
+      function LoadingDiv({ loadingPercentage }) {
         const loadingStyle = {
-          width: `${loadingPercentage * 10}%`,
+          width: `${0}%`, // Initially, set the width to 0%
         };
+      
+        const loadingRef = useRef(null);
+      
+        useEffect(() => {
+          const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin:"0px 0px -250px 0px",
+            threshold: 0, // Trigger when 10% of the element is visible
+          });
+      
+          if (loadingRef.current) {
+            observer.observe(loadingRef.current);
+          }
+      
+          return () => {
+            if (loadingRef.current) {
+              observer.unobserve(loadingRef.current);
+            }
+          };
+      
+          function handleIntersection(entries) {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.transition = "width 1.5s ease-in";
+                entry.target.style.width = `${loadingPercentage * 10}%`;
+              }
+              else {
+                entry.target.style.width = 0;
+              }
+            });
+          }
+        }, [loadingPercentage]);
       
         return (
           <div className="loading-container appear">
-            <div className="loading-bar" style={loadingStyle}></div>
+            <div className="loading-bar" style={loadingStyle} ref={loadingRef}></div>
           </div>
         );
       }
       
       function DataPointList({ dataPoints }) {
         return (
-          <div className='loading-flex'>
+          <div className="loading-flex">
             {dataPoints.map((dataPoint, index) => (
-                <div key={index}>
-                    {dataPoint.name} <span className='skill-per'>{dataPoint.number*10}%</span>
-                    <LoadingDiv loadingPercentage={dataPoint.number} />
-                    
-                </div>
+              <div key={index}>
+                {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
+                <LoadingDiv loadingPercentage={dataPoint.number} />
+              </div>
             ))}
           </div>
         );

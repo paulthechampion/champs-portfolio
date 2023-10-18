@@ -1,10 +1,13 @@
 .appear {
     opacity: 0;
-    transform: translateY(20px); /* Initial position offscreen */
-    transition: opacity 1s, transform 1s ease-in;
-  }
+    transition: opacity 1.5s, transform 0.3s ease-in;
+}
   
-  .appear.appeared {
-    opacity: 1;
-    transform: translateY(0); /* Final position onscreen */
-  }
+.move-up {
+  transform: translateY(30px); /* Initial position offscreen */
+}
+
+.appear.appeared {
+  opacity: 1;
+  transform: translateY(0); /* Final position onscreen */
+}
