@@ -1,6 +1,10 @@
 import React , { useEffect, useRef }from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 export default function SkillsService() {
+      const isDesktopOrLaptop = useMediaQuery({
+          query: '(min-width: 809px)'
+      })
 
       function LoadingDiv({ loadingPercentage }) {
         const loadingStyle = {
@@ -10,9 +14,10 @@ export default function SkillsService() {
         const loadingRef = useRef(null);
       
         useEffect(() => {
+          const rootMargin = isDesktopOrLaptop ? "0px 0px -250px 0px" : "0px 0px -10px 0px"
           const observer = new IntersectionObserver(handleIntersection, {
             root: null,
-            rootMargin:"0px 0px -250px 0px",
+            rootMargin,
             threshold: 0, // Trigger when 10% of the element is visible
           });
       
