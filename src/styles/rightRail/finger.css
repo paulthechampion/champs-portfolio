@@ -9,6 +9,7 @@
 }
 
 .finger-scroll-container > img {
+  height: 50px !important;
   filter: brightness(0) saturate(100%) hue-rotate(0deg) sepia(100%) invert(100%);
   
 }
