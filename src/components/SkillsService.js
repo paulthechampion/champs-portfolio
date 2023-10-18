@@ -24,9 +24,9 @@ export default function SkillsService() {
       
         useEffect(() => {
           const observer = new IntersectionObserver(handleIntersection, {
-            root: document.documentElement, // Observe the entire page
+            root: null,
             rootMargin: "0px",
-            threshold: 0.1,
+            threshold: 0.1, // Adjust this threshold as needed
           });
       
           if (loadingFlexRef.current) {
