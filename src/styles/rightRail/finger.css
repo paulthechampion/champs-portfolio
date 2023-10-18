@@ -1,6 +1,6 @@
 .finger-scroll-container {
     position: absolute;
-    bottom: 30%;
+    bottom: 40%;
     right: 50px;
     z-index: 999;
     animation: moveUpDown 2s linear infinite;
@@ -25,15 +25,12 @@
 }
 
 @keyframes moveUpDown {
-    0% {
-      bottom: 40%;
-      opacity: 1;
-    }
-    50% {
-      bottom: 50%;
-      opacity: 0;
-    }
-    70% {
-      opacity: 0.1;
-    }
+  0% {
+    bottom: 40%;
+    opacity: 1;
   }
+  100% {
+    bottom: 60%;
+    opacity: 0;
+  }
+}
