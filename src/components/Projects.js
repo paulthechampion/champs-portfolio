@@ -25,14 +25,14 @@ export default function Projects() {
     ]
     return (
         <div className='projects' id='projects'>
-            <h1 className='phoneNone'>Projects</h1>
-            <div className='phone-mini-div leftPad project-phone'>
+            <h1 className='phoneNone appear'>Projects</h1>
+            <div className='phone-mini-div leftPad project-phone appear'>
                 <h1>PROJECTS</h1>
             </div>
     
             <div>
                 {projectsData.map((project, index) => (
-                    <div className='project-card' key={index} id={`project${index}`}>
+                    <div className='project-card appear' key={index} id={`project${index}`}>
                         <div>
                             <img src={project.img} alt={project.name} />
                         </div>

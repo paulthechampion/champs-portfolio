@@ -24,7 +24,7 @@ export default class MyForm extends React.Component {
                     <div>
                         <img src={astroMan}/>
                     </div>
-                    <div className="main-form">
+                    <div className="main-form appear">
                         <form
                             className="contForm"
                             onSubmit={this.submitForm}
@@ -46,7 +46,7 @@ export default class MyForm extends React.Component {
                         </form>
                     </div>
                 </div>
-                <div id='contact-blank' className='blank'>ssssssssssssssssss<br/>ssssssssssss</div>
+                <div id='contact-blank' className='blank appear'>ssssssssssssssssss<br/>ssssssssssss</div>
             </div>
         );
     }

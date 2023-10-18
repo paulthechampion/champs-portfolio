@@ -33,7 +33,7 @@ export default function LeftRail() {
     return (
     <div id='left-rail'>
         <FingerScroll/>
-        <div className='main-intro'>
+        <div className='main-intro appear'>
             <h2>Champ<span className='i'>i</span>on Paul</h2>
             <p>Software Developer at S&P Global</p>
             <p className='iBuild'>I build the <span className='blue-background'>best websites and web-applications
@@ -41,7 +41,7 @@ export default function LeftRail() {
             </p>
         </div>
 
-        <div className='menu-main-div'>
+        <div className='menu-main-div appear'>
             <a href='#about' className='menu-link firstMenuLink' tabIndex="0">
                 <div className='menu-flex' id='firstMenuLink' >
                     <div className='menu-line firstline' id='firstLine'>
@@ -88,9 +88,9 @@ export default function LeftRail() {
             </a>
         </div>
 
-        <div className='call-div'>CALL ME<a href='tel:6475342898' className='call-link'>(647) 534-2898 <FaPhone/></a></div>
+        <div className='call-div appear'>CALL ME<a href='tel:6475342898' className='call-link'>(647) 534-2898 <FaPhone/></a></div>
 
-        <div className="socials-link" id="socials-link">
+        <div className="socials-link appear" id="socials-link">
           <a href="https://github.com/paulthechampion" className="iconLink" target="_blank">  <FaGithub className="chatIcons"/></a>
           <a href="https://twitter.com/fal2ememorie2"className="iconLink" target="_blank"> <FaTwitter className="chatIcons"/></a>
           <a href="https://www.linkedin.com/in/paul-enwerem-9a307518b/"className="iconLink" target="_blank">  <FaLinkedin className="chatIcons"/></a>

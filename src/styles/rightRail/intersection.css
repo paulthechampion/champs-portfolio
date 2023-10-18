@@ -1,0 +1,9 @@
+.appear {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.appeared {
+    opacity: 1;
+}
+  

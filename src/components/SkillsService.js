@@ -7,7 +7,7 @@ export default function SkillsService() {
         };
       
         return (
-          <div className="loading-container">
+          <div className="loading-container appear">
             <div className="loading-bar" style={loadingStyle}></div>
           </div>
         );
@@ -49,19 +49,19 @@ export default function SkillsService() {
       ];
     return (
         <div className='skillservice' id='skill-service'>
-            <h1 className='phoneNone'>Skills & Service</h1>
-            <div className='phone-mini-div leftPad'>
+            <h1 className='phoneNone appear'>Skills & Service</h1>
+            <div className='phone-mini-div leftPad appear'>
                 <h1>SKILLS & SERVICES</h1>
             </div>
             <p>Below are some of the services I can offer your Business:</p>
 
-            <div className='service-p'>
+            <div className='service-p appear'>
                 E-COMMERCE WEBSITES <span className='upFullstop serviceFullStop'>.</span> BUSINESS LANDING PAGES <span className='upFullstop serviceFullStop'>.</span> CUSTOM WEB APPLICATIONS  
                 <span className='upFullstop serviceFullStop'>.</span>DOMAIN REGISTRATION AND HOSTING <span className='upFullstop serviceFullStop'>.</span> UI/UX DESIGN  <span className='upFullstop serviceFullStop'>.</span> LOGO MAKING   
                 <span className='upFullstop serviceFullStop'>.</span>GOOGLE AND FACEBOOK BUSINESS ACCOUNT SET UP <span className='upFullstop serviceFullStop'>.</span> AND MANY MORE
             </div>
 
-            <p>This a List of the Skills I posses to help fulfil your Project :</p>
+            <p className='appear'>This a List of the Skills I posses to help fulfil your Project :</p>
 
             <DataPointList dataPoints={dataPoints} />
             <div id='skills-blank' className='blank'>fffffffffffffffffff<br/>ssssssssssssssssss</div>

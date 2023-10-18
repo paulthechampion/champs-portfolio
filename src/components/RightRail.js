@@ -9,17 +9,17 @@ export default function RightRail() {
     return (
     <div className='right-rail'>
         <div className='about' id='about'>
-            <div className='phone-mini-div'>
+            <div className='phone-mini-div appear'>
                 <h1>ABOUT</h1>
             </div>
-            <p>
+            <p className='appear'>
                 In 2018, I began my journey into web development, with a strong focus
                 on <span className='blue'>Full Stack JavaScript Development.</span> Over the past 5 years, I've built a diverse portfolio
                 of projects for various clients, specializing in the <span className='blue'>MERN stack 
                 (MongoDB, Express, ReactJS, NodeJS), </span>  and staying at the forefront of web development trends.
             </p>
 
-            <p>
+            <p className='appear'>
                 My foundational knowledge comes from certifications in <span className='gold'>HTML, CSS, and JavaScript acquired from 
                 New Horizon Nigeria.</span> Beyond coding, I excel in creating responsive designs, ensuring seamless user 
                 experiences. My portfolio includes eCommerce websites, Investment research tools web applications, 
@@ -27,23 +27,23 @@ export default function RightRail() {
                 technical expertise with creative problem-solving. 
             </p>
 
-            <p>
+            <p className='appear'>
                 Collaborating with cross-functional teams and clients, I effectively <span className='blue'>transform ideas into scalable websites 
                 and web applications</span> while remaining committed to embracing the latest in technology and offering multiple other Technological Services to Businesses.
             </p>
         </div>
 
         <div className='experience' id='experience'>
-            <h1 className='phoneNone'>Experience</h1>
-            <div className='phone-mini-div leftPad'>
+            <h1 className='phoneNone appear'>Experience</h1>
+            <div className='phone-mini-div leftPad appear'>
                 <h1>EXPERIENCE</h1>
             </div>
             <div className='experienceFlex'>
-                <div>
+                <div className='appear'>
                     2021 ---- PRESENT
                 </div>
                 
-                <div>
+                <div className='appear'>
                     <h2>Software Developer <span className='upFullstop'>.</span>S&P Global</h2>
                     <p>
                         Develop and maintain applications for a variety of clients, 
@@ -70,11 +70,11 @@ export default function RightRail() {
             </div>
 
             <div className='experienceFlex'>
-                <div>
+                <div className='appear'>
                      2021 ---- PRESENT
                 </div>
                 
-                <div>
+                <div className='appear'>
                     <h2>Software Developer <span className='upFullstop'>.</span>Davito Immigration Service</h2>
                     <p>
                         This project involved building the company's website to showcase services and certifications, 
@@ -100,7 +100,7 @@ export default function RightRail() {
                 </div>
             </div>
 
-            <div className='resume-div' id='resume-div'><a href='' className='resume-link'>View Full Resume <i className="fas fa-arrow-right"></i></a></div>
+            <div className='resume-div appear' id='resume-div'><a href='' className='resume-link'>View Full Resume <i className="fas fa-arrow-right"></i></a></div>
             <div id='resume-blank' className='blank'>ssssssssssssssssss</div>
             </div>
            <SkillsService/>
