@@ -1,9 +1,10 @@
 .appear {
     opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.appeared {
-    opacity: 1;
-}
+    transform: translateY(20px); /* Initial position offscreen */
+    transition: opacity 0.5s, transform 0.5s;
+  }
   
+  .appear.appeared {
+    opacity: 1;
+    transform: translateY(0); /* Final position onscreen */
+  }

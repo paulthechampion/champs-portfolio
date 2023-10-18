@@ -11,7 +11,7 @@ function App() {
     })
 
     document.addEventListener("DOMContentLoaded", () => {
-        let elements = document.querySelectorAll(".appear");
+        const elements = document.querySelectorAll(".appear");
       
         const observer = new IntersectionObserver(handleIntersection, {
           root: null, // Use the viewport as the root
@@ -20,28 +20,18 @@ function App() {
         });
       
         elements.forEach((element) => {
-          element.style.opacity = 0;
           observer.observe(element);
         });
       
-        let resetElements = false;
         function handleIntersection(entries, observer) {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("appeared");
-                resetElements = false;
-              } else {
-                if (!resetElements) {
-                  elements.forEach((element) => {
-                    element.classList.remove("appeared");
-                    element.style.opacity = 0;
-                  });
-                  resetElements = true;
-                }
-              }
-            })
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("appeared");
+            } else {
+              entry.target.classList.remove("appeared");
+            }
+          });
         }
-        
     });
       
     
