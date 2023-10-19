@@ -6,7 +6,7 @@ function cleanupSectionClasses() {
   sections.forEach((section) => {
     section.style.zIndex = 3;
     section.style.transition = 'unset';
-    section.classList.remove('hidden-up', 'hidden-up-show', 'hidden-down', 'hidden-down-show');
+    section.classList.remove('hidden-up-show', 'hidden-down-show');
   });
 }
 
