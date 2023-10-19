@@ -19,7 +19,7 @@ export function moveUp(elementId) {
     sectionToAppear.style.transition = 'all .7s';
     // sectionToAppear.classList.add('hidden-up');
     sectionToAppear.style.zIndex = 4;
-    sectionToAppear.style.top = "80%"
+    sectionToAppear.style.top = "150%"
     // Use a timeout to trigger the animation
     setTimeout(() => {
       sectionToAppear.style.top = "0"
@@ -37,7 +37,7 @@ export function moveDown(elementId) {
     sectionToAppear.style.transition = 'all .7s';
     // sectionToAppear.classList.add('hidden-down');
     sectionToAppear.style.zIndex = 4;
-    sectionToAppear.style.top = "-80%"
+    sectionToAppear.style.top = "-150%"
 
     // Use a timeout to trigger the animation
     setTimeout(() => {
