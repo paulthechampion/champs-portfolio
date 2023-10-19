@@ -1,50 +1,45 @@
-const sections = ['letf-rail', 'about', 'experience', 'skill-service', 'project', 'contact']
-
+// Function to reset section classes and transitions
 function cleanupSectionClasses() {
-  const sections = document.querySelectorAll('.section'); // Assuming .section is the class for your sections
-
+  const sections = document.querySelectorAll('.section');
+  const leftRail = document.getElementById('left-rail')
+  leftRail.style.transition ='unset'
   sections.forEach((section) => {
-    section.style.zIndex = 3
-    section.style.transition = 'unset'
+    section.style.zIndex = 3;
+    section.style.transition = 'unset';
+    section.classList.remove('hidden-up', 'hidden-up-show', 'hidden-down', 'hidden-down-show');
   });
 }
 
+// Function to trigger the slide-up animation
 export function moveUp(elementId) {
-  cleanupSectionClasses()
+  cleanupSectionClasses();
   const sectionToAppear = document.getElementById(elementId);
 
   if (sectionToAppear) {
-    // Add a class to hide the section at the top
-    console.log('ydyc 2', elementId)
-
+    sectionToAppear.style.transition = 'all .7s';
     sectionToAppear.classList.add('hidden-up');
     sectionToAppear.style.zIndex = 4;
-    sectionToAppear.style.transition = 'top .7s'
 
     // Use a timeout to trigger the animation
     setTimeout(() => {
-      // Remove the class to move the element into view
       sectionToAppear.classList.add('hidden-up-show');
-    }, 10);
+    }, 100);
   }
 }
 
+// Function to trigger the slide-down animation
 export function moveDown(elementId) {
-  cleanupSectionClasses()
+  cleanupSectionClasses();
   const sectionToAppear = document.getElementById(elementId);
-  console.log('Before class removal:', sectionToAppear.classList.toString());
-  
-  if (sectionToAppear) {
-    // Add a class to hide the section at the bottom
 
+  if (sectionToAppear) {
+    sectionToAppear.style.transition = 'all .7s';
     sectionToAppear.classList.add('hidden-down');
     sectionToAppear.style.zIndex = 4;
-    sectionToAppear.style.transition = 'top .7s'
-    
+
+    // Use a timeout to trigger the animation
     setTimeout(() => {
-      // Remove the class to move the element into view
       sectionToAppear.classList.add('hidden-down-show');
-    }, 10);
+    }, 100);
   }
 }
-

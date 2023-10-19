@@ -2,6 +2,7 @@ import React from 'react'
 import Projects from './Projects'
 import Contact from './Contact'
 import SkillsService from './SkillsService'
+import { moveUp, moveDown } from './swipe';
 
 export default function RightRail() {
     
@@ -63,7 +64,7 @@ export default function RightRail() {
 
                     <div>
                         {experienceSkills.map((experience,index) => (
-                            <button key={index} className='experience-btn'>{experience}</button>
+                            <button key={index} className='experience-btn' onClick={()=>{moveDown('left-rail')}}>{experience}</button>
                         ))}
                     </div>
                 </div>
