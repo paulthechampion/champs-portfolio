@@ -19,10 +19,11 @@ export function moveUp(elementId) {
   if (sectionToAppear) {
     // sectionToAppear.classList.add('hidden-up');
     sectionToAppear.style.zIndex = 4;
-    sectionToAppear.style.top = "150%"
-    sectionToAppear.style.transition = 'top 1s';
+    sectionToAppear.style.top = "300%"
     // Use a timeout to trigger the animation
     setTimeout(() => {
+      
+      sectionToAppear.style.transition = 'top 1s';
       sectionToAppear.style.top = "0"
       // sectionToAppear.classList.add('hidden-up-show');
     }, 500);
@@ -37,12 +38,12 @@ export function moveDown(elementId) {
   if (sectionToAppear) {
     // sectionToAppear.classList.add('hidden-down');
     sectionToAppear.style.zIndex = 4;
-    sectionToAppear.style.top = "-150%"
-    sectionToAppear.style.transition = 'top 1s';
+    sectionToAppear.style.top = "-300%"
 
     // Use a timeout to trigger the animation
     setTimeout(() => {
       // sectionToAppear.classList.add('hidden-down-show');
+      sectionToAppear.style.transition = 'top 1s';
       sectionToAppear.style.top = "0"
     }, 500);
   }
