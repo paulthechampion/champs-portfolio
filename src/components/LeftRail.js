@@ -19,7 +19,7 @@ export default function LeftRail() {
             link.addEventListener('click', function (event) {
                 event.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
-                moveUp(targetId);
+                moveDown(targetId);
             });
             });
         }

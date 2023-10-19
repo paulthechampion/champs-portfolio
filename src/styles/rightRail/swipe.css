@@ -11,18 +11,18 @@
 
     /* Define initial styles for your sections off-screen */
 .section.hidden-down {
-    top: -100% !important; /* Start off-screen at the top */
+    top: -100%; /* Start off-screen at the top */
   }
   .section.hidden-down-show {
-    top: 0 !important;
+    top: 0;
   }
   
   .section.hidden-up {
-    top: 100% !important; /* Start off-screen at the bottom */
+    top: 100%; /* Start off-screen at the bottom */
   }
 
   .section.hidden-up-show {
-    top:0 !important;
+    top:0;
   }
 
     .projects.section {
