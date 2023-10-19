@@ -3,7 +3,7 @@
     .section {
         position: fixed;
         background-color:#151d31 !important;
-        transition: top 1s;
+        transition: top .7s;
         z-index: 3;
          
     
@@ -11,7 +11,7 @@
 
     /* Define initial styles for your sections off-screen */
 .section.hidden-down {
-    top: -50% !important; /* Start off-screen at the top */
+    top: -80% !important; /* Start off-screen at the top */
     z-index: 4;
   }
   .section.hidden-down-show {
@@ -19,7 +19,7 @@
   }
   
   .section.hidden-up {
-    top: 50% !important; /* Start off-screen at the bottom */
+    top: 80% !important; /* Start off-screen at the bottom */
     z-index: 4;
   }
 
