@@ -5,6 +5,7 @@ function cleanupSectionClasses() {
 
   sections.forEach((section) => {
     section.style.zIndex = 3
+    section.style.transition = 'unset'
   });
 }
 

@@ -13,6 +13,7 @@
 .section.hidden-down {
     top: -80% !important; /* Start off-screen at the top */
     z-index: 4;
+    transition: top .7s;
   }
   .section.hidden-down-show {
     top: 0 !important;
@@ -21,6 +22,7 @@
   .section.hidden-up {
     top: 80% !important; /* Start off-screen at the bottom */
     z-index: 4;
+    transition: top .7s;
   }
 
   .section.hidden-up-show {
