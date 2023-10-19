@@ -4,7 +4,7 @@ function cleanupSectionClasses() {
   const sections = document.querySelectorAll('.section'); // Assuming .section is the class for your sections
 
   sections.forEach((section) => {
-    section.classList.remove('hidden-down', 'hidden-down-show', 'hidden-up', 'hidden-up-show');
+    section.style.zIndex = 3
   });
 }
 
@@ -17,6 +17,7 @@ export function moveUp(elementId) {
     console.log('ydyc 2', elementId)
 
     sectionToAppear.classList.add('hidden-up');
+    sectionToAppear.style.zIndex = 4;
 
     // Use a timeout to trigger the animation
     setTimeout(() => {
@@ -35,6 +36,7 @@ export function moveDown(elementId) {
     // Add a class to hide the section at the bottom
 
     sectionToAppear.classList.add('hidden-down');
+    sectionToAppear.style.zIndex = 4;
     
     setTimeout(() => {
       // Remove the class to move the element into view
