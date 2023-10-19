@@ -8,6 +8,7 @@ export function moveUp(elementId) {
     if (sectionToAppear) {
       // Initially set the section at the bottom of the page
       sectionToAppear.style.position = 'fixed';
+      sectionToAppear.style.bottom = 'unset'; 
       sectionToAppear.style.top = '100%'; // Start at the bottom
       sectionToAppear.style.transition = 'top 0.5s';
       
@@ -28,14 +29,16 @@ export function moveDown(elementId) {
     if (sectionToAppear) {
       // Initially set the section at the top of the page
       sectionToAppear.style.position = 'fixed';
-      sectionToAppear.style.top = '-100%'; // Start at the top
-      sectionToAppear.style.transition = 'top 1s';
+      sectionToAppear.style.top = 'unset'; 
+      sectionToAppear.style.bottom = '100%'
+      // Start at the top
+      sectionToAppear.style.transition = 'bottom 1s';
       
   console.log("here", sectionToAppear)
       // Use a timeout to trigger the animation
       setTimeout(() => {
         // Set the top property to 0 to move the element to the top
-        sectionToAppear.style.top = '0';
+        sectionToAppear.style.bottom = '0';
       }, 100);
     }
   
