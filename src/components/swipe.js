@@ -1,19 +1,38 @@
-// Function to reset section classes and transitions
-function cleanupSectionClasses() {
+function cleanupSectionClasses(dir, elementId) {
+  const sectionArray = ['left-rail', 'about', 'experience', 'skill-service', 'projects', 'contact'];
   const sections = document.querySelectorAll('.section');
-  const leftRail = document.getElementById('left-rail')
-  leftRail.style.transition ='unset'
-  leftRail.style.zIndex = 3
+  const leftRail = document.getElementById('left-rail');
+  leftRail.style.transition = 'unset';
+  leftRail.style.zIndex = 2;
+
   sections.forEach((section) => {
-    section.style.zIndex = 3;
     section.style.transition = 'unset';
-    // section.classList.remove('hidden-up', 'hidden-up-show', 'hidden-down', 'hidden-down-show');
+    section.style.zIndex = 2;
   });
+
+  if (dir === 'up') {
+    const underlayPos = sectionArray.indexOf(elementId);
+    const underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
+
+    if (underlaysection) {
+      underlaysection.style.zIndex = 3;
+    }
+  }
+
+  if (dir === 'down') {
+    const underlayPos = sectionArray.indexOf(elementId);
+    const underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
+
+    if (underlaysection) {
+      underlaysection.style.zIndex = 3;
+    }
+  }
 }
+
 
 // Function to trigger the slide-up animation
 export function moveUp(elementId) {
-  cleanupSectionClasses();
+  cleanupSectionClasses('up', elementId);
   const sectionToAppear = document.getElementById(elementId);
 
   if (sectionToAppear) {
@@ -32,7 +51,7 @@ export function moveUp(elementId) {
 
 // Function to trigger the slide-down animation
 export function moveDown(elementId) {
-  cleanupSectionClasses();
+  cleanupSectionClasses('down', elementId);
   const sectionToAppear = document.getElementById(elementId);
 
   if (sectionToAppear) {
