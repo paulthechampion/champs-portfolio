@@ -85,7 +85,7 @@ export default function SkillsService() {
         // Add more data points here
       ];
     return (
-        <div className='skillservice' id='skill-service'>
+        <div className='skillservice section' id='skill-service'>
             <h1 className='phoneNone appear'>Skills & Service</h1>
             <div className='phone-mini-div leftPad appear'>
                 <h1>SKILLS & SERVICES</h1>

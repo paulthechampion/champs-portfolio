@@ -92,86 +92,30 @@ function SwipeDetector() {
                     setNumber(number-1)
                     const inAbout = eventData.event.target.closest("#about");
                     if(inAbout) {
-                        const leftRail = document.getElementById('left-rail');
-                        const blankDivTop = leftRail.getBoundingClientRect().top + window.scrollY;
-                        leftRail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        moveDown('left-rail')
                     }
 
                     const inexperience = eventData.event.target.closest("#experience");
                     if(inexperience) {
-                        const resumeDiv = document.getElementById('resume-div')
-                        const isResumeDiv = isElementOnScreen(resumeDiv)
-                        if(isResumeDiv) {
-                            const experienceDiv = document.getElementById('experience')
-                            experienceDiv.scrollIntoView({ behavior: 'smooth', block:'start' })
-                            return;
-                        }
-                        const aboutDiv = document.getElementById('about');
-                        aboutDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        moveDown('about')
                         
                     }
 
                     const inSkillServiceDiv = eventData.event.target.closest('#skill-service')
                     if(inSkillServiceDiv) {
-                        const blank = document.getElementById('skills-blank')
-                        const isBlankDiv = isElementOnScreen(blank)
-
-                        if(isBlankDiv) {
-                            const skillServiceDiv = document.getElementById('skill-service')
-                            skillServiceDiv.scrollIntoView({behavior:'smooth', block:'start'})
-                            return
-                        }
-                        const experienceDiv = document.getElementById('experience')
-                        experienceDiv.scrollIntoView({ behavior:'smooth', block:'start' })
+                        moveDown('experience')
                     }
 
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        // Check if the 'projects' div is at the top of the screen
-                        const isProjectsAtTop = isDivAtTopOfScreen('projects');
-
-                        if (isProjectsAtTop) {
-                            const skillServiceDiv = document.getElementById('skill-service');
-                            if (skillServiceDiv) {
-                                // Scroll to the top of the 'skill-service' div
-                                skillServiceDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
-                        } else {
-                            if (activeCard <= 1) {
-                                // If 'activeCard' is less than or equal to 1, scroll to 'projects' and set 'activeCard' to 1
-                                const projectsDiv = document.getElementById('projects');
-                                projectsDiv.scrollIntoView({ behavior:'smooth' , block: 'start'})
-                                setActiveCard(1);
-                            } else {
-                                // Scroll to the previous project card
-                                setActiveCard(activeCard - 1);
-                                const projectCard = document.getElementById(`project${activeCard - 1}`);
-                                if (projectCard) {
-                                    projectCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                } else {
-                                    console.log(`Project card with ID project${activeCard - 1} not found.`);
-                                }
-                            }
-                        }
+                        moveDown('skill-service')
                     }
 
                     const incontact = eventData.event.target.closest("#contact");
 
                     if (incontact) {
-                        const isDivAtTop = isDivAtTopOfScreen('contact');
-                        
-                        if (isDivAtTop) {
-                            const lastProject = document.getElementById(`project8`);
-                            setActiveCard(8)
-                            if(lastProject) {
-                                lastProject.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
-                          
-                        } else {
-                            const contact = document.getElementById('contact');
-                            contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
+                        moveDown('projects')
                     }
                     
 
