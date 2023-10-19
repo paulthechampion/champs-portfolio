@@ -16,10 +16,10 @@ export function moveUp(elementId) {
   const sectionToAppear = document.getElementById(elementId);
 
   if (sectionToAppear) {
-    sectionToAppear.style.transition = 'all .7s';
     // sectionToAppear.classList.add('hidden-up');
     sectionToAppear.style.zIndex = 4;
     sectionToAppear.style.top = "150%"
+    sectionToAppear.style.transition = 'all .4s';
     // Use a timeout to trigger the animation
     setTimeout(() => {
       sectionToAppear.style.top = "0"
@@ -34,10 +34,10 @@ export function moveDown(elementId) {
   const sectionToAppear = document.getElementById(elementId);
 
   if (sectionToAppear) {
-    sectionToAppear.style.transition = 'all .7s';
     // sectionToAppear.classList.add('hidden-down');
     sectionToAppear.style.zIndex = 4;
     sectionToAppear.style.top = "-150%"
+    sectionToAppear.style.transition = 'all .4s';
 
     // Use a timeout to trigger the animation
     setTimeout(() => {
