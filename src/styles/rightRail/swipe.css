@@ -1,0 +1,9 @@
+@media only screen and (max-width:809px )  { 
+        
+    .section {
+        position: fixed;
+        top: 100%;
+        background-color: black !important;
+    }
+
+}

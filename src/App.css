@@ -8,7 +8,7 @@
 @import "./styles/rightRail/responsive.css";
 @import "./styles/rightRail/finger.css";
 @import "./styles/rightRail/intersection.css";
-
+@import "./styles/rightRail/swipe.css";
 
 *{
   padding: none;

@@ -8,7 +8,7 @@ export default function RightRail() {
     const experienceSkills = ['HTML', 'CSS', 'BitBucket','NodeJS', 'React JS']
     return (
     <div className='right-rail'>
-        <div className='about' id='about'>
+        <div className='about section' id='about'>
             <div className='phone-mini-div appear'>
                 <h1>ABOUT</h1>
             </div>
@@ -33,7 +33,7 @@ export default function RightRail() {
             </p>
         </div>
 
-        <div className='experience' id='experience'>
+        <div className='experience section' id='experience'>
             <h1 className='phoneNone appear'>Experience</h1>
             <div className='phone-mini-div leftPad appear'>
                 <h1>EXPERIENCE</h1>

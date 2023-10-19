@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import Main from './Main';
+import { moveUp, moveDown } from './swipe';
 
 function SwipeDetector() {
     const [backgroundColor, setBackgroundColor] = useState('transparent');
@@ -38,10 +39,7 @@ function SwipeDetector() {
                     const notLeftRail = document.querySelector('.content-div:not(#left-rail):hover');
                 
                     if (eventData.event.target.closest("#left-rail")) {
-                        // If the user is inside the #left-rail div, scroll to the top of #about plus 20px
-                        const aboutDiv = document.getElementById('about');
-                        const aboutDivTop = aboutDiv.getBoundingClientRect().top + window.scrollY;
-                        aboutDiv.scrollIntoView({behavior:'smooth', block:'start'})
+                        moveUp('about')
                     }
                 
                     // if (notLeftRail) {
@@ -53,64 +51,26 @@ function SwipeDetector() {
                     const inAbout = eventData.event.target.closest("#about");
             
                     if (inAbout) {
-                        // If the user is inside the #about div, scroll to the top of #experience plus 20px
-                        const experienceDiv = document.getElementById('experience');
-                        const experienceDivTop = experienceDiv.getBoundingClientRect().top + window.scrollY;
-                        experienceDiv.scrollIntoView({behavior:'smooth', block:'start'})
+                        moveUp('experience')
                     }
 
                     const inExperience = eventData.event.target.closest("#experience");
             
                     if (inExperience) {
-                        // If the user is inside the #experience div, scroll to the bottom of the #resume-blank
-                        const resumeDiv = document.getElementById('resume-blank');
-                        const resumeDivBottom = resumeDiv.getBoundingClientRect().bottom;
-
-                        if(isElementOnScreen(resumeDiv)) {
-                            const skillServiceDiv = document.getElementById('skill-service');
-                            const skillServiceDivTop = skillServiceDiv.getBoundingClientRect().top + window.scrollY;
-                            skillServiceDiv.scrollIntoView({behavior:'smooth', block:'start'})
-                        }
-                        else{
-                            resumeDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
-                        }
+                        moveUp('skill-service')
                     }
 
                     const inSkillServiceDiv = eventData.event.target.closest("#skill-service");
             
                     if (inSkillServiceDiv) {
-                        // If the user is inside the #experience div, scroll to the bottom of the #skills-blank
-                        const blank = document.getElementById('skills-blank');
-                        const blankDivBottom = blank.getBoundingClientRect().bottom;
-                        const isBlank = isElementOnScreen(blank)
-                        if(isBlank) {
-                            const projectsDiv = document.getElementById('projects');
-                            const projectsDivTop = projectsDiv.getBoundingClientRect().top + window.scrollY;
-                            projectsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            return;
-                        }
-                        blank.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                        moveUp('projects')
                         
                     }
 
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        if (activeCard > 9) {
-                            const contact = document.getElementById('contact');
-                            setActiveCard(9);
-                            contact.scrollIntoView({behavior:'smooth', block:'start'})
-                        } else {
-                            setActiveCard(activeCard + 1);
-                            let projectCard = document.getElementById(`project${activeCard}`);
-                            if (projectCard !== null) {
-                                // Scroll to the project card
-                                projectCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            } else {
-                                console.log(`Project card with ID project${activeCard} not found.`);
-                            }
-                            
-                        }
+                        moveUp('contact')
                         
                     }
 

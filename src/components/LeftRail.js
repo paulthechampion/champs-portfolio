@@ -1,35 +1,31 @@
 import React, {useEffect} from 'react'
 import {FaGithub, FaTwitter, FaLinkedin, FaMailBulk, FaPhone} from "react-icons/fa"
 import FingerScroll from './FingerScroll';
+import { moveUp, moveDown } from './swipe';
+import { useMediaQuery } from 'react-responsive'
 
 export default function LeftRail() {
-    useEffect(() => {
-        const menuLinks = document.querySelectorAll(".menu-link");
-
-        menuLinks.forEach(function (link) {
-            link.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent the default link behavior
-
-                // Remove "clicked" class from all menu-links
-                menuLinks.forEach(function (menuLink) {
-                    menuLink.classList.remove("clicked");
-                });
-
-                // Add "clicked" class to the clicked menu-link
-                link.classList.add("clicked");
-
-                // Scroll to the target section
-                const targetId = link.getAttribute("href").substring(1);
-                console.log('zama', targetId)
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    window.location.href = `#${targetId}`;
-                }
-                
-            });
-        });
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 809px)'
     })
+
     
+
+    useEffect(() => {
+        if(!isDesktopOrLaptop) {
+            const menuLinks = document.querySelectorAll('.menu-link');
+    
+            menuLinks.forEach((link) => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                moveUp(targetId);
+            });
+            });
+        }
+        
+      }, []);
+      
     return (
     <div id='left-rail'>
         {/* <FingerScroll/> */}
@@ -42,7 +38,7 @@ export default function LeftRail() {
         </div>
 
         <div className='menu-main-div appear'>
-            <a href='#about' className='menu-link firstMenuLink' tabIndex="0">
+            <a href='#about' className='menu-link firstMenuLink' tabIndex="0"  >
                 <div className='menu-flex' id='firstMenuLink' >
                     <div className='menu-line firstline' id='firstLine'>
 
@@ -51,7 +47,7 @@ export default function LeftRail() {
                 </div>
             </a>
 
-            <a href='#experience' className='menu-link' tabIndex="1">
+            <a href='#experience' className='menu-link' tabIndex="1" >
                 <div className='menu-flex' id='secondMenuLink'>
                     <div className='menu-line' id='secondLine'>
 

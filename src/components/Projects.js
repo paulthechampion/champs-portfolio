@@ -24,7 +24,7 @@ export default function Projects() {
         {name: "Todo App", isApp: true, img: todoPic, skills:["CSS", "JavaScript", "Node Js", "Express","React Js", "MongoDB",], link: "https://champs-todo.herokuapp.com",github : "https://github.com/paulthechampion/todoApp", words:"A Full-stack Todo app, saves Todo tasks and arranges them in a tabular format"}
     ]
     return (
-        <div className='projects' id='projects'>
+        <div className='projects section' id='projects'>
             <h1 className='phoneNone appear'>Projects</h1>
             <div className='phone-mini-div leftPad project-phone appear'>
                 <h1>PROJECTS</h1>

@@ -14,7 +14,7 @@ export default class MyForm extends React.Component {
         const { status } = this.state;
         const { phoneNumber } = this.state;
         return (
-            <div className="contact" id="contact">
+            <div className="contact section" id="contact">
                 <h1 className="phoneNone">Message Me</h1>
                 <div className='phone-mini-div leftPad'>
                     <h1>MESSAGE ME</h1>
