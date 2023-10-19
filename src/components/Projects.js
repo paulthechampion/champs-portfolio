@@ -41,7 +41,7 @@ export default function Projects() {
                             <h2>{project.name} <i className="fas fa-arrow-up white"></i></h2>
                             <p>{project.words}</p>
                             {project.skills.map((skill, skillIndex) => (
-                            <button key={skillIndex} className='experience-btn' onClick={()=>{moveDown('contact')}}>{skill}</button>
+                            <button key={skillIndex} className='experience-btn' onClick={()=>{moveUp('contact')}}>{skill}</button>
                             ))}
                             <div className='project-link-div'>
                                 {project.github?<a href={project.github} target='_blank' className='project-link'>GitHub <i className="fas fa-arrow-up"></i></a> : null}
