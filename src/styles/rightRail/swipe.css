@@ -3,26 +3,28 @@
     .section {
         position: fixed;
         background-color:#151d31 !important;
-        z-index: 3;
         transition: top 1s;
+        z-index: 3;
          
     
     }
 
     /* Define initial styles for your sections off-screen */
 .section.hidden-down {
-    top: -100%; /* Start off-screen at the top */
+    top: -50% !important; /* Start off-screen at the top */
+    z-index: 4;
   }
   .section.hidden-down-show {
-    top: 0;
+    top: 0 !important;
   }
   
   .section.hidden-up {
-    top: 100%; /* Start off-screen at the bottom */
+    top: 50% !important; /* Start off-screen at the bottom */
+    z-index: 4;
   }
 
   .section.hidden-up-show {
-    top:0;
+    top:0 !important;
   }
 
     .projects.section {
