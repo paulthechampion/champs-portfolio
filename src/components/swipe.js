@@ -3,6 +3,9 @@ export function moveUp(elementId) {
 
   if (sectionToAppear) {
     // Add a class to hide the section at the top
+    sectionToAppear.classList.remove('hidden-down')
+    sectionToAppear.classList.remove('hidden-down-show')
+
     sectionToAppear.classList.add('hidden-up');
 
     // Use a timeout to trigger the animation
@@ -18,6 +21,9 @@ export function moveDown(elementId) {
 
   if (sectionToAppear) {
     // Add a class to hide the section at the bottom
+    sectionToAppear.classList.remove('hidden-up')
+    sectionToAppear.classList.remove('hidden-up-show')
+
     sectionToAppear.classList.add('hidden-down');
 
     // Use a timeout to trigger the animation
