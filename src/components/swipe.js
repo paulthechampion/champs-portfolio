@@ -18,6 +18,7 @@ export function moveUp(elementId) {
 
     sectionToAppear.classList.add('hidden-up');
     sectionToAppear.style.zIndex = 4;
+    sectionToAppear.style.transition = 'top .7s'
 
     // Use a timeout to trigger the animation
     setTimeout(() => {
@@ -37,6 +38,7 @@ export function moveDown(elementId) {
 
     sectionToAppear.classList.add('hidden-down');
     sectionToAppear.style.zIndex = 4;
+    sectionToAppear.style.transition = 'top .7s'
     
     setTimeout(() => {
       // Remove the class to move the element into view
