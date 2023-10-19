@@ -42,7 +42,7 @@ export function moveDown(elementId) {
     // Use a timeout to trigger the animation
     setTimeout(() => {
       // sectionToAppear.classList.add('hidden-down-show');
-      sectionToAppear.style.top = "-80%"
+      sectionToAppear.style.top = "0%"
     }, 100);
   }
 }
