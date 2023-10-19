@@ -25,7 +25,7 @@ export function moveUp(elementId) {
     setTimeout(() => {
       sectionToAppear.style.top = "0"
       // sectionToAppear.classList.add('hidden-up-show');
-    }, 10);
+    }, 500);
   }
 }
 
@@ -44,6 +44,6 @@ export function moveDown(elementId) {
     setTimeout(() => {
       // sectionToAppear.classList.add('hidden-down-show');
       sectionToAppear.style.top = "0"
-    }, 10);
+    }, 500);
   }
 }
