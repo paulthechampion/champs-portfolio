@@ -4,9 +4,26 @@
         position: fixed;
         background-color:#151d31 !important;
         z-index: 3;
+        transition: top 1s;
          
     
     }
+
+    /* Define initial styles for your sections off-screen */
+.section.hidden-down {
+    top: -100% !important; /* Start off-screen at the top */
+  }
+  .section.hidden-down-show {
+    top: 0 !important;
+  }
+  
+  .section.hidden-up {
+    top: 100% !important; /* Start off-screen at the bottom */
+  }
+
+  .section.hidden-up-show {
+    top:0 !important;
+  }
 
     .projects.section {
         margin-top: 0;
