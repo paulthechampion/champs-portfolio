@@ -3,6 +3,7 @@ function cleanupSectionClasses() {
   const sections = document.querySelectorAll('.section');
   const leftRail = document.getElementById('left-rail')
   leftRail.style.transition ='unset'
+  leftRail.style.zIndex = 3
   sections.forEach((section) => {
     section.style.zIndex = 3;
     section.style.transition = 'unset';
@@ -19,7 +20,7 @@ export function moveUp(elementId) {
     // sectionToAppear.classList.add('hidden-up');
     sectionToAppear.style.zIndex = 4;
     sectionToAppear.style.top = "150%"
-    sectionToAppear.style.transition = 'all .4s';
+    sectionToAppear.style.transition = 'all 1s';
     // Use a timeout to trigger the animation
     setTimeout(() => {
       sectionToAppear.style.top = "0"
@@ -37,7 +38,7 @@ export function moveDown(elementId) {
     // sectionToAppear.classList.add('hidden-down');
     sectionToAppear.style.zIndex = 4;
     sectionToAppear.style.top = "-150%"
-    sectionToAppear.style.transition = 'all .4s';
+    sectionToAppear.style.transition = 'all 1s';
 
     // Use a timeout to trigger the animation
     setTimeout(() => {
