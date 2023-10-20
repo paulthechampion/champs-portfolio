@@ -32,20 +32,6 @@ function SwipeDetector() {
         // If the div doesn't exist, return false
         return false;
     }
-
-    function cardAtTopOfScreen(cardId) {
-        const card = document.getElementById(cardId);
-      
-        if (!card) {
-          return false; // Card with the given ID not found
-        }
-      
-        const cardRect = card.getBoundingClientRect();
-        const cardTop = cardRect.top;
-      
-        return cardTop <= 40;
-    }
-
     const handlers = useSwipeable({
         onSwiped: (eventData) => {
             if (eventData.dir === 'Up') {
@@ -84,24 +70,8 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        if (cardAtTopOfScreen('project9')) {
-                          moveUp('contact');
-                          return;
-                        }
-                      
-                        const allCards = document.querySelectorAll('.project-card');
+                        moveUp('contact')
                         
-                        // Add the 'scroll-up' class to move the cards up
-                        allCards.forEach((card) => {
-                          card.classList.add('scroll-up');
-                        });
-                      
-                        // To remove the class and reset the cards, you can use a setTimeout
-                        setTimeout(() => {
-                          allCards.forEach((card) => {
-                            card.classList.remove('scroll-up');
-                          });
-                        }, 300); // Adjust the timeout duration to match the CSS transition duration (0.3s)
                     }
 
                     const incontact = eventData.event.target.closest("#contact");
@@ -139,15 +109,7 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        if(cardAtTopOfScreen('project0')) {
-                            moveDown('skill-service')
-                            return
-                        }
-
-                        const allCards = document.querySelectorAll('.project-card')
-                        allCards.forEach((card) => {
-                            card.style.transform = 'translateY(100px)';
-                        });
+                        moveDown('skill-service')
                     }
 
                     const incontact = eventData.event.target.closest("#contact");
