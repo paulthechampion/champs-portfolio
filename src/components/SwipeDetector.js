@@ -33,6 +33,20 @@ function SwipeDetector() {
         return false;
     }
 
+    function isDivAtBottom(divId) {
+        const targetDiv = document.getElementById(divId);
+      
+        if (targetDiv) {
+          const divRect = targetDiv.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+      
+          return divRect.bottom >= viewportHeight; // Check if the bottom edge of the div is at or below the bottom of the viewport
+        }
+      
+        return false; // Handle the case where the element is not found
+      }
+      
+
     function cardAtTopOfScreen(cardId) {
         const card = document.getElementById(cardId);
       
@@ -86,11 +100,11 @@ function SwipeDetector() {
                     if (inProjectsDiv) {
                         const projectSection = document.getElementById('projects')
                         const currentPosition = projectSection.getBoundingClientRect().top;
-                        const newPosition = currentPosition - 500;
+                        const newPosition = currentPosition - 450;
                         
                         projectSection.style.transform = `translateY(${newPosition}px)`;
 
-                        if(cardAtTopOfScreen('project9')) {
+                        if(isDivAtBottom('projects')) {
                             
                             moveUp('contact')
                         }
@@ -132,7 +146,15 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        moveDown('skill-service')
+                        const projectSection = document.getElementById('projects')
+                        const currentPosition = projectSection.getBoundingClientRect().top;
+                        const newPosition = currentPosition + 450;
+                        
+                        projectSection.style.transform = `translateY(${newPosition}px)`;
+
+                        if(isDivAtTopOfScreen('projects')) {
+                            moveDown('skill-service')
+                        }
                     }
 
                     const incontact = eventData.event.target.closest("#contact");
