@@ -70,7 +70,15 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        moveUp('contact')
+                        if(isDivAtTopOfScreen('project9')) {
+                            moveUp('contact')
+                            return
+                        }
+                        
+                        const allCards = document.querySelectorAll('.project-card')
+                        allCards.forEach((card) => {
+                            card.style.transform = 'translateY(-100px)';
+                        });
                         
                     }
 
@@ -109,7 +117,15 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        moveDown('skill-service')
+                        if(isDivAtTopOfScreen('project0')) {
+                            moveDown('skill-service')
+                            return
+                        }
+
+                        const allCards = document.querySelectorAll('.project-card')
+                        allCards.forEach((card) => {
+                            card.style.transform = 'translateY(100px)';
+                        });
                     }
 
                     const incontact = eventData.event.target.closest("#contact");

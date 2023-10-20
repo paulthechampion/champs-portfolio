@@ -3,7 +3,7 @@
     .section {
         position: fixed;
         background-color:#151d31 !important;
-        transition: all 1s !important;
+        transition: all .7s !important;
         z-index: 3;
          
     
@@ -13,7 +13,7 @@
 .hidden-down {
     top: -80% !important; /* Start off-screen at the top */
     z-index: 4;
-    transition: all 1s !important;
+    transition: all .7s !important;
   }
 .hidden-down-show {
     top: 0 !important;
@@ -22,14 +22,14 @@
 .hidden-up {
     top: 80% !important; /* Start off-screen at the bottom */
     z-index: 4;
-    transition: all 1s !important;
+    transition: all .7s !important;
   }
 
 .hidden-up-show {
     top:0 !important;
   }
 #left-rail {
-    transition: all 1s !important;
+    transition: all .7s !important;
     background-color:#151d31 !important;
 }
 
@@ -85,3 +85,5 @@ background-position: center center;
     }
     
 }
+
+  

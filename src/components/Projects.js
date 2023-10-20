@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import schwab from '../images/schwab.png'
 import sandP from '../images/SandP.png'
 import clownImg from '../images/clownchat.png'
@@ -24,6 +24,13 @@ export default function Projects() {
         {name: "Emaily",  isApp: true, img: surveyPic, skills:["CSS", "JavaScript", "Node Js", "Express","React Js","Redux", "MongoDB",], link: "https://email-dev-list.herokuapp.com",github : "https://github.com/paulthechampion/email-list", words:"Emaily is a survey dispatch service, it enables the users to send surveys to a series of emails and receive feedback. This app is still in the test phase, it was created using Mongodb, Express Js, React Js, Redux, Redux Forms, Stripe for payment integration, SendGrid,Node js and many more"}, 
         {name: "Todo App", isApp: true, img: todoPic, skills:["CSS", "JavaScript", "Node Js", "Express","React Js", "MongoDB",], link: "https://champs-todo.herokuapp.com",github : "https://github.com/paulthechampion/todoApp", words:"A Full-stack Todo app, saves Todo tasks and arranges them in a tabular format"}
     ]
+
+    const [activeProjectIndex, setActiveProjectIndex] = useState(null);
+    
+    const moveProjectToTop = (index) => {
+        setActiveProjectIndex(index);
+      };
+
     return (
         <div className='projects section' id='projects'>
             <h1 className='phoneNone appear'>Projects</h1>
@@ -33,7 +40,9 @@ export default function Projects() {
     
             <div>
                 {projectsData.map((project, index) => (
-                    <div className='project-card appear move-up' key={index} id={`project${index}`}>
+                    <div 
+                        className={`project-card appear move-up${index === activeProjectIndex ? ' active' : ''}`}
+                        key={index} id={`project${index}`}>
                         <div>
                             <img src={project.img} alt={project.name} />
                         </div>
@@ -41,7 +50,7 @@ export default function Projects() {
                             <h2>{project.name} <i className="fas fa-arrow-up white"></i></h2>
                             <p>{project.words}</p>
                             {project.skills.map((skill, skillIndex) => (
-                            <button key={skillIndex} className='experience-btn' onClick={()=>{moveUp('contact')}}>{skill}</button>
+                            <button key={skillIndex} className='experience-btn move-up-button' >{skill}</button>
                             ))}
                             <div className='project-link-div'>
                                 {project.github?<a href={project.github} target='_blank' className='project-link'>GitHub <i className="fas fa-arrow-up"></i></a> : null}

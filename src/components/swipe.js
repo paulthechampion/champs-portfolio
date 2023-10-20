@@ -42,10 +42,10 @@ export function moveUp(elementId) {
     // Use a timeout to trigger the animation
     setTimeout(() => {
       
-      sectionToAppear.style.transition = 'top 1s';
+      sectionToAppear.style.transition = 'top .7s';
       sectionToAppear.style.top = "0"
       // sectionToAppear.classList.add('hidden-up-show');
-    }, 500);
+    }, 300);
   }
 }
 
@@ -62,8 +62,8 @@ export function moveDown(elementId) {
     // Use a timeout to trigger the animation
     setTimeout(() => {
       // sectionToAppear.classList.add('hidden-down-show');
-      sectionToAppear.style.transition = 'top 1s';
+      sectionToAppear.style.transition = 'top .7s';
       sectionToAppear.style.top = "0"
-    }, 500);
+    }, 300);
   }
 }
