@@ -40,12 +40,16 @@ function SwipeDetector() {
           const divRect = targetDiv.getBoundingClientRect();
           const viewportHeight = window.innerHeight;
       
-          return divRect.bottom >= viewportHeight; // Check if the bottom edge of the div is at or below the bottom of the viewport
+          // Check if the bottom edge of the last content within the div is at or below the bottom of the viewport
+          const lastContent = targetDiv.lastElementChild; // Assuming the last content is the last child element
+          if (lastContent) {
+            const lastContentRect = lastContent.getBoundingClientRect();
+            return lastContentRect.bottom >= viewportHeight;
+          }
         }
       
         return false; // Handle the case where the element is not found
-      }
-      
+    }
 
     function cardAtTopOfScreen(cardId) {
         const card = document.getElementById(cardId);
