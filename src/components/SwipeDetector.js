@@ -103,7 +103,7 @@ function SwipeDetector() {
                     if (inProjectsDiv) {
                         const projectSection = document.getElementById('projects')
                         const currentPosition = projectSection.getBoundingClientRect().top;
-                        const newPosition = currentPosition - 450;
+                        const newPosition = currentPosition - 430;
                         const lastProject = document.getElementById('project9')
                         if(isElementOnScreen(lastProject)) {
                             
@@ -153,7 +153,7 @@ function SwipeDetector() {
                     if (inProjectsDiv) {
                         const projectSection = document.getElementById('projects')
                         const currentPosition = projectSection.getBoundingClientRect().top;
-                        const newPosition = currentPosition + 450;
+                        const newPosition = currentPosition + 430;
                         
                         if(isDivAtTopOfScreen('projects')) {
                             moveDown('skill-service')
