@@ -87,3 +87,7 @@ background-position: center center;
 }
 
   
+.scroll-up {
+    transform: translateY(-500px);
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }

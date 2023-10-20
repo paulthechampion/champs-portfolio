@@ -84,16 +84,24 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        if(cardAtTopOfScreen('project9')) {
-                            moveUp('contact')
-                            return
+                        if (cardAtTopOfScreen('project9')) {
+                          moveUp('contact');
+                          return;
                         }
+                      
+                        const allCards = document.querySelectorAll('.project-card');
                         
-                        const allCards = document.querySelectorAll('.project-card')
+                        // Add the 'scroll-up' class to move the cards up
                         allCards.forEach((card) => {
-                            card.style.transform = 'translateY(-100px)';
+                          card.classList.add('scroll-up');
                         });
-                        
+                      
+                        // To remove the class and reset the cards, you can use a setTimeout
+                        setTimeout(() => {
+                          allCards.forEach((card) => {
+                            card.classList.remove('scroll-up');
+                          });
+                        }, 300); // Adjust the timeout duration to match the CSS transition duration (0.3s)
                     }
 
                     const incontact = eventData.event.target.closest("#contact");
