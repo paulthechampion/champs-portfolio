@@ -32,6 +32,20 @@ function SwipeDetector() {
         // If the div doesn't exist, return false
         return false;
     }
+
+    function cardAtTopOfScreen(cardId) {
+        const card = document.getElementById(cardId);
+      
+        if (!card) {
+          return false; // Card with the given ID not found
+        }
+      
+        const cardRect = card.getBoundingClientRect();
+        const cardTop = cardRect.top;
+      
+        return cardTop <= 40;
+    }
+
     const handlers = useSwipeable({
         onSwiped: (eventData) => {
             if (eventData.dir === 'Up') {
@@ -70,7 +84,7 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        if(isDivAtTopOfScreen('project9')) {
+                        if(cardAtTopOfScreen('project9')) {
                             moveUp('contact')
                             return
                         }
@@ -117,7 +131,7 @@ function SwipeDetector() {
                     const inProjectsDiv = eventData.event.target.closest("#projects");
 
                     if (inProjectsDiv) {
-                        if(isDivAtTopOfScreen('project0')) {
+                        if(cardAtTopOfScreen('project0')) {
                             moveDown('skill-service')
                             return
                         }
