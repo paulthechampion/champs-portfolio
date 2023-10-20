@@ -37,20 +37,19 @@ function SwipeDetector() {
         const targetDiv = document.getElementById(divId);
       
         if (targetDiv) {
-          const divRect = targetDiv.getBoundingClientRect();
-          const viewportHeight = window.innerHeight;
-      
-          // Check if the bottom edge of the last content within the div is at or below the bottom of the viewport
           const lastContent = targetDiv.lastElementChild; // Assuming the last content is the last child element
+      
           if (lastContent) {
-            const lastContentRect = lastContent.getBoundingClientRect();
-            return lastContentRect.bottom >= viewportHeight;
+            const divBottom = targetDiv.offsetTop + targetDiv.offsetHeight;
+            const lastContentBottom = lastContent.offsetTop + lastContent.offsetHeight;
+            const viewportHeight = window.innerHeight;
+      
+            return lastContentBottom >= divBottom && lastContentBottom >= viewportHeight;
           }
         }
       
         return false; // Handle the case where the element is not found
-    }
-
+      }
     function cardAtTopOfScreen(cardId) {
         const card = document.getElementById(cardId);
       
@@ -106,12 +105,14 @@ function SwipeDetector() {
                         const currentPosition = projectSection.getBoundingClientRect().top;
                         const newPosition = currentPosition - 450;
                         
-                        projectSection.style.transform = `translateY(${newPosition}px)`;
-
                         if(isDivAtBottom('projects')) {
                             
                             moveUp('contact')
+                            return;
                         }
+                        projectSection.style.transform = `translateY(${newPosition}px)`;
+
+                        
                         
                     }
 
@@ -154,11 +155,13 @@ function SwipeDetector() {
                         const currentPosition = projectSection.getBoundingClientRect().top;
                         const newPosition = currentPosition + 450;
                         
-                        projectSection.style.transform = `translateY(${newPosition}px)`;
-
                         if(isDivAtTopOfScreen('projects')) {
                             moveDown('skill-service')
+                            return
                         }
+                        projectSection.style.transform = `translateY(${newPosition}px)`;
+
+                        
                     }
 
                     const incontact = eventData.event.target.closest("#contact");
