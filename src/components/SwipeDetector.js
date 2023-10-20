@@ -104,8 +104,8 @@ function SwipeDetector() {
                         const projectSection = document.getElementById('projects')
                         const currentPosition = projectSection.getBoundingClientRect().top;
                         const newPosition = currentPosition - 450;
-                        
-                        if(isDivAtBottom('projects')) {
+                        const lastProject = document.getElementById('project9')
+                        if(isElementOnScreen(lastProject)) {
                             
                             moveUp('contact')
                             return;
