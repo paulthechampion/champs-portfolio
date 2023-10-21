@@ -197,8 +197,10 @@ function SwipeDetector() {
                         
                         if(isElementOnScreen(firstProject)) {
                             projectSection.style.transform = 'unset'
-                            moveDown('skill-service')
-                            return
+                            if(isDivAtTopOfScreen('projects')) {
+                                moveDown('skill-service')
+                                return;
+                            }
                         }
                         projectSection.style.transform = `translateY(${newPosition}px)`;
 
