@@ -186,6 +186,7 @@ function SwipeDetector() {
                             return;
                         }else {
                             moveDown('about')
+                            return;
                         }
                         
                     }
@@ -202,6 +203,7 @@ function SwipeDetector() {
                         }
                         else {
                             moveDown('experience')
+                            return;
                         }
                     }
 
