@@ -161,7 +161,7 @@ function SwipeDetector() {
                         if(isDivAtTopOfScreen('contact')) {
                             const contact = document.getElementById('contact');
                             if(contact) {
-                                contact.style.transform = `translateY(-200px)`;
+                                contact.style.transform = `translateY(-500px)`;
                                 return;
                             }
                         }
