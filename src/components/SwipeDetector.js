@@ -75,7 +75,7 @@ function SwipeDetector() {
         // Calculate the translateY value to move the main div
         const viewportHeight = window.innerHeight;
         const lastChildDivHeight = lastChildDiv.clientHeight;
-        const translateYValue = viewportHeight - lastChildDivHeight;
+        const translateYValue = viewportHeight - lastChildDivHeight - 20; // Adjusted for a small gap
       
         // Apply the translateY transform to move the main div
         mainDiv.style.transform = `translateY(-${translateYValue}px)`;
@@ -193,8 +193,9 @@ function SwipeDetector() {
                         const projectSection = document.getElementById('projects')
                         const currentPosition = projectSection.getBoundingClientRect().top;
                         const newPosition = currentPosition + 450;
+                        const firstProject = document.getElementById('project0')
                         
-                        if(isElementOnScreen('project0')) {
+                        if(isElementOnScreen(firstProject)) {
                             moveDown('skill-service')
                             return
                         }
