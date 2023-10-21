@@ -213,7 +213,12 @@ function SwipeDetector() {
                         const currentPosition = projectSection.getBoundingClientRect().top;
                         const newPosition = currentPosition + 450;
                         const firstProject = document.getElementById('project0')
+                        const secondProject = document.getElementById('project1')
                         
+                        if(isElementOnScreen(secondProject) && !isElementOnScreen(firstProject)) {
+                            projectSection.style.transform = 'unset'
+                            return;
+                        }
                         if(isElementOnScreen(firstProject)) {
                             projectSection.style.transform = 'unset'
                             if(isDivAtTopOfScreen('projects')) {
