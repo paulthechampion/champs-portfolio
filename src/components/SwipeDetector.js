@@ -181,7 +181,11 @@ function SwipeDetector() {
                         const experienceSection = document.getElementById('experience')
                         const blank = document.getElementById('resume-blank')
                         if(isElementOnScreen(blank)) {
-                            experienceSection.style.transform = 'unset'
+                            experienceSection.style.transform ='translateY(0px)'
+
+                            setTimeout(() => {
+                                moveDown('about');
+                              }, 1000); // Adjust the timeout value as needed
                         }
                         moveDown('about')
                         
@@ -193,7 +197,12 @@ function SwipeDetector() {
                         const blank = document.getElementById('skills-blank')
                         
                         if(isElementOnScreen(blank)) {
-                            skillSection.style.transform = 'unset'
+                            skillSection.style.transform = 'translateY(0px)'
+
+                            setTimeout(() => {
+                                moveDown('experience');
+                                return;
+                              }, 1000); // Adjust the timeout value as needed
                         }
                         moveDown('experience')
                     }
