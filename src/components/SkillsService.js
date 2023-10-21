@@ -44,8 +44,8 @@ export default function SkillsService() {
     }, [loadingPercentage]);
 
     return (
-      <div className="loading-container appear">
-        <div className="loading-bar" style={loadingStyle} ref={loadingRef}></div>
+      <div className="loading-container">
+        <div className="loading-bar appear" style={loadingStyle} ref={loadingRef}></div>
       </div>
     );
   }
