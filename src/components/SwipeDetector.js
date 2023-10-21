@@ -81,7 +81,7 @@ function SwipeDetector() {
         mainDiv.style.transform = `translateY(-${translateYValue}px)`;
       }
     
-      function loadingBarWidthAndOpacity(end) {
+      function loadingBarWidth(end) {
         const loadingContainers = document.querySelectorAll('.loading');
       
         loadingContainers.forEach((loadingContainer, i) => {
