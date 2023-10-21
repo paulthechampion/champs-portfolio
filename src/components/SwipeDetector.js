@@ -185,7 +185,8 @@ function SwipeDetector() {
 
                             setTimeout(() => {
                                 moveDown('about');
-                              }, 1000); // Adjust the timeout value as needed
+                                return;
+                              }, 2000); // Adjust the timeout value as needed
                         }
                         moveDown('about')
                         
@@ -202,7 +203,7 @@ function SwipeDetector() {
                             setTimeout(() => {
                                 moveDown('experience');
                                 return;
-                              }, 1000); // Adjust the timeout value as needed
+                              }, 2000); // Adjust the timeout value as needed
                         }
                         moveDown('experience')
                     }
