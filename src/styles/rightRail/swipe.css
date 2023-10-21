@@ -9,49 +9,49 @@
     
     }
 
-    /* Define initial styles for your sections off-screen */
-.hidden-down {
-    top: -80% !important; /* Start off-screen at the top */
-    z-index: 4;
-    transition: all .7s !important;
-  }
-.hidden-down-show {
-    top: 0 !important;
-  }
-  
-.hidden-up {
-    top: 80% !important; /* Start off-screen at the bottom */
-    z-index: 4;
-    transition: all .7s !important;
-  }
+        /* Define initial styles for your sections off-screen */
+    .hidden-down {
+        top: -80% !important; /* Start off-screen at the top */
+        z-index: 4;
+        transition: all .7s !important;
+      }
+    .hidden-down-show {
+        top: 0 !important;
+      }
+      
+    .hidden-up {
+        top: 80% !important; /* Start off-screen at the bottom */
+        z-index: 4;
+        transition: all .7s !important;
+      }
 
-.hidden-up-show {
-    top:0 !important;
-  }
-#left-rail {
-    transition: all .7s !important;
-    background-color:#151d31 !important;
-}
+    .hidden-up-show {
+        top:0 !important;
+      }
+    #left-rail {
+        transition: all .7s !important;
+        background-color:#151d31 !important;
+    }
 
-#left-rail::after {
+    #left-rail::after {
 
-    content: '';
-background: url("../../images/blueloadinggif.gif"); /* Replace with your background image */
-background-size: cover;
-width: 100%;
-height: 100%;
-position: fixed;
-top: 0;
-left: 0;
+        content: '';
+    background: url("../../images/blueloadinggif.gif"); /* Replace with your background image */
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-opacity: 0.04; /* Adjust opacity for the image */
-z-index: -1; /* Place the pseudo-element behind the content */
-background-position: center center; /* Center the background image */
-pointer-events: none; 
-background-size: 200%;
-background-repeat: no-repeat;
-background-position: center center;
-}
+    opacity: 0.04; /* Adjust opacity for the image */
+    z-index: -1; /* Place the pseudo-element behind the content */
+    background-position: center center; /* Center the background image */
+    pointer-events: none; 
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
     .projects.section {
         margin-top: 0;
     }
@@ -85,27 +85,29 @@ background-position: center center;
     }
 
      
-.scroll-up {
-    transform: translateY(-500px);
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-  }
+    .scroll-up {
+        transform: translateY(-500px);
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
+      }
 
-  .projects.section {
-    padding-bottom: 100px;
-  }
+    .projects.section {
+      padding-bottom: 100px;
+    }
+
+    
+    .experience {
+      padding-bottom: 100px;
+    }
+
+    .skillservice {
+      padding-bottom: 100px;
+    }
+
+    .blank {
+      color: transparent !important;
+    }
     
 }
 
 
-.experience {
-  padding-bottom: 100px;
-}
-
-.skillservice {
-  padding-bottom: 100px;
-}
-
-.blank {
-  color: transparent !important;
-}
  
