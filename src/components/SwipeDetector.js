@@ -195,7 +195,6 @@ function SwipeDetector() {
                         const newPosition = currentPosition + 450;
                         
                         if(isElementOnScreen('project0')) {
-                            projectSection.style.transform = 'unset';
                             moveDown('skill-service')
                             return
                         }
