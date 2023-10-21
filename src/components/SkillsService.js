@@ -53,24 +53,12 @@ export default function SkillsService() {
     );
   }
 
-  function DataPointList({ dataPoints }) {
-    return (
-      <div className="loading-flex">
-        {dataPoints.map((dataPoint, index) => (
-          <div key={index} className='loading'>
-            {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
-            <LoadingDiv loadingPercentage={dataPoint.number} />
-          </div>
-        ))}
-      </div>
-    );
-  }
 
   function DataPointList({ dataPoints }) {
     return (
       <div className="loading-flex">
         {dataPoints.map((dataPoint, index) => (
-          <div key={index}>
+          <div key={index} className='loading'>
             {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
             <LoadingDiv loadingPercentage={dataPoint.number} />
           </div>
