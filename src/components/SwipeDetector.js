@@ -63,6 +63,29 @@ function SwipeDetector() {
         return cardTop <= 40;
       }
 
+      function moveToBottom(divId) {
+        // Get the main div and its last child div
+        const mainDiv = document.getElementById(divId);
+        if (!mainDiv) {
+          console.error(`Element with ID ${divId} not found.`);
+          return;
+        }
+      
+        const lastChildDiv = mainDiv.lastElementChild;
+      
+        // Get the height of the main div and last child div
+        const mainDivHeight = mainDiv.clientHeight;
+        const lastChildDivHeight = lastChildDiv.clientHeight;
+      
+        // Calculate the translateY value to move the main div
+        const translateYValue = mainDivHeight - lastChildDivHeight;
+      
+        // Apply the translateY transform to move the main div
+        mainDiv.style.transform = `translateY(-${translateYValue}px)`;
+      }
+
+
+
     const handlers = useSwipeable({
         onSwiped: (eventData) => {
             if (eventData.dir === 'Up') {
@@ -112,7 +135,7 @@ function SwipeDetector() {
                             return
                         }
 
-                        skillSection.style.transform = `translateY(${newPosition}px)`;
+                        moveToBottom('skills-blank')
                         
                     }
 

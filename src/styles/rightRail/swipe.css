@@ -102,6 +102,6 @@ background-position: center center;
 }
 
 .blank {
-  color: transparent;
+  color: transparent !important;
 }
  
