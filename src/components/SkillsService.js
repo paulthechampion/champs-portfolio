@@ -15,7 +15,7 @@ export default function SkillsService() {
     const loadingRef = useRef(null);
 
     useEffect(() => {
-      const rootMargin = isDesktopOrLaptop ? '0px 0px -250px 0px' : '0px 0px -2000px 0px';
+      const rootMargin = isDesktopOrLaptop ? '0px 0px -250px 0px' : '0px 0px -20px 0px';
       const observer = new IntersectionObserver(handleIntersection, {
         root: null,
         rootMargin,
@@ -43,17 +43,6 @@ export default function SkillsService() {
             entry.target.style.width = '0%';
           }
         });
-      }
-    }, [loadingPercentage, isDesktopOrLaptop]);
-
-    // Additional useEffect for mobile devices
-    useEffect(() => {
-      if (!isDesktopOrLaptop) {
-        const loadingBar = loadingRef.current;
-        if (loadingBar) {
-          const width = loadingPercentage * 10; // Set width to loadingPercentage * 10
-          loadingBar.style.width = `${width}%`;
-        }
       }
     }, [loadingPercentage, isDesktopOrLaptop]);
 
