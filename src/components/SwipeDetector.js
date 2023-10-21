@@ -159,13 +159,10 @@ function SwipeDetector() {
             
                     if (incontact) {
                         if(isDivAtTopOfScreen('contact')) {
-                            const blankDiv = document.getElementById('contact-blank');
-                            const blankDivTop = blankDiv.getBoundingClientRect().top + window.scrollY;
-                            blankDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            const contact = document.getElementById('contact-blank');
+                            contact.style.transform = `translateY(-200px)`;
                             return;
                         }
-                        const contactDiv = document.getElementById('contact') 
-                        contactDiv.scrollIntoView({behavior:'smooth', block:'start'})
                     }    
             }
             
