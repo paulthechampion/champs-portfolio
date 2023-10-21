@@ -178,10 +178,10 @@ function SwipeDetector() {
 
                     const inexperience = eventData.event.target.closest("#experience");
                     if(inexperience) {
-                        const skillSection = document.getElementById('skill-service')
+                        const experienceSection = document.getElementById('experience')
                         const blank = document.getElementById('resume-blank')
                         if(isElementOnScreen(blank)) {
-                            projectSection.style.transform = 'unset'
+                            experienceSection.style.transform = 'unset'
                         }
                         moveDown('about')
                         
@@ -193,7 +193,7 @@ function SwipeDetector() {
                         const blank = document.getElementById('skills-blank')
                         
                         if(isElementOnScreen(blank)) {
-                            projectSection.style.transform = 'unset'
+                            skillSection.style.transform = 'unset'
                         }
                         moveDown('experience')
                     }
