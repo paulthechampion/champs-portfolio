@@ -1,6 +1,5 @@
-import React , { useEffect, useRef }from 'react'
-import { useMediaQuery } from 'react-responsive'
-
+import React, { useRef, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export default function SkillsService() {
   const isDesktopOrLaptop = useMediaQuery({
@@ -9,7 +8,7 @@ export default function SkillsService() {
 
   function LoadingDiv({ loadingPercentage }) {
     const loadingStyle = {
-      width: '0%' // Initially, set the width to 0%
+      width: `${loadingPercentage * 10}%`, // Set the width to loadingPercentage * 10%
     };
 
     const loadingRef = useRef(null);
@@ -19,7 +18,7 @@ export default function SkillsService() {
       const observer = new IntersectionObserver(handleIntersection, {
         root: null,
         rootMargin,
-        threshold: 0 // Trigger when 0% of the element is visible
+        threshold: 0.1 // Trigger when 10% of the element is visible
       });
 
       if (loadingRef.current) {
@@ -34,31 +33,29 @@ export default function SkillsService() {
 
       function handleIntersection(entries) {
         entries.forEach((entry) => {
+          const loadingBar = entry.target;
           if (entry.isIntersecting) {
-            const loadingBar = entry.target;
-            const width = loadingPercentage * 10; // Set width to loadingPercentage * 10
-            loadingBar.style.transition = 'width 1.5s ease-in';
-            loadingBar.style.width = `${width}%`;
+            loadingBar.style.transition = 'opacity 1.5s ease-in'; // Add opacity transition
+            loadingBar.style.opacity = 1;
           } else {
-            entry.target.style.width = '0%';
+            loadingBar.style.opacity = 0;
           }
         });
       }
-    }, [loadingPercentage, isDesktopOrLaptop]);
+    }, [isDesktopOrLaptop]);
 
     return (
       <div className="loading-container">
-        <div className="loading-bar appear" style={loadingStyle} ref={loadingRef}></div>
+        <div className="loading-bar appear" style={{ ...loadingStyle }} ref={loadingRef}></div>
       </div>
     );
   }
-
 
   function DataPointList({ dataPoints }) {
     return (
       <div className="loading-flex">
         {dataPoints.map((dataPoint, index) => (
-          <div key={index} className='loading'>
+          <div key={index} className="loading">
             {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
             <LoadingDiv loadingPercentage={dataPoint.number} />
           </div>
@@ -66,8 +63,6 @@ export default function SkillsService() {
       </div>
     );
   }
-
-
       const dataPoints = [
         { name: "HTML 5", number: 10 },
         { name: "C#", number: 4 },

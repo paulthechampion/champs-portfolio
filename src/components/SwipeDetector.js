@@ -81,38 +81,6 @@ function SwipeDetector() {
         mainDiv.style.transform = `translateY(-${translateYValue}px)`;
       }
     
-      function loadingBarWidth(end) {
-        const loadingContainers = document.querySelectorAll('.loading');
-      
-        loadingContainers.forEach((loadingContainer, i) => {
-          const skillPerSpan = loadingContainer.querySelector('.skill-per');
-          const loadingBar = loadingContainer.querySelector('.loading-container .loading-bar');
-      
-          if (skillPerSpan && loadingBar) {
-            // Get the skill percentage text and convert it to a number
-            const skillPercentage = parseFloat(skillPerSpan.textContent);
-      
-            // Set the initial state
-            loadingBar.style.opacity = '0';
-            loadingBar.style.width = '0%';
-      
-            // Animate the opacity and width
-            const animationDuration = 1000; // Duration in milliseconds
-            const delay = i * (animationDuration / loadingContainers.length);
-      
-            setTimeout(() => {
-              loadingBar.style.transition = `opacity ${animationDuration}ms ease-in-out, width ${animationDuration}ms ease-in-out`;
-              loadingBar.style.opacity = '1';
-              loadingBar.style.width = `${skillPercentage}%`;
-            }, delay);
-      
-            // Stop when reaching the 'end' index
-            if (i === end) {
-              return;
-            }
-          }
-        });
-      }
       
       
 
@@ -148,7 +116,6 @@ function SwipeDetector() {
                         const newPosition = currentPosition - 460;
                         const resumeBlank = document.getElementById('resume-blank')
                         if(isElementOnScreen(resumeBlank)) {
-                            loadingBarWidth(5)
                             moveUp('skill-service')
                             return
                         }
@@ -169,7 +136,7 @@ function SwipeDetector() {
                         }
 
                         moveToBottom('skill-service')
-                        loadingBarWidth(18)
+                        
                         return;
                         
                     }
@@ -261,7 +228,7 @@ function SwipeDetector() {
                             if(isDivAtTopOfScreen('projects')) {
 
                                 moveDown('skill-service')
-                                loadingBarWidth(18)
+                                
                                 return;
                             }
                         }
