@@ -196,6 +196,7 @@ function SwipeDetector() {
                         const firstProject = document.getElementById('project0')
                         
                         if(isElementOnScreen(firstProject)) {
+                            projectSection.style.transform = 'unset'
                             moveDown('skill-service')
                             return
                         }
