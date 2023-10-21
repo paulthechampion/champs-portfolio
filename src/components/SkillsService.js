@@ -3,6 +3,10 @@ import { useMediaQuery } from 'react-responsive'
 
 
 export default function SkillsService() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 809px)'
+  });
+
   function LoadingDiv({ loadingPercentage }) {
     const loadingStyle = {
       width: '0%' // Initially, set the width to 0%
@@ -11,7 +15,7 @@ export default function SkillsService() {
     const loadingRef = useRef(null);
 
     useEffect(() => {
-      const rootMargin = '0px'; // Set rootMargin to 0px for immediate visibility
+      const rootMargin = isDesktopOrLaptop ? '0px 0px -250px 0px' : '0px 0px -2000px 0px';
       const observer = new IntersectionObserver(handleIntersection, {
         root: null,
         rootMargin,
@@ -40,11 +44,35 @@ export default function SkillsService() {
           }
         });
       }
-    }, [loadingPercentage]); // Observe loadingPercentage as a dependency
+    }, [loadingPercentage, isDesktopOrLaptop]);
+
+    // Additional useEffect for mobile devices
+    useEffect(() => {
+      if (!isDesktopOrLaptop) {
+        const loadingBar = loadingRef.current;
+        if (loadingBar) {
+          const width = loadingPercentage * 10; // Set width to loadingPercentage * 10
+          loadingBar.style.width = `${width}%`;
+        }
+      }
+    }, [loadingPercentage, isDesktopOrLaptop]);
 
     return (
       <div className="loading-container">
         <div className="loading-bar appear" style={loadingStyle} ref={loadingRef}></div>
+      </div>
+    );
+  }
+
+  function DataPointList({ dataPoints }) {
+    return (
+      <div className="loading-flex">
+        {dataPoints.map((dataPoint, index) => (
+          <div key={index}>
+            {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
+            <LoadingDiv loadingPercentage={dataPoint.number} />
+          </div>
+        ))}
       </div>
     );
   }
