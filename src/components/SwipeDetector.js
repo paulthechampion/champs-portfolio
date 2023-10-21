@@ -88,13 +88,31 @@ function SwipeDetector() {
                     const inExperience = eventData.event.target.closest("#experience");
             
                     if (inExperience) {
-                        moveUp('skill-service')
+                        const experienceSection = document.getElementById('experience')
+                        const currentPosition = experienceSection.getBoundingClientRect().top;
+                        const newPosition = currentPosition - 750;
+                        const resumeBlank = document.getElementById('resume-blank')
+                        if(isElementOnScreen(resumeBlank)) {
+                            moveUp('skill-service')
+                            return
+                        }
+
+                        experienceSection.style.transform = `translateY(${newPosition}px)`
                     }
 
                     const inSkillServiceDiv = eventData.event.target.closest("#skill-service");
             
                     if (inSkillServiceDiv) {
-                        moveUp('projects')
+                        const blankDiv = document.getElementById('skills-blank')
+                        const skillSection = document.getElementById('skill-service')
+                        const currentPosition = skillSection.getBoundingClientRect().top;
+                        const newPosition = currentPosition - 750;
+                        if(isElementOnScreen(blankDiv)) {
+                            moveUp('projects')
+                            return
+                        }
+
+                        skillSection.style.transform = `translateY(${newPosition}px)`;
                         
                     }
 
@@ -155,7 +173,8 @@ function SwipeDetector() {
                         const currentPosition = projectSection.getBoundingClientRect().top;
                         const newPosition = currentPosition + 450;
                         
-                        if(isDivAtTopOfScreen('projects')) {
+                        if(isElementOnScreen('project0')) {
+                            projectSection.style.transform = 'unset';
                             moveDown('skill-service')
                             return
                         }
