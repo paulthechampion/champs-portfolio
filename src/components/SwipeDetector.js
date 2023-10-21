@@ -81,7 +81,7 @@ function SwipeDetector() {
         mainDiv.style.transform = `translateY(-${translateYValue}px)`;
       }
     
-      function loadingBarWidth(end) {
+      function loadingBarWidthAndOpacity(end) {
         const loadingContainers = document.querySelectorAll('.loading');
       
         loadingContainers.forEach((loadingContainer, i) => {
@@ -90,11 +90,21 @@ function SwipeDetector() {
       
           if (skillPerSpan && loadingBar) {
             // Get the skill percentage text and convert it to a number
-            loadingBar.style.width='0%'
             const skillPercentage = parseFloat(skillPerSpan.textContent);
-            
-            // Set the width of the loading-bar
-            loadingBar.style.width = `${skillPercentage}%`;
+      
+            // Set the initial state
+            loadingBar.style.opacity = '0';
+            loadingBar.style.width = '0%';
+      
+            // Animate the opacity and width
+            const animationDuration = 1000; // Duration in milliseconds
+            const delay = i * (animationDuration / loadingContainers.length);
+      
+            setTimeout(() => {
+              loadingBar.style.transition = `opacity ${animationDuration}ms ease-in-out, width ${animationDuration}ms ease-in-out`;
+              loadingBar.style.opacity = '1';
+              loadingBar.style.width = `${skillPercentage}%`;
+            }, delay);
       
             // Stop when reaching the 'end' index
             if (i === end) {
