@@ -31,6 +31,7 @@
     #left-rail {
         transition: all .7s !important;
         background-color:#151d31 !important;
+        overflow: hidden;
     }
 
     #left-rail::after {
@@ -43,6 +44,8 @@
     position: fixed;
     top: 0;
     left: 0;
+    overflow: hidden;
+    box-sizing: border-box;
 
     opacity: 0.04; /* Adjust opacity for the image */
     z-index: -1; /* Place the pseudo-element behind the content */
