@@ -1,11 +1,8 @@
 import React , { useEffect, useRef }from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-export default function SkillsService() {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 809px)'
-  });
 
+export default function SkillsService() {
   function LoadingDiv({ loadingPercentage }) {
     const loadingStyle = {
       width: '0%' // Initially, set the width to 0%
@@ -14,7 +11,7 @@ export default function SkillsService() {
     const loadingRef = useRef(null);
 
     useEffect(() => {
-      const rootMargin = isDesktopOrLaptop ? '0px 0px -250px 0px' : '0px 0px -2000px 0px';
+      const rootMargin = '0px'; // Set rootMargin to 0px for immediate visibility
       const observer = new IntersectionObserver(handleIntersection, {
         root: null,
         rootMargin,
@@ -34,14 +31,16 @@ export default function SkillsService() {
       function handleIntersection(entries) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.transition = 'width 1.5s ease-in';
-            entry.target.style.width = `${loadingPercentage * 10}%`;
+            const loadingBar = entry.target;
+            const width = loadingPercentage * 10; // Set width to loadingPercentage * 10
+            loadingBar.style.transition = 'width 1.5s ease-in';
+            loadingBar.style.width = `${width}%`;
           } else {
             entry.target.style.width = '0%';
           }
         });
       }
-    }, [loadingPercentage]);
+    }, [loadingPercentage]); // Observe loadingPercentage as a dependency
 
     return (
       <div className="loading-container">
@@ -50,18 +49,20 @@ export default function SkillsService() {
     );
   }
 
-      function DataPointList({ dataPoints }) {
-        return (
-          <div className="loading-flex">
-            {dataPoints.map((dataPoint, index) => (
-              <div key={index}>
-                {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
-                <LoadingDiv loadingPercentage={dataPoint.number} />
-              </div>
-            ))}
+  function DataPointList({ dataPoints }) {
+    return (
+      <div className="loading-flex">
+        {dataPoints.map((dataPoint, index) => (
+          <div key={index}>
+            {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
+            <LoadingDiv loadingPercentage={dataPoint.number} />
           </div>
-        );
-      }
+        ))}
+      </div>
+    );
+  }
+
+
       const dataPoints = [
         { name: "HTML 5", number: 10 },
         { name: "C#", number: 4 },
