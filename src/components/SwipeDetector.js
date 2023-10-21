@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import Main from './Main';
 import { moveUp, moveDown } from './swipe';
+import { load } from 'npm';
 
 function SwipeDetector() {
     const [backgroundColor, setBackgroundColor] = useState('transparent');
@@ -80,6 +81,29 @@ function SwipeDetector() {
         // Apply the translateY transform to move the main div
         mainDiv.style.transform = `translateY(-${translateYValue}px)`;
       }
+
+      function loadingBarWidth(end) {
+        const loadingContainers = document.querySelectorAll('.loading');
+      
+        loadingContainers.forEach((loadingContainer, i) => {
+          const skillPerSpan = loadingContainer.querySelector('.skill-per');
+          const loadingBar = loadingContainer.querySelector('.loading-bar');
+      
+          if (skillPerSpan && loadingBar) {
+            // Get the skill percentage text and convert it to a number
+            loadingBar.style.width = '0%'
+            const skillPercentage = parseFloat(skillPerSpan.textContent);
+            
+            // Set the width of the loading-bar
+            loadingBar.style.width = `${skillPercentage}%`;
+      
+            // Stop when reaching the 'end' index
+            if (i === end) {
+              return;
+            }
+          }
+        });
+      }
       
 
 
@@ -114,6 +138,7 @@ function SwipeDetector() {
                         const newPosition = currentPosition - 460;
                         const resumeBlank = document.getElementById('resume-blank')
                         if(isElementOnScreen(resumeBlank)) {
+                            loadingBarWidth(5)
                             moveUp('skill-service')
                             return
                         }
@@ -132,7 +157,7 @@ function SwipeDetector() {
                             moveUp('projects')
                             return
                         }
-
+                        loadingBarWidth(18)
                         moveToBottom('skill-service')
                         
                     }
@@ -222,6 +247,7 @@ function SwipeDetector() {
                         if(isElementOnScreen(firstProject)) {
                             projectSection.style.transform = 'unset'
                             if(isDivAtTopOfScreen('projects')) {
+                                loadingBarWidth(18)
                                 moveDown('skill-service')
                                 return;
                             }
