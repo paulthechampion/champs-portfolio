@@ -86,7 +86,7 @@ function SwipeDetector() {
       
         loadingContainers.forEach((loadingContainer, i) => {
           const skillPerSpan = loadingContainer.querySelector('.skill-per');
-          const loadingBar = loadingContainer.querySelector('.loading-bar');
+          const loadingBar = loadingContainer.querySelector('.loading-container .loading-bar');
       
           if (skillPerSpan && loadingBar) {
             // Get the skill percentage text and convert it to a number
@@ -113,6 +113,7 @@ function SwipeDetector() {
           }
         });
       }
+      
       
 
 
