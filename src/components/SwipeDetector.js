@@ -159,9 +159,11 @@ function SwipeDetector() {
             
                     if (incontact) {
                         if(isDivAtTopOfScreen('contact')) {
-                            const contact = document.getElementById('contact-blank');
-                            contact.style.transform = `translateY(-200px)`;
-                            return;
+                            const contact = document.getElementById('contact');
+                            if(contact) {
+                                contact.style.transform = `translateY(-200px)`;
+                                return;
+                            }
                         }
                     }    
             }
@@ -227,7 +229,16 @@ function SwipeDetector() {
                     const incontact = eventData.event.target.closest("#contact");
 
                     if (incontact) {
-                        moveDown('projects')
+                        if(isDivAtTopOfScreen('contact')) {
+                            moveDown('projects')
+                            return;
+                        } else {
+                            const contact = document.getElementById('contact');
+                            if(contact) {
+                                contact.style.transform = `translateY(0px)`;
+                                return;
+                            }
+                        }
                     }
                     
 
