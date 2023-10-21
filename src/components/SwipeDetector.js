@@ -90,7 +90,7 @@ function SwipeDetector() {
                     if (inExperience) {
                         const experienceSection = document.getElementById('experience')
                         const currentPosition = experienceSection.getBoundingClientRect().top;
-                        const newPosition = currentPosition - 550;
+                        const newPosition = currentPosition - 500;
                         const resumeBlank = document.getElementById('resume-blank')
                         if(isElementOnScreen(resumeBlank)) {
                             moveUp('skill-service')
@@ -106,7 +106,7 @@ function SwipeDetector() {
                         const blankDiv = document.getElementById('skills-blank')
                         const skillSection = document.getElementById('skill-service')
                         const currentPosition = skillSection.getBoundingClientRect().top;
-                        const newPosition = currentPosition - 550;
+                        const newPosition = currentPosition - 500;
                         if(isElementOnScreen(blankDiv)) {
                             moveUp('projects')
                             return
