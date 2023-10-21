@@ -15,7 +15,7 @@ export default function SkillsService() {
         const loadingRef = useRef(null);
 
         useEffect(() => {
-          const rootMargin = isDesktopOrLaptop ? '0px 0px -200px 0px' : '0px 0px -100px 0px';
+          const rootMargin = isDesktopOrLaptop ? '0px 0px -200px 0px' : '0px 0px 10px 0px';
           const observer = new IntersectionObserver(handleIntersection, {
             root: null,
             rootMargin,
