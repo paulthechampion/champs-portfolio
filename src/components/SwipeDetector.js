@@ -183,10 +183,6 @@ function SwipeDetector() {
                         if(isElementOnScreen(blank)) {
                             experienceSection.style.transform ='translateY(0px)'
 
-                            setTimeout(() => {
-                                moveDown('about');
-                              }, 3000); // Adjust the timeout value as needed
-                            
                             return;
                         }else {
                             moveDown('about')
@@ -201,10 +197,6 @@ function SwipeDetector() {
                         
                         if(isElementOnScreen(blank)) {
                             skillSection.style.transform = 'translateY(0px)'
-
-                            setTimeout(() => {
-                                moveDown('experience');
-                            }, 3000); // Adjust the timeout value as needed
                             
                             return;
                         }
