@@ -135,7 +135,7 @@ function SwipeDetector() {
                             return
                         }
 
-                        moveToBottom('skills-blank')
+                        moveToBottom('skill-service')
                         
                     }
 
