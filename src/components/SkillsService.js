@@ -2,67 +2,71 @@ import React, { useRef, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 export default function SkillsService() {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 809px)'
-  });
-
-  function LoadingDiv({ loadingPercentage }) {
-    const loadingStyle = {
-      width: `${loadingPercentage * 10}%`, // Set the width to loadingPercentage * 10%
-    };
-
-    const loadingRef = useRef(null);
-
-    useEffect(() => {
-      const rootMargin = isDesktopOrLaptop ? '0px 0px -250px 0px' : '0px 0px -20px 0px';
-      const observer = new IntersectionObserver(handleIntersection, {
-        root: null,
-        rootMargin,
-        threshold: 0.1 // Trigger when 10% of the element is visible
+      const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 809px)'
       });
 
-      if (loadingRef.current) {
-        observer.observe(loadingRef.current);
-      }
+      function LoadingDiv({ loadingPercentage }) {
+        const loadingStyle = {
+          width: '0%', // Initially, set the width to 0%
+          opacity: 0, // Initially, set opacity to 0
+        };
 
-      return () => {
-        if (loadingRef.current) {
-          observer.unobserve(loadingRef.current);
-        }
-      };
+        const loadingRef = useRef(null);
 
-      function handleIntersection(entries) {
-        entries.forEach((entry) => {
-          const loadingBar = entry.target;
-          if (entry.isIntersecting) {
-            loadingBar.style.transition = 'opacity 1.5s ease-in'; // Add opacity transition
-            loadingBar.style.opacity = 1;
-          } else {
-            loadingBar.style.opacity = 0;
+        useEffect(() => {
+          const rootMargin = isDesktopOrLaptop ? '0px 0px -250px 0px' : '0px 0px -20px 0px';
+          const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin,
+            threshold: 0.1 // Trigger when 10% of the element is visible
+          });
+
+          if (loadingRef.current) {
+            observer.observe(loadingRef.current);
           }
-        });
-      }
-    }, [isDesktopOrLaptop]);
 
-    return (
-      <div className="loading-container">
-        <div className="loading-bar appear" style={{ ...loadingStyle }} ref={loadingRef}></div>
-      </div>
-    );
-  }
+          return () => {
+            if (loadingRef.current) {
+              observer.unobserve(loadingRef.current);
+            }
+          };
 
-  function DataPointList({ dataPoints }) {
-    return (
-      <div className="loading-flex">
-        {dataPoints.map((dataPoint, index) => (
-          <div key={index} className="loading">
-            {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
-            <LoadingDiv loadingPercentage={dataPoint.number} />
+          function handleIntersection(entries) {
+            entries.forEach((entry) => {
+              const loadingBar = entry.target;
+              if (entry.isIntersecting) {
+                const width = loadingPercentage * 10; // Set width to loadingPercentage * 10
+                loadingBar.style.transition = 'width 1.5s ease-in, opacity 0.5s ease-in';
+                loadingBar.style.width = `${width}%`;
+                loadingBar.style.opacity = 1; // Set opacity to 1 when in the viewport
+              } else {
+                loadingBar.style.width = '0%';
+                loadingBar.style.opacity = 0;
+              }
+            });
+          }
+        }, [loadingPercentage, isDesktopOrLaptop]);
+
+        return (
+          <div className="loading-container">
+            <div className="loading-bar appear" style={loadingStyle} ref={loadingRef}></div>
           </div>
-        ))}
-      </div>
-    );
-  }
+        );
+      }
+
+      function DataPointList({ dataPoints }) {
+        return (
+          <div className="loading-flex">
+            {dataPoints.map((dataPoint, index) => (
+              <div key={index} className="loading">
+                {dataPoint.name} <span className="skill-per">{dataPoint.number * 10}%</span>
+                <LoadingDiv loadingPercentage={dataPoint.number} />
+              </div>
+            ))}
+          </div>
+        );
+      }
       const dataPoints = [
         { name: "HTML 5", number: 10 },
         { name: "C#", number: 4 },
