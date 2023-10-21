@@ -12,7 +12,7 @@ function App() {
 
     useEffect(() => {
         const elements = document.querySelectorAll(".appear");
-        const rootMargin = isDesktopOrLaptop ? "0px 0px -200px 0px" : "0px 0px -120px 0px"
+        const rootMargin = isDesktopOrLaptop ? "0px 0px -200px 0px" : "0px 0px 10px 0px"
         const observer = new IntersectionObserver(handleIntersection, {
           root: null, // Use the viewport as the root
           rootMargin,
