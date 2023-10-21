@@ -188,8 +188,9 @@ function SwipeDetector() {
                               }, 3000); // Adjust the timeout value as needed
                             
                             return;
+                        }else {
+                            moveDown('about')
                         }
-                        moveDown('about')
                         
                     }
 
@@ -207,7 +208,9 @@ function SwipeDetector() {
                             
                             return;
                         }
-                        moveDown('experience')
+                        else {
+                            moveDown('experience')
+                        }
                     }
 
                     const inProjectsDiv = eventData.event.target.closest("#projects");
