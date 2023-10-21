@@ -2,55 +2,54 @@ import React , { useEffect, useRef }from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 export default function SkillsService() {
-      const isDesktopOrLaptop = useMediaQuery({
-          query: '(min-width: 809px)'
-      })
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 809px)'
+  });
 
-      function LoadingDiv({ loadingPercentage }) {
-        const loadingStyle = {
-          width: `${0}%`, // Initially, set the width to 0%
-        };
-      
-        const loadingRef = useRef(null);
-      
-        useEffect(() => {
-          const rootMargin = isDesktopOrLaptop ? "0px 0px -250px 0px" : "0px"
-          const observer = new IntersectionObserver(handleIntersection, {
-            root: null,
-            rootMargin,
-            threshold: 0, // Trigger when 10% of the element is visible
-          });
-      
-          if (loadingRef.current) {
-            observer.observe(loadingRef.current);
-          }
-      
-          return () => {
-            if (loadingRef.current) {
-              observer.unobserve(loadingRef.current);
-            }
-          };
-      
-          function handleIntersection(entries) {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.style.transition = "width 1.5s ease-in";
-                entry.target.style.width = `${loadingPercentage * 10}%`;
-              }
-              else {
-                entry.target.style.width = 0;
-              }
-            });
-          }
-        }, [loadingPercentage]);
-      
-        return (
-          <div className="loading-container appear">
-            <div className="loading-bar" style={loadingStyle} ref={loadingRef}></div>
-          </div>
-        );
+  function LoadingDiv({ loadingPercentage }) {
+    const loadingStyle = {
+      width: '0%' // Initially, set the width to 0%
+    };
+
+    const loadingRef = useRef(null);
+
+    useEffect(() => {
+      const rootMargin = isDesktopOrLaptop ? '0px 0px -250px 0px' : '0px';
+      const observer = new IntersectionObserver(handleIntersection, {
+        root: null,
+        rootMargin,
+        threshold: 0 // Trigger when 0% of the element is visible
+      });
+
+      if (loadingRef.current) {
+        observer.observe(loadingRef.current);
       }
-      
+
+      return () => {
+        if (loadingRef.current) {
+          observer.unobserve(loadingRef.current);
+        }
+      };
+
+      function handleIntersection(entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transition = 'width 1.5s ease-in';
+            entry.target.style.width = `${loadingPercentage * 10}%`;
+          } else {
+            entry.target.style.width = '0%';
+          }
+        });
+      }
+    }, [loadingPercentage]);
+
+    return (
+      <div className="loading-container appear">
+        <div className="loading-bar" style={loadingStyle} ref={loadingRef}></div>
+      </div>
+    );
+  }
+
       function DataPointList({ dataPoints }) {
         return (
           <div className="loading-flex">
