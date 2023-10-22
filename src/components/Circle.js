@@ -52,15 +52,15 @@ export default function Circle() {
     // Event listener for touch start
     window.addEventListener('touchstart', function (e) {
       e.preventDefault(); // Prevent default touch behavior
-      coords.x = e.touches[0].clientX;
-      coords.y = e.touches[0].clientY;
+      coords.x = e.touches[0].clientX+50;
+      coords.y = e.touches[0].clientY+50;
     });
 
     // Event listener for touch move
     window.addEventListener('touchmove', function (e) {
       e.preventDefault(); // Prevent default touch behavior
-      coords.x = e.touches[0].clientX;
-      coords.y = e.touches[0].clientY;
+      coords.x = e.touches[0].clientX+50;
+      coords.y = e.touches[0].clientY+50;
     });
 
     // Event listener for touch end
