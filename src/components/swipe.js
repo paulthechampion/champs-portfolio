@@ -1,34 +1,3 @@
-function isElementVisibleOnTop(element) {
-  var rect = element.getBoundingClientRect();
-
-  // Check if the element is in the viewport
-  var isInViewport = (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-
-  if (!isInViewport) {
-      return false;
-  }
-
-  // Check if the element is on top of all other elements
-  var elementsAbove = document.elementsFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
-
-  for (var i = 0; i < elementsAbove.length; i++) {
-      if (elementsAbove[i] === element) {
-          return true;
-      }
-      if (getComputedStyle(elementsAbove[i]).zIndex > getComputedStyle(element).zIndex) {
-          return false;
-      }
-  }
-
-  return false;
-}
-
-
 function cleanupSectionClasses(dir, elementId) {
   const sectionArray = ['left-rail', 'about', 'experience', 'skill-service', 'projects', 'contact'];
   const sections = document.querySelectorAll('.section');
@@ -47,13 +16,6 @@ function cleanupSectionClasses(dir, elementId) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
 
-    var elementToCheck = document.getElementById("build");
-    if(elementToCheck) {
-        if(isElementVisibleOnTop(elementToCheck)) {
-            underlaysection = document.getElementById('left-rail')
-        }
-    }
-
     if (underlaysection) {
       underlaysection.style.zIndex = 3;
     }
@@ -65,9 +27,6 @@ function cleanupSectionClasses(dir, elementId) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
   
-    if(elementId === 'left-rail') {
-      underlaysection = document.getElementById('left-rail')
-    }
     if (underlaysection) {
       underlaysection.style.zIndex = 3;
     }
