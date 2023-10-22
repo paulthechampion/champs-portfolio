@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import logo from '../images/siphle-nobg.png'
+import { moveUp } from './swipe';
 
 export default function SkillsService() {
       const isDesktopOrLaptop = useMediaQuery({
@@ -94,7 +95,7 @@ export default function SkillsService() {
             <h1 className='phoneNone appear'>Skills & Service</h1>
             <div className='phone-mini-div extraWidth leftPad appear'>
                 <h1>SKILLS & SERVICES</h1>
-                <img src={logo} alt='Logo' className='phone-logo'/>
+                <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveUp('left-rail')}}/>
             </div>
             <p>Below are some of the services I can offer your Business:</p>
 
