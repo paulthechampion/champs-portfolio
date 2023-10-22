@@ -17,7 +17,7 @@ export default class MyForm extends React.Component {
         return (
             <div className="contact section" id="contact">
                 <h1 className="phoneNone">Message Me</h1>
-                <div className='phone-mini-div leftPad'>
+                <div className='phone-mini-div extraWidth leftPad'>
                     <h1>MESSAGE ME</h1>
                     <img src={logo} alt='Logo' className='phone-logo'/>
                 </div>

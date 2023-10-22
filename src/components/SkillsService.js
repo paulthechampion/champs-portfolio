@@ -92,7 +92,7 @@ export default function SkillsService() {
     return (
         <div className='skillservice section' id='skill-service'>
             <h1 className='phoneNone appear'>Skills & Service</h1>
-            <div className='phone-mini-div leftPad appear'>
+            <div className='phone-mini-div extraWidth leftPad appear'>
                 <h1>SKILLS & SERVICES</h1>
                 <img src={logo} alt='Logo' className='phone-logo'/>
             </div>

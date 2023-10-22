@@ -37,7 +37,7 @@ export default function RightRail() {
 
         <div className='experience section' id='experience'>
             <h1 className='phoneNone appear'>Experience</h1>
-            <div className='phone-mini-div leftPad appear'>
+            <div className='phone-mini-div extraWidth leftPad appear'>
                 <h1>EXPERIENCE</h1>
                 <img src={logo} alt='Logo' className='phone-logo'/>
             </div>

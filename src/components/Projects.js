@@ -34,7 +34,7 @@ export default function Projects() {
     return (
         <div className='projects section' id='projects'>
             <h1 className='phoneNone appear'>Projects</h1>
-            <div className='phone-mini-div leftPad project-phone appear'>
+            <div className='phone-mini-div extraWidth leftPad project-phone appear'>
                 <h1>PROJECTS</h1>
                 <img src={logo} alt='Logo' className='phone-logo'/>
             </div>
