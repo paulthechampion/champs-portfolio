@@ -1,4 +1,4 @@
-function cleanupSectionClasses(dir, elementId) {
+function cleanupSectionClasses(dir, elementId, from) {
   const sectionArray = ['left-rail', 'about', 'experience', 'skill-service', 'projects', 'contact'];
   const sections = document.querySelectorAll('.section');
   const leftRail = document.getElementById('left-rail');
@@ -12,31 +12,42 @@ function cleanupSectionClasses(dir, elementId) {
 
   if (dir === 'up') {
     
-    
-    const underlayPos = sectionArray.indexOf(elementId);
-    let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
-
-    if (underlaysection) {
-      underlaysection.style.zIndex = 3;
+    if(from === 'click') {
+      return;
     }
+    else {
+      const underlayPos = sectionArray.indexOf(elementId);
+      let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
+
+      if (underlaysection) {
+        underlaysection.style.zIndex = 3;
+      }
+    }
+    
 
     
   }
 
   if (dir === 'down') {
-    const underlayPos = sectionArray.indexOf(elementId);
-    let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
-  
-    if (underlaysection) {
-      underlaysection.style.zIndex = 3;
+    if(from === 'click') {
+      return;
     }
+    else {
+      const underlayPos = sectionArray.indexOf(elementId);
+      let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
+    
+      if (underlaysection) {
+        underlaysection.style.zIndex = 3;
+      }
+    }
+    
   }
 }
 
 
 // Function to trigger the slide-up animation
-export function moveUp(elementId) {
-  cleanupSectionClasses('up', elementId);
+export function moveUp(elementId,from) {
+  cleanupSectionClasses('up', elementId, from);
   const sectionToAppear = document.getElementById(elementId);
 
   if (sectionToAppear) {
@@ -54,8 +65,8 @@ export function moveUp(elementId) {
 }
 
 // Function to trigger the slide-down animation
-export function moveDown(elementId) {
-  cleanupSectionClasses('down', elementId);
+export function moveDown(elementId, from) {
+  cleanupSectionClasses('down', elementId, from);
   const sectionToAppear = document.getElementById(elementId);
 
   if (sectionToAppear) {

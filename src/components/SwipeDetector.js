@@ -93,7 +93,7 @@ function SwipeDetector() {
                     const notLeftRail = document.querySelector('.content-div:not(#left-rail):hover');
                 
                     if (eventData.event.target.closest("#left-rail")) {
-                        moveUp('about')
+                        moveUp('about', null)
                     }
                 
                     // if (notLeftRail) {
@@ -105,7 +105,7 @@ function SwipeDetector() {
                     const inAbout = eventData.event.target.closest("#about");
             
                     if (inAbout) {
-                        moveUp('experience')
+                        moveUp('experience', null)
                     }
 
                     const inExperience = eventData.event.target.closest("#experience");
@@ -116,7 +116,7 @@ function SwipeDetector() {
                         const newPosition = currentPosition - 500;
                         const resumeBlank = document.getElementById('resume-blank')
                         if(isElementOnScreen(resumeBlank)) {
-                            moveUp('skill-service')
+                            moveUp('skill-service', null)
                             return
                         }
 
@@ -131,7 +131,7 @@ function SwipeDetector() {
                         const currentPosition = skillSection.getBoundingClientRect().top;
                         const newPosition = currentPosition - 500;
                         if(isElementOnScreen(blankDiv)) {
-                            moveUp('projects')
+                            moveUp('projects', null)
                             return
                         }
 
@@ -150,7 +150,7 @@ function SwipeDetector() {
                         const lastProject = document.getElementById('project9')
                         if(isElementOnScreen(lastProject)) {
                             
-                            moveUp('contact')
+                            moveUp('contact', null)
                             return;
                         }
                         projectSection.style.transform = `translateY(${newPosition}px)`;
@@ -176,7 +176,7 @@ function SwipeDetector() {
                     setNumber(number-1)
                     const inAbout = eventData.event.target.closest("#about");
                     if(inAbout) {
-                        moveDown('left-rail')
+                        moveDown('left-rail', null)
                     }
 
                     const inexperience = eventData.event.target.closest("#experience");
@@ -188,7 +188,7 @@ function SwipeDetector() {
 
                             return;
                         }else {
-                            moveDown('about')
+                            moveDown('about', null)
                             return;
                         }
                         
@@ -205,7 +205,7 @@ function SwipeDetector() {
                             return;
                         }
                         else {
-                            moveDown('experience')
+                            moveDown('experience', null)
                             return;
                         }
                     }
@@ -227,7 +227,7 @@ function SwipeDetector() {
                             projectSection.style.transform = 'unset'
                             if(isDivAtTopOfScreen('projects')) {
 
-                                moveDown('skill-service')
+                                moveDown('skill-service', null)
                                 
                                 return;
                             }
@@ -241,7 +241,7 @@ function SwipeDetector() {
 
                     if (incontact) {
                         if(isDivAtTopOfScreen('contact')) {
-                            moveDown('projects')
+                            moveDown('projects', null)
                             return;
                         } else {
                             const contact = document.getElementById('contact');
