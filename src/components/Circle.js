@@ -51,23 +51,32 @@ export default function Circle() {
 
     // Event listener for touch start
     window.addEventListener('touchstart', function (e) {
-      e.preventDefault(); // Prevent default touch behavior
-      coords.x = e.touches[0].clientX;
-      coords.y = e.touches[0].clientY;
-    });
-
-    // Event listener for touch move
-    window.addEventListener('touchmove', function (e) {
-      e.preventDefault(); // Prevent default touch behavior
-      coords.x = e.touches[0].clientX;
-      coords.y = e.touches[0].clientY+300;
-    });
-
-    // Event listener for touch end
-    window.addEventListener('touchend', function (e) {
-      // You can add any necessary touch end logic here
-    });
-
+        e.preventDefault(); // Prevent default touch behavior
+        coords.x = e.touches[0].clientX;
+        coords.y = e.touches[0].clientY;
+        startingY = e.touches[0].clientY; // Store the starting Y position
+      });
+      
+      let startingY = 0;
+      
+      // Event listener for touch move
+      window.addEventListener('touchmove', function (e) {
+        e.preventDefault(); // Prevent default touch behavior
+        const newY = e.touches[0].clientY;
+        
+        // Calculate the change in Y position
+        const deltaY = newY - startingY;
+        
+        // Adjust the Y position based on the swipe direction
+        coords.x = e.touches[0].clientX;
+        coords.y = e.touches[0].clientY + (deltaY > 0 ? 300 : -300);
+      });
+      
+      // Event listener for touch end
+      window.addEventListener('touchend', function (e) {
+        // You can add any necessary touch end logic here
+      });
+      
     function animateCircles() {
       let x = coords.x;
       let y = coords.y;
