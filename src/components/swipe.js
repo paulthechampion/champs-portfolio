@@ -1,17 +1,18 @@
-function isElementInViewportById(divId) {
-  const divElement = document.getElementById(divId);
-  if (!divElement) {
-    console.error(`Element with ID "${divId}" not found.`);
+function isElementOnScreenById(elementId) {
+  const element = document.getElementById(elementId);
+
+  if (!element) {
+    console.error(`Element with ID "${elementId}" not found.`);
     return false;
   }
 
-  const rect = divElement.getBoundingClientRect();
+  const rect = element.getBoundingClientRect();
 
   return (
+    rect.top < window.innerHeight &&
     rect.bottom > 0 &&
-    rect.right > 0 &&
-    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.left < (window.innerWidth || document.documentElement.clientWidth)
+    rect.left < window.innerWidth &&
+    rect.right > 0
   );
 }
 
@@ -34,7 +35,7 @@ function cleanupSectionClasses(dir, elementId) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
 
-    if(isElementInViewportById('left-rail')) {
+    if(isElementOnScreenById('build')) {
       underlaysection = document.getElementById('left-rail')
     }
 
