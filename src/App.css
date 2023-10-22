@@ -17,6 +17,25 @@
   font-family: 'Lato', sans-serif;
 }
 
+#full-app {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background-color: #10172A;
+  background-image:url("./images/blueloadinggif.gif");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center center;
+}
+
+
+
 .blank {
   display: none;
   color:#10172A;

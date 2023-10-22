@@ -37,11 +37,25 @@ function App() {
     
     return (
         <div className="App">
-            <div className='phone-logo-div'></div>
+          <div id='full-app'>
+              <div className='phone-logo-div'></div>
+              {isDesktopOrLaptop  ? <Main/> : <SwipeDetector/> }
+          </div>
             <Circle/>
-            {isDesktopOrLaptop  ? <Main/> : <SwipeDetector/> }
         </div>
     );
 }
+
+document.addEventListener("DOMContentLoaded", function() { 
+  setTimeout(loadingGif, 6000);
+
+  function loadingGif() {
+    let root = document.getElementById("root")
+    document.getElementById("full-app").style.opacity=1 
+    root.style.backgroundImage="none"
+    root.style.backgroundColor="unset"
+    root.style.position="unset"
+  }
+})
 
 export default App;

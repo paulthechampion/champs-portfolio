@@ -90,7 +90,7 @@ export default function LeftRail() {
           <a href="https://github.com/paulthechampion" className="iconLink" target="_blank">  <FaGithub className="chatIcons"/></a>
           <a href="https://twitter.com/fal2ememorie2"className="iconLink" target="_blank"> <FaTwitter className="chatIcons"/></a>
           <a href="https://www.linkedin.com/in/paul-enwerem-9a307518b/"className="iconLink" target="_blank">  <FaLinkedin className="chatIcons"/></a>
-          <a href="mailto:enwerempaulo@gmail.com" className="iconLink" target="_blank">  <FaMailBulk className="chatIcons"/></a>
+          <a href="mailto:paulthechampion28@gmail.com" className="iconLink" target="_blank">  <FaMailBulk className="chatIcons"/></a>
         </div>
     </div>
     )

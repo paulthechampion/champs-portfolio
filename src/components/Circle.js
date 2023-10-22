@@ -7,7 +7,15 @@ export default function Circle() {
   });
 
   useEffect(() => {
-    const coords = { x: 0, y: 0 };
+    const coords = isDesktopOrLaptop? 
+    {
+      x: window.innerWidth / 2.1, 
+      y: window.innerHeight / 2.2
+    }
+    : {
+        x: window.innerWidth / 2.4, 
+        y: window.innerHeight / 2.4
+      };
     const circles = document.querySelectorAll('.circle');
     const colorsOne = [
       '#009FD6',
@@ -35,7 +43,7 @@ export default function Circle() {
       }
     }
 
-    setInterval(changeColors, 5000);
+    setInterval(changeColors, 6000);
 
     circles.forEach(function (circle, index) {
       circle.x = 0;
