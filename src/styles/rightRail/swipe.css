@@ -57,13 +57,14 @@
         top: 0;
         left: 0;
         
-        opacity: 0.04; /* Adjust opacity for the image */
-        z-index: -1; /* Place the pseudo-element behind the content */
+        opacity: 0.1; /* Adjust opacity for the image */
+        z-index: 10; /* Place the pseudo-element behind the content */
         background-position: center center; /* Center the background image */
         pointer-events: none; 
         background-size: 200%;
         background-repeat: no-repeat;
         background-position: center center;
+        pointer-events: none;
     }
 
      
