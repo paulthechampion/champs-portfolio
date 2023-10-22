@@ -33,7 +33,7 @@ function cleanupSectionClasses(dir, elementId, from) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
 
-    if(from !== 'click') {
+    if(from !== null && from !== 'click') {
       underlaysection = document.getElementById(from)
     }
     
