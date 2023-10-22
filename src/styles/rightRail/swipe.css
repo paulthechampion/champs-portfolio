@@ -58,7 +58,7 @@
         left: 0;
         
         opacity: 0.1; /* Adjust opacity for the image */
-        z-index: 10; /* Place the pseudo-element behind the content */
+        z-index: 6; /* Place the pseudo-element behind the content */
         background-position: center center; /* Center the background image */
         pointer-events: none; 
         background-size: 200%;
@@ -66,6 +66,15 @@
         background-position: center center;
         pointer-events: none;
     }
+
+    .mainDiv {
+      position: relative;
+    }
+    .project-card > div:first-child > img {
+      position: relative;
+      z-index: 10;
+    }
+  
 
      
     .scroll-up {
