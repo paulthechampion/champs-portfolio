@@ -69,14 +69,14 @@ export default function Circle() {
         
         // Adjust the Y position based on the swipe direction
         coords.x = e.touches[0].clientX;
-        coords.y = e.touches[0].clientY + (deltaY > 0 ? 300 : -300);
+        coords.y = e.touches[0].clientY + (deltaY > 0 ? 300 : -100);
       });
       
       // Event listener for touch end
       window.addEventListener('touchend', function (e) {
         // You can add any necessary touch end logic here
       });
-      
+
     function animateCircles() {
       let x = coords.x;
       let y = coords.y;
