@@ -19,7 +19,7 @@ export default class MyForm extends React.Component {
                 <div className='phone-mini-div leftPad'>
                     <h1>MESSAGE ME</h1>
                 </div>
-                <p>Let's work on something Amazing together!</p>
+                <p>Let's build something Amazing together!</p>
                 <div className="contactFlex">
                     <div>
                         <img src={astroMan}/>

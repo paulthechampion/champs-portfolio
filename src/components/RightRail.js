@@ -21,10 +21,10 @@ export default function RightRail() {
             </p>
 
             <p className='appear'>
-                My foundational knowledge comes from certifications in <span className='gold'>HTML, CSS, and JavaScript acquired from 
-                New Horizon Nigeria.</span> Beyond coding, I excel in creating responsive designs, ensuring seamless user 
-                experiences. My portfolio includes eCommerce websites, Investment research tools web applications, 
-                Chat applications, Business landing pages, and more, showcasing a multifaceted skill set that combines 
+                My foundational knowledge comes from certifications in HTML, CSS, and JavaScript acquired from 
+                New Horizon Nigeria. Beyond coding, I excel in creating responsive designs, ensuring seamless user 
+                experiences. My portfolio includes <span className='gold'>eCommerce websites, Investment research tools web applications, 
+                Chat applications, Business landing pages, and more, </span>  showcasing a multifaceted skill set that combines 
                 technical expertise with creative problem-solving. 
             </p>
 
@@ -72,7 +72,7 @@ export default function RightRail() {
 
             <div className='experienceFlex'>
                 <div className='appear'>
-                     2021 ---- PRESENT
+                     2020 ---- 2021
                 </div>
                 
                 <div className='appear'>

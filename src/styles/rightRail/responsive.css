@@ -160,6 +160,10 @@
         font-size: 14px;
     }
 
+    .experience > .phone-mini-div {
+        margin-bottom: 20px;
+    }
+
     .resume-div {
         margin-left: 20px;
     }
@@ -275,7 +279,8 @@
     }
 
     .mainDiv > div:first-child::after {
-        display: none;
+        width: 200%;
+        right: -200px;
     }
 
     .phone-logo-div {
@@ -295,13 +300,15 @@
 
     .mainDiv > div:first-child::after {
         top: 20px;
-        right:100px;
+        right:-120px;
+        width: 200%;
     }
 }
 
 @media only screen and (min-width:1600px)  { 
     .mainDiv > div:first-child::after {
         right:0px;
+        width: 150%;
     }
 
     .messageCont {
