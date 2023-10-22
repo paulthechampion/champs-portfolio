@@ -12,34 +12,35 @@ function cleanupSectionClasses(dir, elementId, from) {
 
   if (dir === 'up') {
     
-    if(from === 'click') {
-      return;
-    }
-    else {
-      const underlayPos = sectionArray.indexOf(elementId);
-      let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
+    const underlayPos = sectionArray.indexOf(elementId);
+    let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
 
-      if (underlaysection) {
-        underlaysection.style.zIndex = 3;
-      }
+    if(from === 'click') {
+      underlaysection = document.getElementById(elementId)
     }
+
+    if (underlaysection) {
+      underlaysection.style.zIndex = 3;
+    }
+    
     
 
     
   }
 
   if (dir === 'down') {
-    if(from === 'click') {
-      return;
-    }
-    else {
-      const underlayPos = sectionArray.indexOf(elementId);
-      let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
     
-      if (underlaysection) {
-        underlaysection.style.zIndex = 3;
-      }
+    const underlayPos = sectionArray.indexOf(elementId);
+    let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
+
+    if(from === 'click') {
+      underlaysection = document.getElementById(elementId)
     }
+    
+    if (underlaysection) {
+      underlaysection.style.zIndex = 3;
+    }
+    
     
   }
 }
