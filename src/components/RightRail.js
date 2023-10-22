@@ -2,7 +2,7 @@ import React from 'react'
 import Projects from './Projects'
 import Contact from './Contact'
 import SkillsService from './SkillsService'
-import { moveUp, moveDown } from './swipe';
+import logo from '../images/siphle-nobg.png'
 
 export default function RightRail() {
     
@@ -12,6 +12,7 @@ export default function RightRail() {
         <div className='about section' id='about'>
             <div className='phone-mini-div appear'>
                 <h1>ABOUT</h1>
+                <img src={logo} alt='Logo' className='phone-logo'/>
             </div>
             <p className='appear'>
                 In 2018, I began my journey into web development, with a strong focus
@@ -38,6 +39,7 @@ export default function RightRail() {
             <h1 className='phoneNone appear'>Experience</h1>
             <div className='phone-mini-div leftPad appear'>
                 <h1>EXPERIENCE</h1>
+                <img src={logo} alt='Logo' className='phone-logo'/>
             </div>
             <div className='experienceFlex'>
                 <div className='appear'>
@@ -64,7 +66,7 @@ export default function RightRail() {
 
                     <div>
                         {experienceSkills.map((experience,index) => (
-                            <button key={index} className='experience-btn' onClick={()=>{moveDown('left-rail')}}>{experience}</button>
+                            <button key={index} className='experience-btn'>{experience}</button>
                         ))}
                     </div>
                 </div>

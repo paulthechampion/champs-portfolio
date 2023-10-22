@@ -1,5 +1,6 @@
 import React from "react";
 import astroMan from '../images/astroMan.png'
+import logo from '../images/siphle-nobg.png'
 
 export default class MyForm extends React.Component {
     constructor(props) {
@@ -18,6 +19,7 @@ export default class MyForm extends React.Component {
                 <h1 className="phoneNone">Message Me</h1>
                 <div className='phone-mini-div leftPad'>
                     <h1>MESSAGE ME</h1>
+                    <img src={logo} alt='Logo' className='phone-logo'/>
                 </div>
                 <p>Let's build something Amazing together!</p>
                 <div className="contactFlex">

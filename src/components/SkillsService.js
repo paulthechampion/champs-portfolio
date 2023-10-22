@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import logo from '../images/siphle-nobg.png'
 
 export default function SkillsService() {
       const isDesktopOrLaptop = useMediaQuery({
@@ -93,6 +94,7 @@ export default function SkillsService() {
             <h1 className='phoneNone appear'>Skills & Service</h1>
             <div className='phone-mini-div leftPad appear'>
                 <h1>SKILLS & SERVICES</h1>
+                <img src={logo} alt='Logo' className='phone-logo'/>
             </div>
             <p>Below are some of the services I can offer your Business:</p>
 

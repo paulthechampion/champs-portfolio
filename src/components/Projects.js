@@ -9,7 +9,7 @@ import todoPic from '../images/todo.png'
 import peace from '../images/peace5.jpeg'
 import daniel from '../images/davito.png'
 import nadaMain from '../images/nadanew.png'
-import { moveUp, moveDown } from './swipe';
+import logo from '../images/siphle-nobg.png'
 
 export default function Projects() {
     const projectsData = [ 
@@ -36,6 +36,7 @@ export default function Projects() {
             <h1 className='phoneNone appear'>Projects</h1>
             <div className='phone-mini-div leftPad project-phone appear'>
                 <h1>PROJECTS</h1>
+                <img src={logo} alt='Logo' className='phone-logo'/>
             </div>
     
             <div>
@@ -50,7 +51,7 @@ export default function Projects() {
                             <h2>{project.name} <i className="fas fa-arrow-up white"></i></h2>
                             <p>{project.words}</p>
                             {project.skills.map((skill, skillIndex) => (
-                            <button key={skillIndex} className='experience-btn move-up-button' onClick={()=>{moveUp('projects')}}>{skill}</button>
+                            <button key={skillIndex} className='experience-btn move-up-button'>{skill}</button>
                             ))}
                             <div className='project-link-div'>
                                 {project.github?<a href={project.github} target='_blank' className='project-link'>GitHub <i className="fas fa-arrow-up"></i></a> : null}
