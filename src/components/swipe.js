@@ -1,19 +1,28 @@
-function isElementVisible(elementId) {
-  const element = document.getElementById(elementId);
+function isElementVisible(element) {
+  var rect = element.getBoundingClientRect();
+  
+  // Check if the element is in the viewport
+  var isInViewport = (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 
-  if (!element) {
-    console.error(`Element with ID "${elementId}" not found.`);
-    return false;
+  if (!isInViewport) {
+      return false;
   }
 
-  return new Promise((resolve) => {
-    const observer = new IntersectionObserver(([entry]) => {
-      observer.disconnect();
-      resolve(entry.isIntersecting);
-    });
+  // Check if the element is not covered by other elements with higher z-index
+  var elementsAbove = document.elementsFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
+  
+  for (var i = 0; i < elementsAbove.length; i++) {
+      if (elementsAbove[i] !== element && getComputedStyle(elementsAbove[i]).zIndex > getComputedStyle(element).zIndex) {
+          return false;
+      }
+  }
 
-    observer.observe(element);
-  });
+  return true;
 }
 
 
@@ -35,14 +44,12 @@ function cleanupSectionClasses(dir, elementId) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
 
-    const elementIdToCheck = 'build'; // Replace with the actual ID of the element
-      isElementVisible(elementIdToCheck)
-        .then((isVisible) => {
-          if (isVisible) {
+    var elementToCheck = document.getElementById("build");
+    if(elementToCheck) {
+        if(isElementVisible(elementToCheck)) {
             underlaysection = document.getElementById('left-rail')
-            return;
-          } 
-    });
+        }
+    }
 
     if (underlaysection) {
       underlaysection.style.zIndex = 3;
@@ -55,6 +62,9 @@ function cleanupSectionClasses(dir, elementId) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
   
+    if(elementId === 'left-rail') {
+      underlaysection = document.getElementById('left-rail')
+    }
     if (underlaysection) {
       underlaysection.style.zIndex = 3;
     }
