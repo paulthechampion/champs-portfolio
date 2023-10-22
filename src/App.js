@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function loadingGif() {
     let root = document.getElementById("root")
     document.getElementById("full-app").style.opacity=1 
+    document.getElementById("full-app").style.pointerEvents = 'unset'
     root.style.backgroundImage="none"
     root.style.backgroundColor="unset"
     root.style.position="unset"
