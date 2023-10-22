@@ -1,6 +1,6 @@
-function isElementVisible(element) {
+function isElementVisibleOnTop(element) {
   var rect = element.getBoundingClientRect();
-  
+
   // Check if the element is in the viewport
   var isInViewport = (
       rect.top >= 0 &&
@@ -13,16 +13,19 @@ function isElementVisible(element) {
       return false;
   }
 
-  // Check if the element is not covered by other elements with higher z-index
+  // Check if the element is on top of all other elements
   var elementsAbove = document.elementsFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
-  
+
   for (var i = 0; i < elementsAbove.length; i++) {
-      if (elementsAbove[i] !== element && getComputedStyle(elementsAbove[i]).zIndex > getComputedStyle(element).zIndex) {
+      if (elementsAbove[i] === element) {
+          return true;
+      }
+      if (getComputedStyle(elementsAbove[i]).zIndex > getComputedStyle(element).zIndex) {
           return false;
       }
   }
 
-  return true;
+  return false;
 }
 
 
@@ -46,7 +49,7 @@ function cleanupSectionClasses(dir, elementId) {
 
     var elementToCheck = document.getElementById("build");
     if(elementToCheck) {
-        if(isElementVisible(elementToCheck)) {
+        if(isElementVisibleOnTop(elementToCheck)) {
             underlaysection = document.getElementById('left-rail')
         }
     }
