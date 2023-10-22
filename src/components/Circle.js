@@ -69,7 +69,7 @@ export default function Circle() {
         
         // Adjust the Y position based on the swipe direction
         coords.x = e.touches[0].clientX;
-        coords.y = e.touches[0].clientY + (deltaY > 0 ? 300 : -100);
+        coords.y = e.touches[0].clientY + (deltaY > 0 ? 100 : -250);
       });
       
       // Event listener for touch end
