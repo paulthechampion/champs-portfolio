@@ -1,3 +1,21 @@
+function isElementInViewportById(divId) {
+  const divElement = document.getElementById(divId);
+  if (!divElement) {
+    console.error(`Element with ID "${divId}" not found.`);
+    return false;
+  }
+
+  const rect = divElement.getBoundingClientRect();
+
+  return (
+    rect.bottom > 0 &&
+    rect.right > 0 &&
+    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.left < (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+
 function cleanupSectionClasses(dir, elementId) {
   const sectionArray = ['left-rail', 'about', 'experience', 'skill-service', 'projects', 'contact'];
   const sections = document.querySelectorAll('.section');
@@ -11,18 +29,26 @@ function cleanupSectionClasses(dir, elementId) {
   });
 
   if (dir === 'up') {
+    
+    
     const underlayPos = sectionArray.indexOf(elementId);
-    const underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
+    let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
+
+    if(isElementInViewportById('left-rail')) {
+      underlaysection = document.getElementById('left-rail')
+    }
 
     if (underlaysection) {
       underlaysection.style.zIndex = 3;
     }
+
+    
   }
 
   if (dir === 'down') {
     const underlayPos = sectionArray.indexOf(elementId);
-    const underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
-
+    let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
+  
     if (underlaysection) {
       underlaysection.style.zIndex = 3;
     }

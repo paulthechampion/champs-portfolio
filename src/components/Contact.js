@@ -1,7 +1,7 @@
 import React from "react";
 import astroMan from '../images/astroMan.png'
 import logo from '../images/siphle-nobg.png'
-import { moveUp } from './swipe';
+import { moveDown } from './swipe';
 
 export default class MyForm extends React.Component {
     constructor(props) {
@@ -20,7 +20,7 @@ export default class MyForm extends React.Component {
                 <h1 className="phoneNone">Message Me</h1>
                 <div className='phone-mini-div extraWidth leftPad'>
                     <h1>MESSAGE ME</h1>
-                    <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveUp('left-rail')}}/>
+                    <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveDown('left-rail')}}/>
                 </div>
                 <p>Let's build something Amazing together!</p>
                 <div className="contactFlex">

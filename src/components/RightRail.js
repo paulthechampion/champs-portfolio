@@ -3,7 +3,7 @@ import Projects from './Projects'
 import Contact from './Contact'
 import SkillsService from './SkillsService'
 import logo from '../images/siphle-nobg.png'
-import { moveUp } from './swipe';
+import { moveDown } from './swipe';
 
 export default function RightRail() {
     
@@ -13,7 +13,7 @@ export default function RightRail() {
         <div className='about section' id='about'>
             <div className='phone-mini-div appear'>
                 <h1>ABOUT</h1>
-                <img src={logo} alt='Logo' className='phone-logo' onClick={() => {moveUp('left-rail')}}/>
+                <img src={logo} alt='Logo' className='phone-logo' onClick={() => {moveDown('left-rail')}}/>
             </div>
             <p className='appear'>
                 In 2018, I began my journey into web development, with a strong focus
@@ -40,7 +40,7 @@ export default function RightRail() {
             <h1 className='phoneNone appear'>Experience</h1>
             <div className='phone-mini-div extraWidth leftPad appear'>
                 <h1>EXPERIENCE</h1>
-                <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveUp('left-rail')}}/>
+                <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveDown('left-rail')}}/>
             </div>
             <div className='experienceFlex'>
                 <div className='appear'>

@@ -10,7 +10,7 @@ import peace from '../images/peace5.jpeg'
 import daniel from '../images/davito.png'
 import nadaMain from '../images/nadanew.png'
 import logo from '../images/siphle-nobg.png'
-import { moveUp } from './swipe';
+import { moveDown } from './swipe';
 
 export default function Projects() {
     const projectsData = [ 
@@ -37,7 +37,7 @@ export default function Projects() {
             <h1 className='phoneNone appear'>Projects</h1>
             <div className='phone-mini-div extraWidth leftPad project-phone appear' >
                 <h1>PROJECTS</h1>
-                <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveUp('left-rail')}}/>
+                <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveDown('left-rail')}}/>
             </div>
     
             <div>
