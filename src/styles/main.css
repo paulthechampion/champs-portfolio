@@ -22,7 +22,7 @@
 
 .mainDiv > div:first-child::after {
     content: '';
-    background: url("../images/loading.gif"); /* Replace with your background image */
+    background: url("../images/blueloadinggif"); /* Replace with your background image */
     background-size: cover;
     width: 150%;
     height: 100%;
