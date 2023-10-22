@@ -1,4 +1,4 @@
-function isElementOnScreenById(elementId) {
+function isElementVisible(elementId) {
   const element = document.getElementById(elementId);
 
   if (!element) {
@@ -6,14 +6,14 @@ function isElementOnScreenById(elementId) {
     return false;
   }
 
-  const rect = element.getBoundingClientRect();
+  return new Promise((resolve) => {
+    const observer = new IntersectionObserver(([entry]) => {
+      observer.disconnect();
+      resolve(entry.isIntersecting);
+    });
 
-  return (
-    rect.top < window.innerHeight &&
-    rect.bottom > 0 &&
-    rect.left < window.innerWidth &&
-    rect.right > 0
-  );
+    observer.observe(element);
+  });
 }
 
 
@@ -35,9 +35,14 @@ function cleanupSectionClasses(dir, elementId) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
 
-    if(isElementOnScreenById('build')) {
-      underlaysection = document.getElementById('left-rail')
-    }
+    const elementIdToCheck = 'build'; // Replace with the actual ID of the element
+      isElementVisible(elementIdToCheck)
+        .then((isVisible) => {
+          if (isVisible) {
+            underlaysection = document.getElementById('left-rail')
+            return;
+          } 
+    });
 
     if (underlaysection) {
       underlaysection.style.zIndex = 3;
