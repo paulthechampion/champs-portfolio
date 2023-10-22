@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 export default function Circle() {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 809px)',
   });
-  
-  const [isCentered, setIsCentered] = useState(true);
-  
+
   useEffect(() => {
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll('.circle');
@@ -45,39 +43,43 @@ export default function Circle() {
       circle.style.backgroundColor = colors[index % colors.length];
     });
 
-    // Function to center the circles in the middle of the screen
-    function centerCircles() {
-      coords.x = window.innerWidth / 2;
-      coords.y = window.innerHeight / 2;
-    }
+    // Event listener for mousemove
+    window.addEventListener('mousemove', function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    });
 
-    // Call centerCircles every 6 seconds
-    setInterval(() => {
-      setIsCentered((prevIsCentered) => {
-        if (prevIsCentered) {
-          centerCircles();
-          return false;
-        } else {
-          return true;
-        }
-      });
-    }, 6000);
+    // Event listener for touch start
+    window.addEventListener('touchstart', function (e) {
+      e.preventDefault(); // Prevent default touch behavior
+      coords.x = e.touches[0].clientX+50;
+      coords.y = e.touches[0].clientY+50;
+    });
+
+    // Event listener for touch move
+    window.addEventListener('touchmove', function (e) {
+      e.preventDefault(); // Prevent default touch behavior
+      coords.x = e.touches[0].clientX+50;
+      coords.y = e.touches[0].clientY+50;
+    });
+
+    // Event listener for touch end
+    window.addEventListener('touchend', function (e) {
+      // You can add any necessary touch end logic here
+    });
 
     function animateCircles() {
       let x = coords.x;
       let y = coords.y;
 
       circles.forEach(function (circle, index) {
+        circle.style.left = x - 12 + 'px';
+        circle.style.top = y - 12 + 'px';
+
         circle.style.transform = `scale(${(circles.length - index) / circles.length}`;
 
-        if (isCentered) {
-          circle.style.left = x - 12 + 'px';
-          circle.style.top = y - 12 + 'px';
-          circle.x = x;
-          circle.y = y;
-        } else {
-          // You can add any custom positioning logic when not centered here
-        }
+        circle.x = x;
+        circle.y = y;
 
         const nextCircle = circles[index + 1] || circles[0];
         x += (nextCircle.x - x) * 0.6;
@@ -88,8 +90,7 @@ export default function Circle() {
     }
 
     animateCircles();
-  }, [isCentered]);
-
+  }, []);
 
   return (
         <div className="circleDiv">
