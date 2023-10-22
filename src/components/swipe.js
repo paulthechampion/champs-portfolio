@@ -8,6 +8,10 @@ function cleanupSectionClasses(dir, elementId, from) {
   sections.forEach((section) => {
     section.style.transition = 'unset';
     section.style.zIndex = 2;
+
+    if(dir==='up' && from === 'click') {
+      section.style.transform ='translateY(0px)'
+    }
   });
 
   if (dir === 'up') {
