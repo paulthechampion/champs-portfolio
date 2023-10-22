@@ -113,7 +113,7 @@ function SwipeDetector() {
                     if (inExperience) {
                         const experienceSection = document.getElementById('experience')
                         const currentPosition = experienceSection.getBoundingClientRect().top;
-                        const newPosition = currentPosition - 430;
+                        const newPosition = currentPosition - 500;
                         const resumeBlank = document.getElementById('resume-blank')
                         if(isElementOnScreen(resumeBlank)) {
                             moveUp('skill-service')
