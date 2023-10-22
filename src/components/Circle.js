@@ -60,7 +60,7 @@ export default function Circle() {
     window.addEventListener('touchmove', function (e) {
       e.preventDefault(); // Prevent default touch behavior
       coords.x = e.touches[0].clientX;
-      coords.y = e.touches[0].clientY;
+      coords.y = e.touches[0].clientY+300;
     });
 
     // Event listener for touch end
