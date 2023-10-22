@@ -75,7 +75,7 @@ function SwipeDetector() {
         // Calculate the translateY value to move the main div
         const viewportHeight = window.innerHeight;
         const lastChildDivHeight = lastChildDiv.clientHeight;
-        const translateYValue = viewportHeight - lastChildDivHeight - 170; // Adjusted for a small gap
+        const translateYValue = viewportHeight - lastChildDivHeight - 100; // Adjusted for a small gap
       
         // Apply the translateY transform to move the main div
         mainDiv.style.transform = `translateY(-${translateYValue}px)`;
@@ -113,7 +113,7 @@ function SwipeDetector() {
                     if (inExperience) {
                         const experienceSection = document.getElementById('experience')
                         const currentPosition = experienceSection.getBoundingClientRect().top;
-                        const newPosition = currentPosition - 460;
+                        const newPosition = currentPosition - 430;
                         const resumeBlank = document.getElementById('resume-blank')
                         if(isElementOnScreen(resumeBlank)) {
                             moveUp('skill-service')
