@@ -16,7 +16,7 @@ function cleanupSectionClasses(dir, elementId, from) {
     let underlaysection = document.getElementById(sectionArray[underlayPos - 1]);
 
     if(from === 'click') {
-      underlaysection = document.getElementById(elementId)
+      underlaysection = document.getElementById(sectionArray[underlayPos - 1])
     }
 
     if (underlaysection) {
@@ -33,8 +33,8 @@ function cleanupSectionClasses(dir, elementId, from) {
     const underlayPos = sectionArray.indexOf(elementId);
     let underlaysection = document.getElementById(sectionArray[underlayPos + 1]);
 
-    if(from === 'click') {
-      underlaysection = document.getElementById(elementId)
+    if(from !== 'click') {
+      underlaysection = document.getElementById(from)
     }
     
     if (underlaysection) {
