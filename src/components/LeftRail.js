@@ -28,7 +28,7 @@ export default function LeftRail() {
       
     return (
     <div id='left-rail'>
-        {/* <FingerScroll/> */}
+       {isDesktopOrLaptop ? null : <FingerScroll/> } 
         <div className='main-intro appear'>
             <h2>Champ<span className='i'>i</span>on Paul</h2>
             <p>Software Developer at S&P Global</p>
