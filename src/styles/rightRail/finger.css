@@ -27,6 +27,9 @@
 @keyframes moveUpDown {
   0% {
     bottom: 40%;
+    opacity: 0;
+  }
+  10% {
     opacity: 1;
   }
   100% {
