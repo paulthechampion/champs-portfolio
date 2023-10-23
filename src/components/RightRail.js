@@ -4,6 +4,7 @@ import Contact from './Contact'
 import SkillsService from './SkillsService'
 import logo from '../images/siphle-nobg.png'
 import { moveDown } from './swipe';
+import resume from'../images/Paul Enwerem Resume.pdf'
 
 export default function RightRail() {
     
@@ -104,7 +105,7 @@ export default function RightRail() {
                 </div>
             </div>
 
-            <div className='resume-div' id='resume-div'><a href='' className='resume-link'>View Full Resume <i className="fas fa-arrow-right"></i></a></div>
+            <div className='resume-div' id='resume-div'><a href={resume} target='_blank' className='resume-link'>View Full Resume <i className="fas fa-arrow-right"></i></a></div>
             <div id='resume-blank' className='blank'>ssssssssssssssssss</div>
             </div>
            <SkillsService/>
