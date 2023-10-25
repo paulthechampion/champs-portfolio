@@ -1,6 +1,5 @@
 import React from "react";
 import logo from '../images/blueloadinggif.gif'
-import DocumentMeta from "react-document-meta";
 export default class MyForm extends React.Component {
     constructor(props) {
         super(props);
@@ -16,19 +15,8 @@ export default class MyForm extends React.Component {
 
     render() {
         const { status } = this.state;
-        const meta = {
-            title:"PaulTheChampion | Clients' Questionnaire",
-            description: 'Fill this Questionnaire to start your Project',
-            canonical: 'https://www.paulthechampion.com/start',
-            meta: {
-                charset: 'utf-8',
-                name: {
-                    keywords: 'react,meta,document,html,tags'
-                }
-            }
-        }
+
         return (
-            <DocumentMeta {...meta} >
                 <div className="question-div" id="question">
                     
                         <div className="main-question-form appear">
@@ -119,7 +107,6 @@ export default class MyForm extends React.Component {
                             </div>
                         </div>
                     </div>
-                </DocumentMeta>
         );
     }
 
