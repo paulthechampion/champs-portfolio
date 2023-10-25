@@ -14,7 +14,6 @@ export default class MyForm extends React.Component {
 
     render() {
         const { status } = this.state;
-        const { phoneNumber } = this.state;
         return (
             <div className="contact section" id="contact">
                 <h1 className="phoneNone">Message Me</h1>
@@ -58,9 +57,7 @@ export default class MyForm extends React.Component {
     ev.preventDefault();
     const form = ev.target;
     const data = new FormData(form);
-    data.append("Phone Number", this.state.phoneNumber)
     const xhr = new XMLHttpRequest();
-    console.log("HEYYYYYY HERE", data )
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
@@ -73,7 +70,6 @@ export default class MyForm extends React.Component {
         }
     };
     xhr.send(data);
-    this.setState({phoneNumber:null})
     setTimeout(() => { this.setState({status:null}) }, 10000);
     }
     }

@@ -13,9 +13,36 @@ export default class MyForm extends React.Component {
         document.getElementById('question-form').reset()
     }
 
+    componentDidMount() {
+        // Change the meta description
+        const metaDescription = document.createElement('meta');
+        metaDescription.name = "description";
+        metaDescription.content = "Fill this Questionnaire for your Project";
+
+        // Remove any existing meta description
+        const existingMetaDescription = document.querySelector('meta[name="description"]');
+        if (existingMetaDescription) {
+            document.head.removeChild(existingMetaDescription);
+        }
+
+        // Add the new meta description to the head
+        document.head.appendChild(metaDescription);
+
+        // Change the page title
+        document.title = "New Page Title"; // Change the title if needed
+    }
+
+    componentWillUnmount() {
+        // If you want to reset the meta description and title when the component unmounts
+        const existingMetaDescription = document.querySelector('meta[name="description"]');
+        if (existingMetaDescription) {
+            document.head.removeChild(existingMetaDescription);
+        }
+        document.title = "PaulTheChampion | Client Questionnaire"; // Reset the title if needed
+    }
+
     render() {
         const { status } = this.state;
-        const { phoneNumber } = this.state;
         return (
             <div className="question-div" id="question">
                 
@@ -114,9 +141,7 @@ export default class MyForm extends React.Component {
     ev.preventDefault();
     const form = ev.target;
     const data = new FormData(form);
-    data.append("Phone Number", this.state.phoneNumber)
     const xhr = new XMLHttpRequest();
-    console.log("HEYYYYYY HERE", data )
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
@@ -129,7 +154,6 @@ export default class MyForm extends React.Component {
         }
     };
     xhr.send(data);
-    this.setState({phoneNumber:null})
     setTimeout(() => { this.setState({status:null}) }, 10000);
     }
     }
