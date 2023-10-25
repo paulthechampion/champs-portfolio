@@ -1,6 +1,5 @@
 import React from "react";
 import logo from '../images/blueloadinggif.gif'
-import { Helmet } from 'react-helmet';
 export default class MyForm extends React.Component {
     constructor(props) {
         super(props);
@@ -14,14 +13,20 @@ export default class MyForm extends React.Component {
         document.getElementById('question-form').reset()
     }
 
+    componentDidMount() {
+        // Change the meta tags dynamically
+        const title = "PaulTheChampion | Clients' Questionnaire";
+        const description = 'Fill this Questionnaire to start your Project';
+        
+        document.title = title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        metaDescription.setAttribute('content', description);
+      }
+
     render() {
         const { status } = this.state;
         return (
             <div className="question-div" id="question">
-                <Helmet>
-                    <meta name="description" content="Fill this Questionnaire to start your Project" />
-                    <title>PaulTheChampion | Client's Questionnaire</title>
-                </Helmet>
                 
                     <div className="main-question-form appear">
                         <form
