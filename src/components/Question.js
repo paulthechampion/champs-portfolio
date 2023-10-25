@@ -9,6 +9,17 @@ export default class MyForm extends React.Component {
         };
     }
 
+    componentDidMount() {
+        // Get the element by its ID
+        const divElement = document.getElementById('circleDiv');
+    
+        // Check if the element exists before attempting to hide it
+        if (divElement) {
+          // Set the display property to "none" to hide it
+          divElement.style.display = 'none';
+        }
+      }
+
     handleClearForm = () => {
         document.getElementById('question-form').reset()
     }

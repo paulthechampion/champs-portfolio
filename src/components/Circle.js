@@ -110,7 +110,7 @@ export default function Circle() {
   }, []);
 
   return (
-        <div className="circleDiv">
+        <div className="circleDiv" id='circleDiv'>
           <div className="circle"></div>
           <div className="circle"></div>
           <div className="circle"></div>
