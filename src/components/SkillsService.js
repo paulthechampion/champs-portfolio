@@ -100,7 +100,7 @@ export default function SkillsService() {
             <p>Below are some of the services I can offer your Business:</p>
 
             <div className='service-p appear'>
-                E-COMMERCE WEBSITES <span className='upFullstop serviceFullStop'>.</span> BUSINESS LANDING PAGES <span className='upFullstop serviceFullStop'>.</span>SEARCH ENGINE OPTIMIZATION <span className='upFullstop serviceFullStop'>.</span> ARTIFICIAL INTELLIGENCE <span className='upFullstop serviceFullStop'>.</span> CUSTOM WEB APPLICATIONS    
+                E-COMMERCE WEBSITES <span className='upFullstop serviceFullStop'>.</span> BUSINESS LANDING PAGES <span className='upFullstop serviceFullStop'>.</span>SEARCH ENGINE OPTIMIZATION <span className='upFullstop serviceFullStop'>.</span> ARTIFICIAL INTELLIGENCE <span className='upFullstop serviceFullStop'>.</span> CUSTOM APPLICATIONS    
                 <span className='upFullstop serviceFullStop'>.</span>DOMAIN REGISTRATION AND HOSTING <span className='upFullstop serviceFullStop'>.</span> UI/UX DESIGN  <span className='upFullstop serviceFullStop'>.</span> LOGO MAKING   
                 <span className='upFullstop serviceFullStop'>.</span>GOOGLE AND FACEBOOK BUSINESS ACCOUNT SET UP <span className='upFullstop serviceFullStop'>.</span> ETC
             </div>
