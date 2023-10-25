@@ -29,16 +29,7 @@ export default class MyForm extends React.Component {
         document.head.appendChild(metaDescription);
 
         // Change the page title
-        document.title = "New Page Title"; // Change the title if needed
-    }
-
-    componentWillUnmount() {
-        // If you want to reset the meta description and title when the component unmounts
-        const existingMetaDescription = document.querySelector('meta[name="description"]');
-        if (existingMetaDescription) {
-            document.head.removeChild(existingMetaDescription);
-        }
-        document.title = "PaulTheChampion | Client Questionnaire"; // Reset the title if needed
+        document.title = "PaulTheChampion | Client's Questionnaire";  // Change the title if needed
     }
 
     render() {
