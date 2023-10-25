@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../images/blueloadinggif.gif'
+import { Helmet } from 'react-helmet';
 export default class MyForm extends React.Component {
     constructor(props) {
         super(props);
@@ -13,29 +14,14 @@ export default class MyForm extends React.Component {
         document.getElementById('question-form').reset()
     }
 
-    componentDidMount() {
-        // Change the meta description
-        const metaDescription = document.createElement('meta');
-        metaDescription.name = "description";
-        metaDescription.content = "Fill this Questionnaire for your Project";
-
-        // Remove any existing meta description
-        const existingMetaDescription = document.querySelector('meta[name="description"]');
-        if (existingMetaDescription) {
-            document.head.removeChild(existingMetaDescription);
-        }
-
-        // Add the new meta description to the head
-        document.head.appendChild(metaDescription);
-
-        // Change the page title
-        document.title = "PaulTheChampion | Client's Questionnaire";  // Change the title if needed
-    }
-
     render() {
         const { status } = this.state;
         return (
             <div className="question-div" id="question">
+                <Helmet>
+                    <meta name="description" content="Fill this Questionnaire to start your Project" />
+                    <title>PaulTheChampion | Client's Questionnaire</title>
+                </Helmet>
                 
                     <div className="main-question-form appear">
                         <form
