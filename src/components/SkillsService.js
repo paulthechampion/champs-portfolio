@@ -105,7 +105,7 @@ export default function SkillsService() {
                digital presence is at the forefront of technology and functionality. Whether you're
                 looking to enhance user experiences, automate processes, or optimize your online platform, 
                 I'm here to make your vision a reality through the power of software development.
-              </p><br/><br/>
+              </p>
             <p>Below are some of the services I can offer your Business:</p>
 
             <div className='service-p appear'>
