@@ -148,6 +148,9 @@
         overflow: hidden;
         padding-top: 20px;
     }
+    .question-form {
+        overflow: hidden;
+    }
     .main-question-form {
         text-align: center;
     }
