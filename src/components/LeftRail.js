@@ -33,7 +33,7 @@ export default function LeftRail() {
             <h2>Champ<span className='i'>i</span>on Paul</h2>
             <p>Software Developer at S&P Global</p>
             <p className='iBuild' id='build'>I build the <span className='blue-background'>best websites and web-applications
-            </span> , accessible, inclusive products and astonishing digital experiences.
+            </span> , accessible, astonishing digital experiences and Artificial Intelligence.
             </p>
         </div>
 
