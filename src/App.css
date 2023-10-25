@@ -9,6 +9,7 @@
 @import "./styles/rightRail/finger.css";
 @import "./styles/rightRail/intersection.css";
 @import "./styles/rightRail/swipe.css";
+@import "./styles/rightRail/question.css";
 
 *{
   padding: none;
@@ -17,7 +18,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-#full-app {
+/* #full-app {
   opacity: 0;
   transition: opacity 1s ease-in;
   pointer-events:none;
@@ -33,7 +34,7 @@
   background-repeat: no-repeat;
   background-size: 75%;
   background-position: center center;
-}
+} */
 
 
 

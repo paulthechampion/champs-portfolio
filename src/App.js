@@ -4,6 +4,8 @@ import Circle from './components/Circle';
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import SwipeDetector from './components/SwipeDetector';
+import {BrowserRouter, Route,Routes} from "react-router-dom"
+import Question from './components/Question';
 
 function App() {
     const isDesktopOrLaptop = useMediaQuery({
@@ -37,26 +39,31 @@ function App() {
     
     return (
         <div className="App">
-          <div id='full-app'>
-              <div className='phone-logo-div'></div>
-              {isDesktopOrLaptop  ? <Main/> : <SwipeDetector/> }
-          </div>
-            <Circle/>
+          <BrowserRouter>
+            {/* <div id='full-app'> */}
+            <div className='phone-logo-div'></div>
+              <Routes>
+                  <Route exact path="/" element={isDesktopOrLaptop  ? <Main/> : <SwipeDetector/> }/>
+                  <Route exact path="/start" element={<Question/> }/>
+              </Routes>
+            {/* </div> */}
+              <Circle/>
+          </BrowserRouter>
         </div>
     );
 }
 
-document.addEventListener("DOMContentLoaded", function() { 
-  setTimeout(loadingGif, 6000);
+// document.addEventListener("DOMContentLoaded", function() { 
+//   setTimeout(loadingGif, 6000);
 
-  function loadingGif() {
-    let root = document.getElementById("root")
-    document.getElementById("full-app").style.opacity=1 
-    document.getElementById("full-app").style.pointerEvents = 'unset'
-    root.style.backgroundImage="none"
-    root.style.backgroundColor="unset"
-    root.style.position="unset"
-  }
-})
+//   function loadingGif() {
+//     let root = document.getElementById("root")
+//     document.getElementById("full-app").style.opacity=1 
+//     document.getElementById("full-app").style.pointerEvents = 'unset'
+//     root.style.backgroundImage="none"
+//     root.style.backgroundColor="unset"
+//     root.style.position="unset"
+//   }
+// })
 
 export default App;

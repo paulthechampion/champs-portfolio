@@ -1,0 +1,196 @@
+.main-question-form {
+    text-align: center;
+    overflow-y: scroll;
+    height: 100vh;
+    margin-bottom: 50px;
+}
+
+.question-form-div {
+    margin: auto;
+    background-color: white;
+    width: 50%;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.question-form-div.input {
+    min-height: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.question-form-div.header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0px;
+    border-top: 6px solid #CC872A;
+    margin-top: 20px;
+}
+
+.question-form-div > h1 {
+    color: black !important;
+    padding-top: 0px;
+    border-bottom: 1px solid #009FD6;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    width: 90%;
+    
+}
+
+.question-form-div > p {
+    color: #CC872A;
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 40px;
+    padding-bottom: 5px;
+}
+
+.question-form-div > label {
+    color: black;
+    font-size: 18px;
+}
+
+.question-input {
+    margin-top: 40px;
+    border: none;
+    border-bottom: 1.3px solid grey;
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    padding-bottom: 5px;
+    color: black;
+    font-size: 15px;
+}
+
+.question-input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #009FD6;
+}
+
+.question-input::placeholder {
+    color: rgb(48, 48, 48);
+    padding-bottom: 10px;
+}
+
+.first-radio {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.second-radio {
+    position: relative;
+    left: 3.2px;
+}
+
+.question-send {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.question-send > div:last-child {
+    text-align: right;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    
+}
+
+.question-sub {
+    background-color: #CC872A;
+    border: 1px solid white;
+}
+
+.question-sub:hover {
+    border: 1px solid white;
+}
+
+.clear-form {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #CC872A;
+}
+
+.clear-form:hover {
+    cursor: pointer;
+}
+
+.question-conclusion {
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.question-conclusion > a {
+    color: #CC872A;
+    position: relative;
+    bottom: 38px;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.question-logo {
+    width: 150px;
+    height: 90px;
+}
+
+@media only screen and (max-width:809px )  { 
+    .question-form-div { 
+        width: 90%;
+    }
+
+    .question-form-div > h1 { 
+        font-size: 25px;
+    }
+
+    .question-input {
+        
+        bottom: 25px;
+        width: 87%;
+    }
+
+    .question-form-div > p {
+        margin-right: 5%;
+    }
+
+    .question-form-div > label {
+        font-size: 16px;
+      }
+
+      .question-input {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:810px) and (max-width:1024px )  { 
+    .question-form-div { 
+        width: 80%;
+    }
+
+    .question-form-div > p {
+        margin-right: 7%;
+    }
+}
+
+@media only screen and (min-width:1400px )  { 
+    .question-form-div > p {
+        margin-right: 5.8%;
+    }
+
+    .question-form-div {
+        padding-left: 40px;
+    }
+
+    .question-form-div > h1 {
+        margin-left: 40px;
+    }
+}

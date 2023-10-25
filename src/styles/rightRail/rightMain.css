@@ -191,6 +191,14 @@
     padding-right: 10px;
     border-radius: 6px;
     margin-bottom: 2em;
+    transition: all .5s;
+}
+
+.subsub:hover {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: 2px solid white;
 }
 
 .status {
