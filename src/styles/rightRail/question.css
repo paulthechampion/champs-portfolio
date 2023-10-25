@@ -177,8 +177,12 @@
         font-size: 16px;
       }
 
-      .question-input {
+    .question-input {
         font-size: 14px;
+    }
+
+    .clear-form {
+        padding-top: 10px;
     }
 }
 
