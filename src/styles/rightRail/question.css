@@ -118,7 +118,7 @@
     background-color: transparent;
     outline: none;
     border: none;
-    color: #CC872A;
+    color: red;
 }
 
 .clear-form:hover {
@@ -183,6 +183,15 @@
 
     .clear-form {
         padding-top: 10px;
+    }
+    
+    .question-send > div:first-child {
+        position: relative;
+        right: 40%;
+    }
+
+    .question-send > div:last-child {
+        right: -39%;
     }
 }
 
