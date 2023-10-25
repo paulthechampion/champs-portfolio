@@ -146,7 +146,7 @@
 @media only screen and (max-width:809px )  { 
     .main-question-form {
         text-align: center;
-        overflow-y: none;
+        overflow-y:hidden;
     }
     
     .question-form-div { 
