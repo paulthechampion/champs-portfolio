@@ -75,7 +75,7 @@ function SwipeDetector() {
         // Calculate the translateY value to move the main div
         const viewportHeight = window.innerHeight;
         const lastChildDivHeight = lastChildDiv.clientHeight;
-        const translateYValue = viewportHeight - lastChildDivHeight + 150; // Adjusted for a small gap
+        const translateYValue = viewportHeight - lastChildDivHeight - 100; // Adjusted for a small gap
       
         // Apply the translateY transform to move the main div
         mainDiv.style.transform = `translateY(-${translateYValue}px)`;

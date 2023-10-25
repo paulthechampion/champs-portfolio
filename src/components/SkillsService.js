@@ -97,21 +97,12 @@ export default function SkillsService() {
                 <h1>SKILLS & SERVICES</h1>
                 <img src={logo} alt='Logo' className='phone-logo'  onClick={() => {moveDown('left-rail', 'skill-service')}}/>
             </div>
-            <p>As a highly skilled software developer, I specialize in harnessing the latest web technologies
-               and integrating Artificial Intelligence to create cutting-edge websites and web 
-               applications for my clients. With a passion for innovation and a commitment to 
-               excellence, I bring a wealth of experience to every project. My mission is to 
-               deliver solutions that not only meet but exceed your expectations, ensuring your 
-               digital presence is at the forefront of technology and functionality. Whether you're
-                looking to enhance user experiences, automate processes, or optimize your online platform, 
-                I'm here to make your vision a reality through the power of software development.
-              </p>
             <p>Below are some of the services I can offer your Business:</p>
 
             <div className='service-p appear'>
-                E-COMMERCE WEBSITES <span className='upFullstop serviceFullStop'>.</span> BUSINESS LANDING PAGES <span className='upFullstop serviceFullStop'>.</span>SEARCH ENGINE OPTIMIZATION <span className='upFullstop serviceFullStop'>.</span> CUSTOM WEB APPLICATIONS  
+                E-COMMERCE WEBSITES <span className='upFullstop serviceFullStop'>.</span> BUSINESS LANDING PAGES <span className='upFullstop serviceFullStop'>.</span>SEARCH ENGINE OPTIMIZATION <span className='upFullstop serviceFullStop'>.</span> ARTIFICIAL INTELLIGENCE <span className='upFullstop serviceFullStop'>.</span> CUSTOM WEB APPLICATIONS    
                 <span className='upFullstop serviceFullStop'>.</span>DOMAIN REGISTRATION AND HOSTING <span className='upFullstop serviceFullStop'>.</span> UI/UX DESIGN  <span className='upFullstop serviceFullStop'>.</span> LOGO MAKING   
-                <span className='upFullstop serviceFullStop'>.</span>GOOGLE AND FACEBOOK BUSINESS ACCOUNT SET UP <span className='upFullstop serviceFullStop'>.</span> AND MANY MORE
+                <span className='upFullstop serviceFullStop'>.</span>GOOGLE AND FACEBOOK BUSINESS ACCOUNT SET UP <span className='upFullstop serviceFullStop'>.</span> ETC
             </div>
 
             <p className='appear'>This a List of the Skills I posses to help fulfil your Project :</p>
