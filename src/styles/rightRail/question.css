@@ -145,10 +145,10 @@
 
 @media only screen and (max-width:809px )  { 
     .question-div {
-        overflow: hidden;
         padding-top: 20px;
     }
-    .question-form {
+
+    #root {
         overflow: hidden;
     }
     .main-question-form {
