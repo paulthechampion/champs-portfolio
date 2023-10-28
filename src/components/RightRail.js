@@ -4,7 +4,7 @@ import Contact from './Contact'
 import SkillsService from './SkillsService'
 import logo from '../images/siphle-nobg.png'
 import { moveDown } from './swipe';
-import resume from'../images/Paul Enwerem Resume.pdf'
+import resume from'../images/pauls-resume.pdf'
 
 export default function RightRail() {
     
