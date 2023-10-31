@@ -77,7 +77,7 @@ export default function SkillsService() {
         { name: "NodeJS", number: 9.5 },
         { name: "GIT", number: 7.5 },
         { name: "ExpressJS", number: 9 },
-        { name: "MongoDB", number: 7 },
+        { name: "MongoDB", number: 8.5 },
         { name: "JQuery", number: 7 },
         { name: "JIRA", number: 8 },
         { name: "Heroku", number: 10 },
