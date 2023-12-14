@@ -40,7 +40,7 @@ export default class MyForm extends React.Component {
                             >   
                                 <div className="question-form-div header">
                                     <h1>Quick Questionnaire</h1>
-                                    <p>Fill this Questionnaire to Begin project ASAP</p>
+                                    <p>Fill this Questionnaire to begin project ASAP</p>
                                 </div>
                                 
                                 <div className="question-form-div input">
@@ -70,7 +70,7 @@ export default class MyForm extends React.Component {
 
                                 <div className="question-form-div input">
                                     <label for="Project Budget and Time">6. List one or two important colors you wish to highlight for your project</label><br/>
-                                    <input type="text" className="question-input " name="Project Colors" placeholder="Write Project Colors"/><br/>
+                                    <input type="text" className="question-input " name="Project Colors" placeholder="Write project colors"/><br/>
                                 </div>
                             
 
