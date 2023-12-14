@@ -43,39 +43,60 @@ export default class MyForm extends React.Component {
                                     <p>Fill this Questionnaire to begin project ASAP</p>
                                 </div>
                                 
+                                <h1 className="phone-q-h2">Questions about you</h1>
+
                                 <div className="question-form-div input">
-                                    <label for="Project Name">1. What is the name of your business or project?</label><br/>
+                                    <label for="Project Budget and Time">1. Client name</label><br/>
+                                    <input type="text" required className="question-input " name="Name" placeholder="Type in your Name"/><br/>
+                                </div>
+
+                                <div className="question-form-div input">
+                                    <label for="Project Budget and Time">2. Email, Phone number or both</label><br/>
+                                    <input type="text" className="question-input " required name="Contact Info" placeholder="customer@email.com, (647)-534-2898"/><br/>
+                                </div>
+                                
+                                <h1 className="phone-q-h2">Questions about your project</h1>
+
+                                <div className="question-form-div input">
+                                    <label for="Project Name">1. Name of business / project</label><br/>
                                     <input type="text" required className="question-input " name="Project Name" placeholder="Project Name"/><br/>
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Goals">2. Can you describe the main goals and objectives for your website or web application?</label><br/>
-                                    <input type="text" required className="question-input " name="Project Goals" placeholder="What do you want to achieve?"/><br/>
+                                    <label for="Project Goals">2. What services and / or products do you offer?</label><br/>
+                                    <input type="text" required className="question-input " name="Project services and products" placeholder="Project services and products"/><br/>
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Design and Branding">3. Do you have any specific design or branding preferences in mind?</label><br/>
-                                    <input type="text" className="question-input " name="Project Design and Branding" placeholder="How do you want your project to look?"/><br/>
+                                    <label for="Project Design and Branding">3. What are your company’s value propositions to the market?</label><br/>
+                                    <input type="text" className="question-input " name="company value propositions" placeholder="Company value propositions"/><br/>
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Functionalities">4. What are some important features or functionalities you require for your project?</label><br/>
-                                    <input type="text" className="question-input " name="Project Functionalities" placeholder="Eg. Payment system, appointment booking, pictures gallery etc..."/><br/>
+                                    <label for="Project Functionalities">4. Would you want your website to be an e-commerce platform (ie sales through the website)?</label><br/>
+                                    <label for="Yes">Yes</label>
+                                    <input type="radio" name="Do you want e-commerce?" value="Yes I want e-commerce" className="first-radio"/><br/>
+                                    <label for="Yes">No</label>
+                                    <input type="radio" name="Do you want e-commerce?" value="No I don't want e-commerce" className="second-radio"/><br/>
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Budget and Time">5. What is your budget and preferred timeline for this project?</label><br/>
-                                    <input type="text" className="question-input " name="Project Budget and Time" placeholder="Project budget and timeline"/><br/>
+                                    <label for="Project Budget and Time">5. What are the base colors representing your company?</label><br/>
+                                    <input type="text" className="question-input " name="Company colors" placeholder="Company colors"/><br/>
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Budget and Time">6. List one or two important colors you wish to highlight for your project</label><br/>
-                                    <input type="text" className="question-input " name="Project Colors" placeholder="Write project colors"/><br/>
+                                    <label for="Project Budget and Time">6. What are the base shapes representing your company?</label><br/>
+                                    <input type="text" className="question-input " name="Base shapes for company" placeholder="Base shapes for company"/><br/>
+                                </div>
+
+                                <div className="question-form-div input">
+                                    <label for="Project Budget and Time">7. Is this project is for re-designing your website / webapp? If so, please provide the current website to be revised.</label><br/>
+                                    <input type="text" className="question-input " name="Current website link" placeholder="Current website link"/><br/>
                                 </div>
                             
-
                                 <div className="question-form-div input">
-                                    <label for="Domain and Hosting">7. Have you already purchased a domain name and hosting for your project?</label><br/>
+                                    <label for="Domain and Hosting">8. Have you already purchased a domain name and hosting for your project?</label><br/>
                                     <label for="Yes">Yes</label>
                                     <input type="radio" name="Do you have a domain?" value="Yes I have domain" className="first-radio"/><br/>
                                     <label for="Yes">No</label>
@@ -83,7 +104,7 @@ export default class MyForm extends React.Component {
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Logo">8. Does your business or project have a Logo?</label><br/>
+                                    <label for="Logo">9. Do you have a Logo or specific pictures for your project?</label><br/>
                                     <label for="Yes">Yes</label>
                                     <input type="radio" name="Do you have a Logo?" value="Yes I have Logo" className="first-radio"/><br/>
                                     <label for="Yes">No</label>
@@ -91,14 +112,26 @@ export default class MyForm extends React.Component {
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Budget and Time">9. What is your Name?</label><br/>
-                                    <input type="text" required className="question-input " name="Name" placeholder="Type in your Name"/><br/>
+                                    <label for="Project Budget and Time">8. Provide example websites you may have as a benchmark.</label><br/>
+                                    <input type="text" className="question-input " name="Example website benchmark link" placeholder="Example website benchmark link"/><br/>
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Budget and Time">10. How can I contact you? Type in your Email, Phone number or both</label><br/>
-                                    <input type="text" className="question-input " required name="Contact Info" placeholder="customer@email.com, (647)-534-2898"/><br/>
+                                    <label for="Project Budget and Time">9. What would be your base tabs (topics or subjects) on the homepage?</label><br/>
+                                    <input type="text" className="question-input " name="Base tabs (topics or subjects)" placeholder="Base tabs (topics or subjects)"/><br/>
                                 </div>
+
+                                <div className="question-form-div input">
+                                    <label for="Project Budget and Time">10. What is your budget and preferred timeline for this project?</label><br/>
+                                    <input type="text" className="question-input " name="Project Budget and Time" placeholder="Project budget and timeline" required/><br/>
+                                </div>
+
+                                <div className="question-form-div input">
+                                    <label for="Project Budget and Time">11. Provide any other requirements to discuss (ie. Specific features, functions, your imagination, etc)</label><br/>
+                                    <input type="text" className="question-input " name="Specific requirements and features" placeholder="Specific requirements and features"/><br/>
+                                </div>
+
+                                
 
                                 
 
