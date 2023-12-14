@@ -40,7 +40,7 @@ export default class MyForm extends React.Component {
                             >   
                                 <div className="question-form-div header">
                                     <h1>Quick Questionnaire</h1>
-                                    <p>Project Details</p>
+                                    <p>Fill this Questionnaire to Begin project ASAP</p>
                                 </div>
                                 
                                 <div className="question-form-div input">
@@ -67,10 +67,15 @@ export default class MyForm extends React.Component {
                                     <label for="Project Budget and Time">5. What is your budget and preferred timeline for this project?</label><br/>
                                     <input type="text" className="question-input " name="Project Budget and Time" placeholder="Project budget and timeline"/><br/>
                                 </div>
+
+                                <div className="question-form-div input">
+                                    <label for="Project Budget and Time">6. List one or two important colors you wish to highlight for your project</label><br/>
+                                    <input type="text" className="question-input " name="Project Colors" placeholder="Write Project Colors"/><br/>
+                                </div>
                             
 
                                 <div className="question-form-div input">
-                                    <label for="Domain and Hosting">6. Have you already purchased a domain name and hosting for your project?</label><br/>
+                                    <label for="Domain and Hosting">7. Have you already purchased a domain name and hosting for your project?</label><br/>
                                     <label for="Yes">Yes</label>
                                     <input type="radio" name="Do you have a domain?" value="Yes I have domain" className="first-radio"/><br/>
                                     <label for="Yes">No</label>
@@ -78,7 +83,7 @@ export default class MyForm extends React.Component {
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Logo">7. Does your business or project have a Logo?</label><br/>
+                                    <label for="Logo">8. Does your business or project have a Logo?</label><br/>
                                     <label for="Yes">Yes</label>
                                     <input type="radio" name="Do you have a Logo?" value="Yes I have Logo" className="first-radio"/><br/>
                                     <label for="Yes">No</label>
@@ -86,12 +91,12 @@ export default class MyForm extends React.Component {
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Budget and Time">8. What is your Name?</label><br/>
+                                    <label for="Project Budget and Time">9. What is your Name?</label><br/>
                                     <input type="text" required className="question-input " name="Name" placeholder="Type in your Name"/><br/>
                                 </div>
 
                                 <div className="question-form-div input">
-                                    <label for="Project Budget and Time">9. How can I contact you? Type in your Email, Phone number or both</label><br/>
+                                    <label for="Project Budget and Time">10. How can I contact you? Type in your Email, Phone number or both</label><br/>
                                     <input type="text" className="question-input " required name="Contact Info" placeholder="customer@email.com, (647)-534-2898"/><br/>
                                 </div>
 
