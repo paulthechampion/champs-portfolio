@@ -30,10 +30,10 @@ export default function LeftRail() {
     <div id='left-rail'>
        {isDesktopOrLaptop ? null : <FingerScroll/> } 
         <div className='main-intro appear'>
-            <h2>Champ<span className='i'>i</span>on Paul</h2>
+            <h2>Paul Enwerem</h2>
             <p>Software Developer at S&P Global</p>
-            <p className='iBuild' id='build'>I build the <span className='blue-background'>best websites and web-applications
-            </span>, astonishing digital experiences and Artificial Intelligence.
+            <p className='iBuild' id='build'>I am a <span className='blue-background'>Javascript FullStack Software Developer
+            </span>, seeking job opportunities to innovate and drive growth in your Company.
             </p>
         </div>
 
