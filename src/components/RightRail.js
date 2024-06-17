@@ -24,8 +24,8 @@ export default function RightRail() {
             </p>
 
             <p className='appear'>
-                My foundational knowledge comes from certifications in HTML, CSS, and JavaScript acquired from 
-                New Horizon Nigeria. Beyond coding, I excel in creating responsive designs, ensuring seamless user 
+                My foundational knowledge comes from learning in HTML, CSS, JavaScript and C# from 
+                New Horizon Nigeria and Cnadian Business College, later dropped out to be self-taught. Beyond coding, I excel in creating responsive designs, ensuring seamless user 
                 experiences. My portfolio includes <span className='gold'>eCommerce websites, Investment research tools web applications, 
                 Chat applications, Business landing pages, and more, </span>  showcasing a multifaceted skill set that combines 
                 technical expertise with creative problem-solving. 
