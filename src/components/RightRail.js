@@ -25,7 +25,7 @@ export default function RightRail() {
 
             <p className='appear'>
                 My foundational knowledge comes from learning HTML, CSS, JavaScript and C# in 
-                Cnadian Business College, later dropped out to be self-taught. My portfolio includes <span className='gold'>eCommerce websites, Investment research tools web applications, 
+                Cnadian Business College, made a decision later oon to drop out and be self-taught. My portfolio includes <span className='gold'>eCommerce websites, Investment research tools web applications, 
                 Chat applications, Business landing pages, and more, </span>  showcasing a multifaceted skill set that combines 
                 technical expertise with creative problem-solving. 
             </p>
